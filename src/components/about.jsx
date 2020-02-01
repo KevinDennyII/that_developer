@@ -11,10 +11,10 @@ export default class About extends Component {
                 <div className="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
                 <div className="col-md-12">
                     <div className="about-desc">
-                    <span className="heading-meta">About Us</span>
+                    <span className="heading-meta">About Me</span>
                     <h2 className="colorlib-heading">Who Am I?</h2>
-                    <p>I am a computer grad student from DAIICT-Gandhinagar with ICT as my major.I love exploring new technologies and often amazed by the progress we as a human species have mad so far in the recent years (apart from the headphone-jack part!!)</p>
-                    <p>I have started reflecting my ideas and thougths through the medium of words recently so spelling and grammer mistaks are very often.You can write me back if you spot any and don't want to live anymore :P </p>
+                    <p>I am loving husband, VERY proud father of 2.  I am a computer scientist graduate of Virginia Tech, class of 2007.  I am software and web developer with over 14 years of experiences.  I am DJ.</p>
+                    <p>I have a passion to continuously learn.  I love reading all types of books but when it comes to web development I particular have keen interest in JavaScript.  I am avid fan of Kyle Simpson and his <i>"You Don't Know JS"</i> series and <i>"Functional-Light JavaScript"</i></p>
                     </div>
                 </div>
                 </div>
@@ -38,7 +38,7 @@ export default class About extends Component {
                 </span>
                 <div className="desc">
                     <h3>Web Development </h3>
-                    <p>I have experience building websites and chrome extentions using JavaScript,React,HTML,CSS</p>
+                    <p>I have experience building websites using Content Management Systems like Wordpress.  I have experience coding in JavaScript, HTML, CSS, and Java.</p>
                 </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@ export default class About extends Component {
                 </span>
                 <div className="desc">
                     <h3>Dev Ops</h3>
-                    <p>I am pursuing my internship with DevOps team at Juniper and working with tools like Jenkins, Docker, K8s</p>
+                    <p>I am Amazon Web Services (AWS) certified as a Developer Associate.  I have 3 years of experiences in configuring and managing data solution with AWS</p>
                 </div>
                 </div>
             </div>
