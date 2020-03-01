@@ -20,7 +20,7 @@ export default class About extends Component {
                         I am loving husband, VERY proud father of 2. I am a
                         computer scientist graduate of Virginia Tech, class of
                         2007. I am software and web developer with over 14 years
-                        of experiences. I am DJ.
+                        of experiences. I am a DJ and hip hop enthusiast.
                       </p>
                       <p>
                         I have a passion to continuously learn. I love reading
@@ -59,8 +59,8 @@ export default class About extends Component {
                     <h3>Web Development </h3>
                     <p>
                       I have experience building websites using Content
-                      Management Systems like Wordpress. I have experience
-                      coding in JavaScript, HTML, CSS, and Java.
+                      Management Systems like Wordpress. I have professional experience
+                      coding in JavaScript, HTML, CSS, and object-oriented languages.
                     </p>
                   </div>
                 </div>
