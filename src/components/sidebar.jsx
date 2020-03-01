@@ -93,7 +93,7 @@ export default class Sidebar extends Component {
                 </li>
                 <li>
                   <a href="https://dev.to/that_developer">
-                    <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="K D II's DEV Profile" height="30" width="30" />
+                    <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="K D II's DEV Profile" height="25" width="25" />
                   </a>
                   {/*<a href="https://dev.to/that_developer" <i className="fab fa-dev" title="that_developer's DEV Profile"></i></a> */}
                 </li>
