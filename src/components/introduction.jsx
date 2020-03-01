@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './fonts/Banger.ttf'
 
 export default class Introduction extends Component {
   render() {
@@ -10,8 +11,7 @@ export default class Introduction extends Component {
               <div className="col-md-8">
                 Thinking of something awesome to display here, but until then...
                 <br />
-                Mighty Mouse is here to save the daaaaaaaay!
-                <br />
+                <p className="mightymouse">Mighty Mouse is here to save the daaaaaaaay!</p>
                 <div
                   className="project"
                   style={{
