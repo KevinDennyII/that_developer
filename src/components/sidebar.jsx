@@ -104,7 +104,7 @@ export default class Sidebar extends Component {
                       width="25"
                     />
                   </a>
-                  {/*<a href="https://dev.to/that_developer" <i className="fab fa-dev" title="that_developer's DEV Profile"></i></a> */}
+                  {/* <a href="https://dev.to/that_developer" <i className="fab fa-dev" title="that_developer's DEV Profile"></i></a> */}
                 </li>
               </ul>
             </nav>
