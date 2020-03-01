@@ -4,7 +4,7 @@ export default class Introduction extends Component {
   render() {
     return (
       <div>
-        <section className="colorlib-experience" data-section="introduction">
+        <section className="colorlib-experience" data-section="home">
           <div className="colorlib-narrow-content">
             <div className="row">
               <div className="col-md-6">

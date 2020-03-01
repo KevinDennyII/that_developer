@@ -36,7 +36,7 @@ export default class About extends Component {
             </div>
           </div>
         </section>
-        <section className="colorlib-about">
+        <section className="colorlib-about" data-section="whatido">
           <div className="colorlib-narrow-content">
             <div className="row">
               <div
