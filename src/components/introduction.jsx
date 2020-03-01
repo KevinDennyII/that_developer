@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import './fonts/Banger.ttf'
 
 export default class Introduction extends Component {
   render() {
