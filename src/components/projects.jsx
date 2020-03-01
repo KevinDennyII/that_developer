@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Projects extends Component {
-  render() {
+function Projects() {
+
     return (
       <div>
 				<section className="colorlib-work" data-section="projects">
@@ -113,5 +113,6 @@ export default class Projects extends Component {
 				</section>
       </div>
     )
-  }
 }
+
+export default Projects;

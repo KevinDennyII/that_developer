@@ -1,7 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class Timeline extends Component {
-  render() {
+function Timeline() {
     return (
       <div>
         <section className="colorlib-experience" data-section="timeline">
@@ -182,5 +181,6 @@ export default class Timeline extends Component {
         </section>
       </div>
     );
-  }
 }
+
+export default Timeline;

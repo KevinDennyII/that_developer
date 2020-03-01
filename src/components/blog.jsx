@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Blog extends Component {
-  render() {
+function Blog() {
     return (
       <div>
           Blog are outdated!  Start a podcast
       </div>
     )
-  }
 }
+
+export default Blog;
