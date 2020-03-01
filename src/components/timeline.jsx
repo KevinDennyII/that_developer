@@ -80,7 +80,6 @@ export default class Timeline extends Component {
                           Director of Operations at{" "}
                           <a
                             href="https://www.ohhdennyservices.com"
-                            style="color:#2c98f0"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
