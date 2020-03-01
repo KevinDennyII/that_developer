@@ -7,10 +7,10 @@ export default class Introduction extends Component {
         <section className="colorlib-experience" data-section="home">
           <div className="colorlib-narrow-content">
             <div className="row">
-              <div className="col-md-6">
+              <div className="col-md-8">
                 Thinking of something awesome to display here, but until then...
                 <br />
-                Mighty Mouse is to save the daaaaaaaay!
+                Mighty Mouse is here to save the daaaaaaaay!
                 <br />
                 <div
                   className="project"
