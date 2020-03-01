@@ -84,13 +84,24 @@ export default class Timeline extends Component {
                           <span>June 2015 - present</span>
                         </h2>
                         <p>
-                          We assist smaller business, mostly concentrating on HIPPA, with Cyber Security, Software & Hardware Installation and Updates, and Network Configuration. We also build websites using the technologies such JavaScript, CSS3 & HTML5. <br />
-                          Network Upgrade for Ideal Nursing Services, Inc.:
-                          For this project, I hired two other professionals to assist with taking Ideal Nursing from a wired network to a wireless network. Measurements of the building were taken to create proper network diagrams for approval by Ideal Nursing. Wires were removed and Wireless Access Points (WAPs) were then installed and configured. All machines were upgraded and/or configured to connect to the WAPs. In addition, a new rack with POE ports was installed in their server room for their server, multi-port hub and router. This created a more efficient working space and alleviated unnecessary clutter.<br />
-                          Websites:
-                          • Men of Community - Sterling, VA -- http://menofcommunity.org/
-                          • Jacob David Properties, LLC - Selma , TX -- https://jacobdavidproperties.com/
-                          • Diamond Grove Baptist Church, Inc - Franklin, VA -- https://www.diamondgrovebaptist.com</p>
+                          <p>
+                          We assist smaller business, mostly concentrating on HIPPA, with Cyber Security, Software & Hardware Installation and Updates, and Network Configuration. We also build websites using the technologies such JavaScript, CSS3 & HTML5. </p>
+                        <p>Network Upgrade for Ideal Nursing Services, Inc.:
+                          For this project, I hired two other professionals to assist with taking Ideal Nursing from a wired network to a wireless network. Measurements of the building were taken to create proper network diagrams for approval by Ideal Nursing. Wires were removed and Wireless Access Points (WAPs) were then installed and configured. All machines were upgraded and/or configured to connect to the WAPs. In addition, a new rack with POE ports was installed in their server room for their server, multi-port hub and router. This created a more efficient working space and alleviated unnecessary clutter.</p>
+                        <p>Websites:
+                          <ul>
+                            <li>
+                              <a href="https://menofcommunity.org/">Men of Community</a> - Sterling, VA
+                            </li>
+                            <li>
+                              <a href="https://jacobdavidproperties.com/">Jacob David Properties, LLC</a> - Selma , TX
+                            </li>
+                            <li>
+                              <a href="https://www.diamondgrovebaptist.com">Diamond Grove Baptist Church, Inc</a> - Franklin, VA
+                        </li>
+                          </ul>
+                        </p>
+                        </p>
                       </div>
                     </div>
                   </article>
