@@ -10,13 +10,14 @@ export default class Introduction extends Component {
               <div className="col-md-8">
                 Thinking of something awesome to display here, but until then...
                 <br />
-                <p className="mightymouse">Mighty Mouse is here to save the daaaaaaaay!</p>
+                <p className="mightymouse">Mighty Mouse is here to save the daaaaaaaay!<br/>
                 <div
                   className="project"
                   style={{
                     backgroundImage: "url(images/Mighty-Mouse-768x432.jpg)"
                   }}
                 ></div>
+                </p>
               </div>
             </div>
           </div>
