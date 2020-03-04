@@ -15,7 +15,9 @@ function Introduction() {
                   style={{
                     backgroundImage: "url(images/Mighty-Mouse-768x432.jpg)"
                   }}
-                ></div>
+                >
+
+                </div>
               </p>
             </div>
           </div>
