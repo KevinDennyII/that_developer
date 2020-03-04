@@ -248,7 +248,7 @@ function Timeline() {
                   data-animate-effect="fadeInLeft"
                 >
                   <div className="timeline-entry-inner">
-                    <div className="timeline-icon color-7">
+                    <div className="timeline-icon color-5">
                       <i className="icon-pen2" />
                     </div>
                     <div className="timeline-label">
@@ -264,7 +264,7 @@ function Timeline() {
                   data-animate-effect="fadeInLeft"
                 >
                   <div className="timeline-entry-inner">
-                    <div className="timeline-icon color-8">
+                    <div className="timeline-icon color-3">
                       <i className="icon-pen2" />
                     </div>
                     <div className="timeline-label">
@@ -281,7 +281,7 @@ function Timeline() {
                   data-animate-effect="fadeInLeft"
                 >
                   <div className="timeline-entry-inner">
-                    <div className="timeline-icon color-9">
+                    <div className="timeline-icon color-2">
                       <i className="icon-pen2" />
                     </div>
                     <div className="timeline-label">
@@ -298,7 +298,7 @@ function Timeline() {
                   data-animate-effect="fadeInLeft"
                 >
                   <div className="timeline-entry-inner">
-                    <div className="timeline-icon color-10">
+                    <div className="timeline-icon color-1">
                       <i className="icon-pen2" />
                     </div>
                     <div className="timeline-label">
