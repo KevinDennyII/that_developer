@@ -28,7 +28,7 @@ function Timeline() {
                     <div className="timeline-label">
                       <h2>
                         Software Engineer at iHeartMedia, Inc{" "}
-                        <span>Feb 2019 - present</span>
+                        <br /><span>Feb 2019 - present</span>
                       </h2>
                       <p>
                         Currently working on iHeartMedia's Music Lab team. I
@@ -84,7 +84,7 @@ function Timeline() {
                         >
                           OhhDenny Services, LLC
                         </a>{" "}
-                        <span>June 2015 - present</span>
+                        <br /><span>June 2015 - present</span>
                       </h2>
                       <p>
                         <p>
@@ -159,7 +159,7 @@ function Timeline() {
                     <div className="timeline-label">
                       <h2>
                         Lead Technologist at Booz Allen Hamilton, Inc{" "}
-                        <span>Oct 2015 - Jan 2019</span>
+                        <br /><span>Oct 2015 - Jan 2019</span>
                       </h2>
                       <p>
                         I have written training documentation for the Air Force
@@ -216,7 +216,7 @@ function Timeline() {
                     <div className="timeline-label">
                       <h2>
                         Senior Web Developer at Sevatec, Inc{" "}
-                        <span>Nov 2014 - Jun 2015</span>
+                        <br /><span>Nov 2014 - Jun 2015</span>
                       </h2>
                       <p>
                         I fulfilled the role of Web Developer as a member of the
@@ -254,7 +254,7 @@ function Timeline() {
                     <div className="timeline-label">
                       <h2>
                         Software Developer at Buchanan & Edwards, Inc{" "}
-                        <span>Nov 2013 - Oct 2014</span>
+                        <br /><span>Nov 2013 - Oct 2014</span>
                       </h2>
                     </div>
                   </div>
@@ -270,7 +270,8 @@ function Timeline() {
                     <div className="timeline-label">
                       <h2>
                         Software Developer at Creative Information Technology,
-                        Inc <span>May 2010 - Oct 2013</span>
+                        Inc
+                        <br /><span>May 2010 - Oct 2013</span>
                       </h2>
                     </div>
                   </div>
@@ -286,7 +287,8 @@ function Timeline() {
                     <div className="timeline-label">
                       <h2>
                         Web Developer/IT Consultant at Intepros Federal
-                        Consulting, Inc <span>Sep 2009 - Apr 2010</span>
+                        Consulting, Inc
+                        <br /><span>Sep 2009 - Apr 2010</span>
                       </h2>
                     </div>
                   </div>
@@ -302,7 +304,7 @@ function Timeline() {
                     <div className="timeline-label">
                       <h2>
                         IT Specialist at IBM, Inc{" "}
-                        <span>Aug 2007 - Sep 2009</span>
+                        <br /><span>Aug 2007 - Sep 2009</span>
                       </h2>
                     </div>
                   </div>
