@@ -27,54 +27,6 @@ function Timeline() {
                     </div>
                     <div className="timeline-label">
                       <h2>
-                        Software Engineer at iHeartMedia, Inc{" "}
-                        <br /><span>Feb 2019 - present</span>
-                      </h2>
-                      <p>
-                        Currently working on iHeartMedia's Music Lab team. I
-                        assist in the maintaining and improving of a web
-                        application that assist in helping program directors of
-                        iHeartRadio stations determine how air time (spins) for
-                        songs will be distributed across radio stations. I am
-                        working as both a Software Engineer and Data Analytics
-                        team liaison on the Music Lab team. Some of my tasks
-                        include architecting solutions with NodeJS, automating
-                        AWS CodeBuilds using CloudWatch events for our MySQL
-                        databases, improving technical documentation, and
-                        learning both our data analytics and software
-                        development stack (ReactJS) for Music Lab.
-                      </p>
-                      <p>
-                        I conducted a Proof of Concept analysis to present to VP
-                        of Data Engineering & Analytics for using an aiWare
-                        platform that uses GraphQL. This was an idea to help
-                        iHeartMedia automate the analysis of some of its market
-                        data like spots and digital impression
-                      </p>
-                      <p>
-                        Previously apart of the Salesforce team, working with
-                        the Campaign Recap application which kept track of
-                        iHeartMedia's clients radio ad campaigns. I briefly
-                        worked with our Kibana instance in attempt to improve
-                        logging. I updated our software architecture. I also
-                        performed a technical analysis with Vertione One in
-                        using there development platform with GraphiQ that could
-                        possible help iHeartMedia automate some of its
-                        processes.
-                      </p>
-                    </div>
-                  </div>
-                </article>
-                <article
-                  className="timeline-entry animate-box"
-                  data-animate-effect="fadeInTop"
-                >
-                  <div className="timeline-entry-inner">
-                    <div className="timeline-icon color-4">
-                      <i className="icon-pen2" />
-                    </div>
-                    <div className="timeline-label">
-                      <h2>
                         Director of Operations at{" "}
                         <a
                           href="https://www.ohhdennyservices.com"
@@ -142,8 +94,67 @@ function Timeline() {
                               </a>{" "}
                               - Franklin, VA
                             </li>
+                            <li>
+                              <a
+                                href="https://www.oberryamezionchurch.org"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                O'Berry A. M. E. Zion Church
+                              </a>{" "}
+                              - Franklin, VA
+                            </li>
                           </ul>
                         </p>
+                      </p>
+                    </div>
+
+                  </div>
+                </article>
+                <article
+                  className="timeline-entry animate-box"
+                  data-animate-effect="fadeInTop"
+                >
+                  <div className="timeline-entry-inner">
+                    <div className="timeline-icon color-4">
+                      <i className="icon-pen2" />
+                    </div>
+                    <div className="timeline-label">
+                      <h2>
+                        Software Engineer at iHeartMedia, Inc{" "}
+                        <br /><span>Feb 2019 - July 2020</span>
+                      </h2>
+                      <p>
+                        Currently working on iHeartMedia's Music Lab team. I
+                        assist in the maintaining and improving of a web
+                        application that assist in helping program directors of
+                        iHeartRadio stations determine how air time (spins) for
+                        songs will be distributed across radio stations. I am
+                        working as both a Software Engineer and Data Analytics
+                        team liaison on the Music Lab team. Some of my tasks
+                        include architecting solutions with NodeJS, automating
+                        AWS CodeBuilds using CloudWatch events for our MySQL
+                        databases, improving technical documentation, and
+                        learning both our data analytics and software
+                        development stack (ReactJS) for Music Lab.
+                      </p>
+                      <p>
+                        I conducted a Proof of Concept analysis to present to VP
+                        of Data Engineering & Analytics for using an aiWare
+                        platform that uses GraphQL. This was an idea to help
+                        iHeartMedia automate the analysis of some of its market
+                        data like spots and digital impression
+                      </p>
+                      <p>
+                        Previously apart of the Salesforce team, working with
+                        the Campaign Recap application which kept track of
+                        iHeartMedia's clients radio ad campaigns. I briefly
+                        worked with our Kibana instance in attempt to improve
+                        logging. I updated our software architecture. I also
+                        performed a technical analysis with Vertione One in
+                        using there development platform with GraphiQ that could
+                        possible help iHeartMedia automate some of its
+                        processes.
                       </p>
                     </div>
                   </div>
