@@ -66,16 +66,6 @@ function Timeline() {
                           <ul>
                             <li>
                               <a
-                                href="https://menofcommunity.org/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                Men of Community
-                              </a>{" "}
-                              - Sterling, VA
-                            </li>
-                            <li>
-                              <a
                                 href="https://jacobdavidproperties.com/"
                                 target="_blank"
                                 rel="noopener noreferrer"
