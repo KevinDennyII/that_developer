@@ -7,7 +7,7 @@
 
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *	Edit this section
 *
 * ======================================================= */
@@ -1427,3 +1427,7 @@ body.offcanvas {
 
 .js .animate-box {
   opacity: 0; }
+
+hr.style2 {
+  border-top: 3px double #8c8b8b;
+}

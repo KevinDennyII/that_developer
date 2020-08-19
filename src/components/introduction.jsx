@@ -3,7 +3,7 @@ import React from "react";
 function Introduction() {
   return (
     <div>
-      <section className="colorlib-experience" data-section="home">
+      <section className="colorlib-experience" style={{marginBottom: "0px"}} data-section="home">
         <div className="colorlib-narrow-content">
           <div className="row">
             <div className="col-md-8">
@@ -13,7 +13,9 @@ function Introduction() {
                 <div
                   className="project"
                   style={{
-                    backgroundImage: "url(images/Mighty-Mouse-768x432.jpg)"
+                    backgroundImage: "url(images/Kevin_as_Mighty_Mouse.jpg)",
+                    backgroundSize: "200px 240px",
+                    marginBottom: "0px"
                   }}
                 >
 
@@ -22,6 +24,7 @@ function Introduction() {
             </div>
           </div>
         </div>
+        <hr className="divider gradient" contentEditable></hr>
       </section>
     </div>
   );
