@@ -19,7 +19,8 @@ function Sidebar() {
               <div
                 className="author-img"
                 style={{
-                  backgroundImage: "url(images/me_virginiatech_alum.jpg)"
+                  backgroundImage: "url(images/djkj_djlookup.jpg)",
+                  backgroundSize: "150px 150px"
                 }}
               />
               <h1 id="colorlib-logo">
