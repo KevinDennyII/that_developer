@@ -37,7 +37,8 @@ function Timeline() {
                         >
                           OhhDenny Services, LLC
                         </a>{" "}
-                        <br /><span>June 2015 - present</span>
+                        <br />
+                        <span>June 2015 - present</span>
                       </h2>
                       <div>
                         <p>
@@ -99,7 +100,6 @@ function Timeline() {
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </article>
                 <article
@@ -112,8 +112,8 @@ function Timeline() {
                     </div>
                     <div className="timeline-label">
                       <h2>
-                        Software Engineer at iHeartMedia, Inc{" "}
-                        <br /><span>Feb 2019 - July 2020</span>
+                        Software Engineer at iHeartMedia, Inc <br />
+                        <span>Feb 2019 - July 2020</span>
                       </h2>
                       <p>
                         Currently working on iHeartMedia's Music Lab team. I
@@ -160,8 +160,8 @@ function Timeline() {
                     </div>
                     <div className="timeline-label">
                       <h2>
-                        Lead Technologist at Booz Allen Hamilton, Inc{" "}
-                        <br /><span>Oct 2015 - Jan 2019</span>
+                        Lead Technologist at Booz Allen Hamilton, Inc <br />
+                        <span>Oct 2015 - Jan 2019</span>
                       </h2>
                       <div>
                         I have written training documentation for the Air Force
@@ -173,8 +173,8 @@ function Timeline() {
                           <li>The understanding and use of Elasticsearch</li>
                           <li>The understanding and use of Logstash</li>
                           <li>
-                            The understanding and use of Kibana The understanding
-                            of Beats
+                            The understanding and use of Kibana The
+                            understanding of Beats
                           </li>
                         </ul>
                         I have created learning documentation for server
@@ -217,8 +217,8 @@ function Timeline() {
                     </div>
                     <div className="timeline-label">
                       <h2>
-                        Senior Web Developer at Sevatec, Inc{" "}
-                        <br /><span>Nov 2014 - Jun 2015</span>
+                        Senior Web Developer at Sevatec, Inc <br />
+                        <span>Nov 2014 - Jun 2015</span>
                       </h2>
                       <p>
                         I fulfilled the role of Web Developer as a member of the
@@ -255,8 +255,8 @@ function Timeline() {
                     </div>
                     <div className="timeline-label">
                       <h2>
-                        Software Developer at Buchanan & Edwards, Inc{" "}
-                        <br /><span>Nov 2013 - Oct 2014</span>
+                        Software Developer at Buchanan & Edwards, Inc <br />
+                        <span>Nov 2013 - Oct 2014</span>
                       </h2>
                     </div>
                   </div>
@@ -273,7 +273,8 @@ function Timeline() {
                       <h2>
                         Software Developer at Creative Information Technology,
                         Inc
-                        <br /><span>May 2010 - Oct 2013</span>
+                        <br />
+                        <span>May 2010 - Oct 2013</span>
                       </h2>
                     </div>
                   </div>
@@ -290,7 +291,8 @@ function Timeline() {
                       <h2>
                         Web Developer/IT Consultant at Intepros Federal
                         Consulting, Inc
-                        <br /><span>Sep 2009 - Apr 2010</span>
+                        <br />
+                        <span>Sep 2009 - Apr 2010</span>
                       </h2>
                     </div>
                   </div>
@@ -305,8 +307,8 @@ function Timeline() {
                     </div>
                     <div className="timeline-label">
                       <h2>
-                        IT Specialist at IBM, Inc{" "}
-                        <br /><span>Aug 2007 - Sep 2009</span>
+                        IT Specialist at IBM, Inc <br />
+                        <span>Aug 2007 - Sep 2009</span>
                       </h2>
                     </div>
                   </div>
@@ -316,7 +318,7 @@ function Timeline() {
                   data-animate-effect="fadeInBottom"
                 >
                   <div className="timeline-entry-inner">
-                    <div className="timeline-icon color-none"/>
+                    <div className="timeline-icon color-none" />
                   </div>
                 </article>
               </div>
