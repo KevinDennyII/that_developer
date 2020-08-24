@@ -9,7 +9,7 @@ function Introduction() {
             <div className="col-md-8">
               Thinking of something awesome to display here, but until then...
               <br />
-              <p className="mightymouse">Mighty Mouse is here to save the daaaaaaaay!<br/>
+              <div className="mightymouse">Mighty Mouse is here to save the daaaaaaaay!<br/>
                 <div
                   className="project"
                   style={{
@@ -20,7 +20,7 @@ function Introduction() {
                 >
 
                 </div>
-              </p>
+              </div>
             </div>
           </div>
         </div>

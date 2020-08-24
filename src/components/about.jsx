@@ -1,6 +1,6 @@
 import React from "react";
 
-function About() {
+const About = ({summary}) => {
     return (
       <div>
         <section className="colorlib-about" data-section="about">
@@ -15,19 +15,7 @@ function About() {
                     <div className="about-desc">
                       <span className="heading-meta">About Me</span>
                       <h2 className="colorlib-heading">Who Am I?</h2>
-                      <p>
-                        I am loving husband, VERY proud father of 2. I am a
-                        computer scientist graduate of Virginia Tech, class of
-                        2007. I am software and web developer with over 15 years
-                        of experience. I am a DJ and hip hop enthusiast.
-                      </p>
-                      <p>
-                        I have a passion to continuously learn. I love reading
-                        all types of books but when it comes to web development
-                        I particular have keen interest in JavaScript. I am avid
-                        fan of Kyle Simpson and his <i>"You Don't Know JS"</i>{" "}
-                        series and <i>"Functional-Light JavaScript"</i>
-                      </p>
+                      {summary}
                     </div>
                   </div>
                 </div>

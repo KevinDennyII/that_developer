@@ -1,5 +1,6 @@
 import React from "react";
 
+// TODO
 function Timeline() {
   return (
     <div>
@@ -38,7 +39,7 @@ function Timeline() {
                         </a>{" "}
                         <br /><span>June 2015 - present</span>
                       </h2>
-                      <p>
+                      <div>
                         <p>
                           We assist smaller business, mostly concentrating on
                           HIPPA, with Cyber Security, Software & Hardware
@@ -61,7 +62,7 @@ function Timeline() {
                           created a more efficient working space and alleviated
                           unnecessary clutter.
                         </p>
-                        <p>
+                        <div>
                           Websites:
                           <ul>
                             <li>
@@ -95,8 +96,8 @@ function Timeline() {
                               - Franklin, VA
                             </li>
                           </ul>
-                        </p>
-                      </p>
+                        </div>
+                      </div>
                     </div>
 
                   </div>
@@ -162,7 +163,7 @@ function Timeline() {
                         Lead Technologist at Booz Allen Hamilton, Inc{" "}
                         <br /><span>Oct 2015 - Jan 2019</span>
                       </h2>
-                      <p>
+                      <div>
                         I have written training documentation for the Air Force
                         serving as an Elastic Stack Subject Matter Expert (SME)
                         creating Elastic Stack training courses. This included
@@ -202,7 +203,7 @@ function Timeline() {
                         Internally, for Booz Allen Hamilton, I have configured
                         and implemented a prototype website using Drupal with
                         Acquia cloud.
-                      </p>
+                      </div>
                     </div>
                   </div>
                 </article>

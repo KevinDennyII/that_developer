@@ -1,6 +1,8 @@
 import React from "react";
 
-function Sidebar() {
+const Sidebar = ({name, email, myLinks}) => {
+  console.log(myLinks)
+
     return (
       <div>
         <div>
@@ -24,10 +26,10 @@ function Sidebar() {
                 }}
               />
               <h1 id="colorlib-logo">
-                <a href="index.html">Kevin Denny II</a>
+                <a href="index.html">{name}</a>
               </h1>
               <span className="email">
-                <i className="icon-mail"></i> kevin.denny.ii@gmail.com
+                <i className="icon-mail"/>{email}
               </span>
             </div>
             <nav id="colorlib-main-menu" role="navigation" className="navbar">
@@ -44,7 +46,6 @@ function Sidebar() {
                     </a>
                   </li>
                   <li><a href="#whatido" data-nav-section="whatido">What I Do?</a></li>
-                  {/*<li><a href="#" data-nav-section="blog">Blog</a></li>*/}
                   <li>
                     <a href="#timeline" data-nav-section="timeline">
                       Timeline
@@ -66,15 +67,6 @@ function Sidebar() {
                 </li>
                 <li>
                   <a
-                    href="https://www.instagram.com/djlookup/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="icon-instagram" />
-                  </a>
-                </li>
-                <li>
-                  <a
                     href="https://www.linkedin.com/in/kodii/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -88,7 +80,7 @@ function Sidebar() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="icon-github"></i>
+                    <i className="icon-github"/>
                   </a>
                 </li>
                 <li>
@@ -104,7 +96,15 @@ function Sidebar() {
                       width="25"
                     />
                   </a>
-                  {/* <a href="https://dev.to/that_developer" <i className="fab fa-dev" title="that_developer's DEV Profile"></i></a> */}
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/djlookup/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="icon-instagram" />
+                  </a>
                 </li>
               </ul>
             </nav>
