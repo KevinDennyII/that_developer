@@ -46,14 +46,14 @@
   margin: 1em 0;
   height: 2em;
   line-height: 2em;
-  color: white;
+  color: #F4F5F4;
   background: black;
 }
 .gradient:before {
-  background: linear-gradient(to right, white, black);
+  background: linear-gradient(to right, #F4F5F4, black);
 }
 .gradient:after {
-  background: linear-gradient(to left, white, black);
+  background: linear-gradient(to left, #F4F5F4, black);
 }
 
 .donotcross {

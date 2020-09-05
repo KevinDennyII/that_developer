@@ -18,21 +18,22 @@ const App = () => {
         setName(data.basics.name);
         setEmail(data.basics.email);
         setSummary(data.basics.summary);
-        console.log(data.basics.profiles);
         setMyLinks(data.basics.profiles);
       });
   }, []);
 
-  console.log(myLinks);
   return (
-    <div id="colorlib-page">
-      <div id="container-wrap">
-        <Sidebar name={name} email={email} myLinks={myLinks} />
-        <div id="colorlib-main">
-          <Introduction />
-          <About summary={summary} />
-          <Timeline />
-        </div>
+    <div id="colorlib-page" style={{ backgroundColor: "#F4F5F4" }}>
+      <div
+        id="container-wrap"
+        style={{ marginLeft: "5rem", marginRight: "5rem" }}
+      >
+        {/*<Sidebar name={name} email={email} myLinks={myLinks} />*/}
+        {/*<div id="colorlib-main">*/}
+        <Introduction myLinks={myLinks} email={email} />
+        <About summary={summary} />
+        <Timeline />
+        {/*</div>*/}
       </div>
     </div>
   );

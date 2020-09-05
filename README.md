@@ -1,4 +1,4 @@
 # that_developer
-creating my own portfolio site based in reactjs
+Creating my own portfolio site based in ReactJS
 
-this can be found at https://thatdeveloper.dev
+This can be seen at https://thatdeveloper.dev

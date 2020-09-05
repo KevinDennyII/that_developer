@@ -88,7 +88,7 @@ figure {
   position: fixed;
   overflow: scroll;
   z-index: 1001;
-  background: #f2f3f7;
+  background: #E3E3E3;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
@@ -361,7 +361,7 @@ body.offcanvas {
     -o-transform: translateX(0);
     transform: translateX(0);
     width: 300px;
-    background: #f2f3f7;
+    background: #E3E3E3;
     z-index: 999;
     position: fixed; }
   body.offcanvas #colorlib-main, body.offcanvas .colorlib-nav-toggle {
@@ -407,6 +407,15 @@ body.offcanvas {
       padding-top: 5em;
       padding-bottom: 8em; } }
 
+@media screen and (max-width: 680px) {
+  .introduction {
+    display: flex;
+    flex-direction: column;
+  } }
+
+.introduction {
+  display: flex;
+}
 .author-img {
   background-size: cover;
   background-position: center center;
@@ -503,7 +512,7 @@ body.offcanvas {
   content: "\e114"; }
 
 .panel-heading a.collapsed {
-  background: #f2f3f7;
+  background: #E3E3E3;
   border: 1px solid #e6e6e6 !important;
   color: #333333; }
 
@@ -535,7 +544,7 @@ body.offcanvas {
   position: absolute;
   display: block;
   width: 4px;
-  background: #f2f3f7;
+  background: #E3E3E3;
   top: 20px;
   bottom: 20px;
   margin-left: 29px; }
@@ -561,9 +570,9 @@ body.offcanvas {
   -ms-border-radius: 50%;
   border-radius: 50%;
   text-align: center;
-  -moz-box-shadow: 0 0 0 5px #f2f3f7;
-  -webkit-box-shadow: 0 0 0 5px #f2f3f7;
-  box-shadow: 0 0 0 5px #f2f3f7;
+  -moz-box-shadow: 0 0 0 5px #E3E3E3;
+  -webkit-box-shadow: 0 0 0 5px #E3E3E3;
+  box-shadow: 0 0 0 5px #E3E3E3;
   line-height: 40px;
   float: left; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon i {
@@ -584,7 +593,7 @@ body.offcanvas {
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
   position: relative;
-  background: #f2f3f7;
+  background: #E3E3E3;
   padding: 1.5em;
   margin-left: 60px;
   -webkit-background-clip: padding-box;
@@ -599,7 +608,7 @@ body.offcanvas {
   height: 0;
   border-style: solid;
   border-width: 9px 9px 9px 0;
-  border-color: transparent #f2f3f7 transparent transparent;
+  border-color: transparent #E3E3E3 transparent transparent;
   left: 0;
   top: 10px;
   margin-left: -9px; }
@@ -747,7 +756,7 @@ body.offcanvas {
   height: 6px;
   -webkit-box-shadow: none;
   box-shadow: none;
-  background: #f2f3f7;
+  background: #E3E3E3;
   overflow: visible; }
 
 .progress-bar {
@@ -832,7 +841,7 @@ body.offcanvas {
     height: 100px;
     display: table;
     text-align: center;
-    background: #f2f3f7;
+    background: #E3E3E3;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
@@ -941,10 +950,11 @@ body.offcanvas {
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
-  height: 300px;
+  height: 350px;
   width: 100%;
   display: block;
-  margin-bottom: 30px; }
+  /*margin-bottom: 30px; */
+}
   .project .desc {
     position: absolute;
     top: 0;
@@ -1288,7 +1298,7 @@ body.offcanvas {
   box-shadow: none;
   background: transparent;
   border: transparent;
-  background: #f2f3f7;
+  background: #E3E3E3;
   height: 54px;
   font-size: 16px;
   font-weight: 400;

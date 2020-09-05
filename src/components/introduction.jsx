@@ -1,37 +1,94 @@
 import React from "react";
+import avi from "../images/kevin_final.png";
 
-function Introduction() {
+const Introduction = ({ myLinks, email }) => {
   return (
     <div>
       <section
         className="colorlib-experience"
-        style={{ marginBottom: "0px" }}
+        style={{
+          marginTop: "0px",
+          marginBottom: "0px",
+          paddingBottom: "0px",
+          paddingTop: "0px",
+        }}
         data-section="home"
       >
-        <div className="colorlib-narrow-content">
-          <div className="row">
-            <div className="col-md-8">
-              Thinking of something awesome to display here, but until then...
-              <br />
-              <div className="mightymouse">
-                Mighty Mouse is here to save the daaaaaaaay!
-                <br />
-                <div
-                  className="project"
-                  style={{
-                    backgroundImage: "url(images/Kevin_as_Mighty_Mouse.jpg)",
-                    backgroundSize: "200px 240px",
-                    marginBottom: "0px",
-                  }}
-                ></div>
-              </div>
+        <div className="introduction">
+          <div style={{ margin: "auto" }}>
+            <img
+              src={avi}
+              style={{
+                width: "22rem",
+                height: "29rem",
+              }}
+              alt="Kevin Denny II with a yellow hoodie that says Without Music The World Would B Flat"
+            />
+          </div>
+          <div
+            style={{
+              textAlign: "center",
+              margin: "auto",
+              fontFamily: "Titillium Web, sans-serif",
+            }}
+          >
+            <h4 style={{ lineHeight: "0.1rem", letterSpacing: "0.35em" }}>
+              Kevin Denny II
+            </h4>
+            <h3 style={{ lineHeight: "0.1rem" }}>Web Developer</h3>
+            <h3 style={{ lineHeight: "0.1rem" }}>Music Curator</h3>
+            <h3 style={{ lineHeight: "0.1rem" }}>Life Long Learner</h3>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignContent: "space-between",
+                justifyContent: "center",
+              }}
+            >
+              {myLinks.map((link) => (
+                <div key={link.network.toLowerCase()}>
+                  <a href={link.url}>
+                    <i
+                      className={`icon-social-${link.network.toLowerCase()}`}
+                      style={{ fontSize: "25px" }}
+                    />
+                  </a>
+                </div>
+              ))}
+            </div>
+            <div>
+              <span className="email">
+                <i className="icon-mail" />
+                <a href={`mailto:${email}`}>{email}</a>
+              </span>
             </div>
           </div>
         </div>
-        <hr className="divider gradient" contentEditable></hr>
+
+        {/*<div className="colorlib-narrow-content">*/}
+        {/*<div className="row">*/}
+        {/*  <div className="col-md-8">*/}
+        {/*<div className="mightymouse">*/}
+        {/*Mighty Mouse is here to save the daaaaaaaay!*/}
+        {/*<br />*/}
+        {/*<div*/}
+        {/*  className="project"*/}
+        {/*  style={{*/}
+        {/*    backgroundImage: "url(images/kevin_final.png)",*/}
+        {/*    // backgroundSize: "200px 240px",*/}
+        {/*    // marginBottom: "0px",*/}
+        {/*  }}*/}
+        {/*/>*/}
+
+        {/*</div>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
+        {/*</div>*/}
+        <hr className="divider gradient" contentEditable />
       </section>
     </div>
   );
-}
+};
 
 export default Introduction;

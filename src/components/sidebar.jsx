@@ -19,8 +19,7 @@ const Sidebar = ({ name, email, myLinks }) => {
             <div
               className="author-img"
               style={{
-                backgroundImage: "url(images/djkj_djlookup.jpg)",
-                backgroundSize: "150px 150px",
+                backgroundImage: "url(images/Kevin_as_Mighty_Mouse.jpg)",
               }}
             />
             <h1 id="colorlib-logo">
