@@ -1,5 +1,5 @@
 import React from "react";
-import avi from "../images/kevin_final.png";
+// import avi from "../images/kevin_final.png";
 
 const Introduction = ({ myLinks, email }) => {
   return (
@@ -15,16 +15,15 @@ const Introduction = ({ myLinks, email }) => {
         data-section="home"
       >
         <div className="introduction">
-          <div style={{ margin: "auto" }}>
-            <img
-              src={avi}
-              style={{
-                width: "22rem",
-                height: "29rem",
-              }}
-              alt="Kevin Denny II with a yellow hoodie that says Without Music The World Would B Flat"
-            />
-          </div>
+          <div
+            className="project"
+            title="Kevin Denny II with a yellow hoodie that says Without Music The World Would B Flat"
+            style={{
+              margin: "auto",
+              backgroundImage: "url(/images/kevin_final.png)",
+              backgroundSize: "24rem 31rem",
+            }}
+          ></div>
           <div
             style={{
               textAlign: "center",
@@ -65,26 +64,6 @@ const Introduction = ({ myLinks, email }) => {
             </div>
           </div>
         </div>
-
-        {/*<div className="colorlib-narrow-content">*/}
-        {/*<div className="row">*/}
-        {/*  <div className="col-md-8">*/}
-        {/*<div className="mightymouse">*/}
-        {/*Mighty Mouse is here to save the daaaaaaaay!*/}
-        {/*<br />*/}
-        {/*<div*/}
-        {/*  className="project"*/}
-        {/*  style={{*/}
-        {/*    backgroundImage: "url(images/kevin_final.png)",*/}
-        {/*    // backgroundSize: "200px 240px",*/}
-        {/*    // marginBottom: "0px",*/}
-        {/*  }}*/}
-        {/*/>*/}
-
-        {/*</div>*/}
-        {/*  </div>*/}
-        {/*</div>*/}
-        {/*</div>*/}
         <hr className="divider gradient" contentEditable />
       </section>
     </div>
