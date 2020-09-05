@@ -18,11 +18,11 @@ const Introduction = ({ myLinks, email }) => {
           <div
             className="project"
             title="Kevin Denny II with a yellow hoodie that says Without Music The World Would B Flat"
-            style={{
-              margin: "auto 0 auto 100px",
-              backgroundImage: "url(/images/kevin_final.png)",
-              backgroundSize: "24rem 31rem",
-            }}
+            // style={{
+            //   margin: "auto 0 auto 100px",
+            //   backgroundImage: "url(/images/kevin_final.png)",
+            //   //backgroundSize: "24rem 31rem",
+            // }}
           />
           <div
             style={{

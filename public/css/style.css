@@ -946,7 +946,9 @@ body.offcanvas {
       color: #2c98f0; }
 
 .project {
-  background-size: cover;
+  background-size: 24rem 31rem;
+  margin: auto 0 auto 100px;
+  background-image: url(../images/kevin_final.png);
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
@@ -1021,8 +1023,15 @@ body.offcanvas {
       transform: translate3d(0, 15px, 0); }
       .project .desc span a {
         color: #000; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 680px) {
+      .project {
+        margin: 0;
+        width: 100%;
+        opacity: 1;
+      }
       .project .desc {
+        margin: 0;
+        width: 100%;
         opacity: 1;
         background: rgba(0, 0, 0, 0.4); }
         .project .desc h3 {
