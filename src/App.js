@@ -6,7 +6,7 @@ import About from "./components/about";
 import Timeline from "./components/timeline";
 
 const App = () => {
-  const [name, setName] = useState("");
+  //const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [summary, setSummary] = useState("");
   const [myLinks, setMyLinks] = useState([]);
@@ -15,7 +15,7 @@ const App = () => {
     fetch("https://gitconnected.com/v1/portfolio/kevindennyii")
       .then((response) => response.json())
       .then((data) => {
-        setName(data.basics.name);
+        //setName(data.basics.name);
         setEmail(data.basics.email);
         setSummary(data.basics.summary);
         setMyLinks(data.basics.profiles);
