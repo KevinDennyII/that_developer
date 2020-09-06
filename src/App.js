@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 // import Sidebar from "./components/sidebar";
+import Projects from "./components/projects";
 import Introduction from "./components/introduction";
 import About from "./components/about";
 import Timeline from "./components/timeline";
@@ -29,13 +30,10 @@ const App = () => {
         id="container-wrap"
         style={{ marginLeft: "5rem", marginRight: "5rem" }}
       >
-        {/*<Sidebar name={name} email={email} myLinks={myLinks} />*/}
-        {/*<div id="colorlib-main">*/}
         <Introduction myLinks={myLinks} email={email} />
         <About summary={summary} />
         <Timeline />
-
-        {/*</div>*/}
+        {/*<Projects />*/}
       </div>
       <Footer />
     </div>

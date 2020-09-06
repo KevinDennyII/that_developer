@@ -45,7 +45,8 @@ function Timeline() {
                           We assist smaller business, mostly concentrating on
                           HIPPA, with Cyber Security, Software & Hardware
                           Installation and Updates, and Network Configuration.
-                          We also build websites using the technologies such
+                          We also build websites using Content Management
+                          Systems like WordPress and technologies such
                           JavaScript, CSS3 & HTML5.{" "}
                         </p>
                         <p>
