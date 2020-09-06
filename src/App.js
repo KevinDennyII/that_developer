@@ -4,6 +4,7 @@ import "./App.css";
 import Introduction from "./components/introduction";
 import About from "./components/about";
 import Timeline from "./components/timeline";
+import Footer from "./components/footer";
 
 const App = () => {
   //const [name, setName] = useState("");
@@ -33,8 +34,10 @@ const App = () => {
         <Introduction myLinks={myLinks} email={email} />
         <About summary={summary} />
         <Timeline />
+
         {/*</div>*/}
       </div>
+      <Footer />
     </div>
   );
 };
