@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 // import Sidebar from "./components/sidebar";
-import Projects from "./components/projects";
+// import Projects from "./components/projects";
 import Introduction from "./components/introduction";
 import About from "./components/about";
 import Timeline from "./components/timeline";
