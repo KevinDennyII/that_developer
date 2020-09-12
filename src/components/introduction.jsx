@@ -27,7 +27,7 @@ const Introduction = ({ myLinks, email }) => {
           <div
             style={{
               textAlign: "center",
-              margin: "auto 20px auto 0",
+              margin: "auto 0px auto 0",
               fontFamily: "Titillium Web, sans-serif",
             }}
           >
