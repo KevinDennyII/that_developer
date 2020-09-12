@@ -37,7 +37,7 @@ const Introduction = ({ myLinks, email }) => {
           >
             {myLinks.map((link) => (
               <div key={link.network.toLowerCase()}>
-                <a href={link.url}>
+                <a href={link.url} target="_blank" rel="noopener noreferrer">
                   <i
                     className={`icon-social-${link.network.toLowerCase()}`}
                     style={{ fontSize: "25px" }}
@@ -46,7 +46,11 @@ const Introduction = ({ myLinks, email }) => {
               </div>
             ))}
             <div key="Instagram">
-              <a href="https://instagram.com/djlookup">
+              <a
+                href="https://instagram.com/djlookup"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className={`icon-instagram`} style={{ fontSize: "15px" }} />
               </a>
             </div>
