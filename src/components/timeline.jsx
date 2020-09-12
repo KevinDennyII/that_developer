@@ -11,7 +11,7 @@ const Timeline = () => {
               className="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
               data-animate-effect="fadeInLeft"
             >
-              <span className="heading-meta">highlights</span>
+              <span className="heading-meta">experience</span>
               <h2 className="colorlib-heading animate-box">Timeline</h2>
             </div>
           </div>
