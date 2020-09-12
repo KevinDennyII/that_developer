@@ -50,8 +50,15 @@ function Timeline() {
                           JavaScript, CSS3 & HTML5.{" "}
                         </p>
                         <p>
-                          Network Upgrade for Ideal Nursing Services, Inc.: For
-                          this project, I hired two other professionals to
+                          Network Upgrade for{" "}
+                          <a
+                            href="http://www.idealnursing.org/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Ideal Nursing Services, Inc.
+                          </a>
+                          : For this project, I hired two other professionals to
                           assist with taking Ideal Nursing from a wired network
                           to a wireless network. Measurements of the building
                           were taken to create proper network diagrams for
