@@ -45,6 +45,11 @@ const Introduction = ({ myLinks, email }) => {
                 </a>
               </div>
             ))}
+            <div key="Instagram">
+              <a href="https://instagram.com/djlookup">
+                <i className={`icon-instagram`} style={{ fontSize: "15px" }} />
+              </a>
+            </div>
           </div>
           <div>
             <span className="email">

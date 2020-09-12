@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink,
+} from "react-router-dom";
 import "./App.css";
 import Introduction from "./components/introduction";
+import Home from "./components/home";
 import About from "./components/about";
 import WhatIDo from "./components/whatido";
 import Timeline from "./components/timeline";
@@ -24,7 +31,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
+    <Router forceRefresh={true}>
       <div id="colorlib-page" style={{ backgroundColor: "#F4F5F4" }}>
         <div
           id="container-wrap"
@@ -43,9 +50,36 @@ const App = () => {
             >
               <Introduction myLinks={myLinks} email={email} />
               <nav style={{ textAlign: "center" }}>
-                <Link to="/">Home</Link>|<Link to="/about">About</Link>|
-                <Link to="/expertise">What I Do</Link>|
-                <Link to="/experience">Experience</Link>
+                <NavLink className="menu-link" to="/">
+                  Home
+                </NavLink>
+                <NavLink
+                  className="menu-link"
+                  to="/about"
+                  activeStyle={{
+                    fontWeight: "bold",
+                  }}
+                >
+                  About
+                </NavLink>
+                <NavLink
+                  className="menu-link"
+                  to="/expertise"
+                  activeStyle={{
+                    fontWeight: "bold",
+                  }}
+                >
+                  What I Do
+                </NavLink>
+                <NavLink
+                  className="menu-link"
+                  to="/experience"
+                  activeStyle={{
+                    fontWeight: "bold",
+                  }}
+                >
+                  Experience
+                </NavLink>
               </nav>
             </section>
             <hr className="divider gradient" contentEditable />
@@ -58,8 +92,9 @@ const App = () => {
               path="/about"
               render={(props) => <About {...props} summary={summary} />}
             />
-            <Route path="/expertise" render={() => <WhatIDo />} />
+            <Route path="/expertise" component={WhatIDo} />
             <Route path="/experience" component={Timeline} />
+            <Route exact path="/" component={Home} />
           </Switch>
         </div>
         <Footer />
