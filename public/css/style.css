@@ -1024,6 +1024,9 @@ body.offcanvas {
       .project .desc span a {
         color: #000; }
     @media screen and (max-width: 680px) {
+      #navbar {
+        font-size: 1.25rem;
+      }
       .project {
         margin: 0;
         width: 100%;

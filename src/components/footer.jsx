@@ -22,7 +22,7 @@ const Footer = () => {
             </a>{" "}
             |{" "}
             <a href="#timeline" data-nav-section="timeline">
-              Timeline
+              Experience
             </a>
           </div>
         </nav>
