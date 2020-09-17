@@ -40,8 +40,9 @@ const App = () => {
               path="/about"
               render={(props) => <About {...props} summary={summary} />}
             />
-            <Route exact path="/expertise" component={WhatIDo} />
+            <Route path="/expertise" component={WhatIDo} />
             <Route path="/experience" component={Timeline} />
+            <Route path="/home" component={Home} />
             <Route exact path="/" component={Home} />
           </Switch>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Introduction = ({ myLinks, email }) => {
   return (
@@ -73,18 +73,34 @@ const Introduction = ({ myLinks, email }) => {
           </div>
         </div>
         <nav style={{ textAlign: "center" }}>
-          <Link className="menu-link" to="/">
+          <NavLink
+            activeStyle={{ fontWeight: "700" }}
+            className="menu-link"
+            to="/home"
+          >
             Home
-          </Link>
-          <Link className="menu-link" to="/about">
+          </NavLink>
+          <NavLink
+            activeStyle={{ fontWeight: "700" }}
+            className="menu-link"
+            to="/about"
+          >
             About
-          </Link>
-          <Link className="menu-link" to="/expertise">
+          </NavLink>
+          <NavLink
+            activeStyle={{ fontWeight: "700" }}
+            className="menu-link"
+            to="/expertise"
+          >
             What I Do
-          </Link>
-          <Link className="menu-link" to="/experience">
+          </NavLink>
+          <NavLink
+            activeStyle={{ fontWeight: "700" }}
+            className="menu-link"
+            to="/experience"
+          >
             Experience
-          </Link>
+          </NavLink>
         </nav>
       </section>
       <hr className="divider gradient" contentEditable />
