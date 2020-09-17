@@ -1,31 +1,23 @@
 import React from "react";
-// import emailjs from "emailjs-com";
+import bcc from "../images/bcclog.png";
 
 const Footer = () => {
   return (
     <div>
+      <div className="bccMember">
+        Proud member of{" "}
+        <a href="https://blackcodecollective.com/">Black Code Collective</a>{" "}
+        <img
+          src={bcc}
+          width="5%"
+          height="5%"
+          style={{ borderRadius: "6px" }}
+          alt="Black Code Collective log with a black fist in between curly braces"
+        />
+      </div>
       <div style={{ textAlign: "center" }}>
         {" "}
         Kevin Denny II &#169; 2020 All Rights Reserved. <br />
-        <nav role="navigation" className="navbar">
-          <div id="navbar">
-            <a href="#home" data-nav-section="home">
-              Introduction
-            </a>{" "}
-            |{" "}
-            <a href="#about" data-nav-section="about">
-              About
-            </a>{" "}
-            |{" "}
-            <a href="#whatido" data-nav-section="whatido">
-              What I Do?
-            </a>{" "}
-            |{" "}
-            <a href="#timeline" data-nav-section="timeline">
-              Experience
-            </a>
-          </div>
-        </nav>
       </div>
     </div>
   );

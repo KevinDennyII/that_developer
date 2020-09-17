@@ -1,8 +1,9 @@
 import React from "react";
-// import avi from "../images/kevin_final.png";
+import { Link } from "react-router-dom";
 
 const Introduction = ({ myLinks, email }) => {
   return (
+    // <>
     <div>
       <section
         className="colorlib-experience"
@@ -16,13 +17,8 @@ const Introduction = ({ myLinks, email }) => {
       >
         <div className="introduction">
           <div
-            className="project"
+            className="avi-header"
             title="Kevin Denny II with a yellow hoodie that says Without Music The World Would B Flat"
-            // style={{
-            //   margin: "auto 0 auto 100px",
-            //   backgroundImage: "url(/images/kevin_final.png)",
-            //   //backgroundSize: "24rem 31rem",
-            // }}
           />
           <div
             style={{
@@ -76,31 +72,22 @@ const Introduction = ({ myLinks, email }) => {
             </div>
           </div>
         </div>
-        <nav
-          role="navigation"
-          // className="navbar"
-          style={{ textAlign: "center" }}
-        >
-          <div id="navbar">
-            <a href="#home" data-nav-section="home">
-              Introduction
-            </a>{" "}
-            |{" "}
-            <a href="#about" data-nav-section="about">
-              About
-            </a>{" "}
-            |{" "}
-            <a href="#whatido" data-nav-section="whatido">
-              What I Do?
-            </a>{" "}
-            |{" "}
-            <a href="#timeline" data-nav-section="timeline">
-              Experience
-            </a>
-          </div>
+        <nav style={{ textAlign: "center" }}>
+          <Link className="menu-link" to="/">
+            Home
+          </Link>
+          <Link className="menu-link" to="/about">
+            About
+          </Link>
+          <Link className="menu-link" to="/expertise">
+            What I Do
+          </Link>
+          <Link className="menu-link" to="/experience">
+            Experience
+          </Link>
         </nav>
-        <hr className="divider gradient" contentEditable />
       </section>
+      <hr className="divider gradient" contentEditable />
     </div>
   );
 };

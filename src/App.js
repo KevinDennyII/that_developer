@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-// import Sidebar from "./components/sidebar";
-// import Projects from "./components/projects";
 import Introduction from "./components/introduction";
+import Home from "./components/home";
 import About from "./components/about";
+import WhatIDo from "./components/whatido";
 import Timeline from "./components/timeline";
 import Footer from "./components/footer";
 
 const App = () => {
-  //const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [summary, setSummary] = useState("");
   const [myLinks, setMyLinks] = useState([]);
@@ -25,18 +25,29 @@ const App = () => {
   }, []);
 
   return (
-    <div id="colorlib-page" style={{ backgroundColor: "#F4F5F4" }}>
-      <div
-        id="container-wrap"
-        style={{ marginLeft: "5rem", marginRight: "5rem" }}
-      >
-        <Introduction myLinks={myLinks} email={email} />
-        <About summary={summary} />
-        <Timeline />
-        {/*<Projects />*/}
+    <Router>
+      <div id="colorlib-page" style={{ backgroundColor: "#F4F5F4" }}>
+        <div
+          id="container-wrap"
+          style={{ marginLeft: "5rem", marginRight: "5rem" }}
+        >
+          <Introduction myLinks={myLinks} email={email} />
+          <Switch>
+            {/* use the render attribute to pass props to the route with the */}
+            {/* arrow function because this will update the component as opposed to */}
+            {/* component={() => <Dashboard isAuthed={true} /> */}
+            <Route
+              path="/about"
+              render={(props) => <About {...props} summary={summary} />}
+            />
+            <Route exact path="/expertise" component={WhatIDo} />
+            <Route path="/experience" component={Timeline} />
+            <Route exact path="/" component={Home} />
+          </Switch>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </Router>
   );
 };
 

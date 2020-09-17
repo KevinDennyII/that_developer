@@ -1,7 +1,7 @@
 import React from "react";
 
 // TODO
-function Timeline() {
+const Timeline = () => {
   return (
     <div>
       <section className="colorlib-experience" data-section="timeline">
@@ -57,7 +57,7 @@ function Timeline() {
                             rel="noopener noreferrer"
                           >
                             Ideal Nursing Services, Inc.
-                          </a>
+                          </a>{" "}
                           : For this project, I hired two other professionals to
                           assist with taking Ideal Nursing from a wired network
                           to a wireless network. Measurements of the building
@@ -336,6 +336,6 @@ function Timeline() {
       </section>
     </div>
   );
-}
+};
 
 export default Timeline;

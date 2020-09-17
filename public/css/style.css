@@ -29,6 +29,12 @@ body {
   font-family: Bangers, Arial, sans-serif;
   font-size: 20px;
 }
+
+.bccMember {
+  background-color: rgba(200,214,229,.2);
+  text-align: center;
+  font-size: 1.2rem;}
+
 a {
   color: #2c98f0;
   -webkit-transition: 0.5s;
@@ -41,6 +47,35 @@ a {
 
 p {
   margin-bottom: 1.5em; }
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  /*background-color: #eceff1;*/
+}
+
+.navbar__link {
+  margin: 1em;
+  font-size: 0.85em;
+  /*font-family: 'Roboto', sans-serif;*/
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: .3em;
+  text-indent: .3em;
+  color: #181818;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar__link:hover {
+  transform: translateY(-2px);
+}
+
+.navbar__link--active {
+  border-bottom: 3px solid #29b6f6;
+  transition: border-bottom .5s ease-in-out;
+}
 
 h1, h2, h3, h4, h5, h6 {
   color: #000;
@@ -945,7 +980,7 @@ body.offcanvas {
     .work-menu span a.active {
       color: #2c98f0; }
 
-.project {
+.avi-header {
   background-size: 24rem 31rem;
   margin: auto 0 auto 100px;
   background-image: url(../images/kevin_final.png);
@@ -1458,5 +1493,3 @@ body.offcanvas {
 .col-padding {
   padding: 10px !important; }
 
-.js .animate-box {
-  opacity: 0; }
