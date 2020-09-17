@@ -4,15 +4,15 @@ const Home = () => {
   return (
     <div
       style={{
-        margin: "5rem 20rem",
+        marginBottom: "5rem",
         textAlign: "center",
         fontFamily: "Chewy, cursive",
         fontSize: "2rem",
       }}
     >
-      When you change your perspective,
+      "When you change your perspective,
       <br />
-      you tend to hear things differently.
+      you tend to hear things differently."
       <br />- DJ Lookup
     </div>
   );

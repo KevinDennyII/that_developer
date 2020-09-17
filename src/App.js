@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  NavLink,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Introduction from "./components/introduction";
 import Home from "./components/home";
@@ -31,59 +25,13 @@ const App = () => {
   }, []);
 
   return (
-    <Router forceRefresh={true}>
+    <Router>
       <div id="colorlib-page" style={{ backgroundColor: "#F4F5F4" }}>
         <div
           id="container-wrap"
           style={{ marginLeft: "5rem", marginRight: "5rem" }}
         >
-          <div>
-            <section
-              className="colorlib-experience"
-              style={{
-                marginTop: "0px",
-                marginBottom: "0px",
-                paddingBottom: "0px",
-                paddingTop: "0px",
-              }}
-              data-section="home"
-            >
-              <Introduction myLinks={myLinks} email={email} />
-              <nav style={{ textAlign: "center" }}>
-                <NavLink className="menu-link" to="/">
-                  Home
-                </NavLink>
-                <NavLink
-                  className="menu-link"
-                  to="/about"
-                  activeStyle={{
-                    fontWeight: "bold",
-                  }}
-                >
-                  About
-                </NavLink>
-                <NavLink
-                  className="menu-link"
-                  to="/expertise"
-                  activeStyle={{
-                    fontWeight: "bold",
-                  }}
-                >
-                  What I Do
-                </NavLink>
-                <NavLink
-                  className="menu-link"
-                  to="/experience"
-                  activeStyle={{
-                    fontWeight: "bold",
-                  }}
-                >
-                  Experience
-                </NavLink>
-              </nav>
-            </section>
-            <hr className="divider gradient" contentEditable />
-          </div>
+          <Introduction myLinks={myLinks} email={email} />
           <Switch>
             {/* use the render attribute to pass props to the route with the */}
             {/* arrow function because this will update the component as opposed to */}
@@ -92,7 +40,7 @@ const App = () => {
               path="/about"
               render={(props) => <About {...props} summary={summary} />}
             />
-            <Route path="/expertise" component={WhatIDo} />
+            <Route exact path="/expertise" component={WhatIDo} />
             <Route path="/experience" component={Timeline} />
             <Route exact path="/" component={Home} />
           </Switch>
