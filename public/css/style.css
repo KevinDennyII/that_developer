@@ -29,6 +29,12 @@ body {
   font-family: Bangers, Arial, sans-serif;
   font-size: 20px;
 }
+
+.bccMember {
+  background-color: rgba(200,214,229,.2);
+  text-align: center;
+  font-size: 1.2rem;}
+
 a {
   color: #2c98f0;
   -webkit-transition: 0.5s;
