@@ -444,9 +444,13 @@ body.offcanvas {
 
 @media screen and (max-width: 680px) {
   .introduction {
-    display: flex;
     flex-direction: column;
-  } }
+  }
+  .avi-header {
+    width: 25rem;
+  }
+
+}
 
 .introduction {
   display: flex;
@@ -989,8 +993,6 @@ body.offcanvas {
   position: relative;
   height: 28rem;
   width: 45%;
-  /*display: block;*/
-  /*margin-bottom: 30px; */
 }
   .project .desc {
     position: absolute;

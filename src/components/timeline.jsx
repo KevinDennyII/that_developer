@@ -76,6 +76,16 @@ const Timeline = () => {
                           <ul>
                             <li>
                               <a
+                                href="https://www.notaryhand.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                The Notary Hand, LLC
+                              </a>{" "}
+                              - Selma , TX
+                            </li>
+                            <li>
+                              <a
                                 href="https://jacobdavidproperties.com/"
                                 target="_blank"
                                 rel="noopener noreferrer"
