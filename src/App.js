@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import Introduction from "./components/introduction";
 import Home from "./components/home";
@@ -25,30 +25,28 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
-      <div id="colorlib-page" style={{ backgroundColor: "#F4F5F4" }}>
-        <div
-          id="container-wrap"
-          style={{ marginLeft: "5rem", marginRight: "5rem" }}
-        >
-          <Introduction myLinks={myLinks} email={email} />
-          <Switch>
-            {/* use the render attribute to pass props to the route with the */}
-            {/* arrow function because this will update the component as opposed to */}
-            {/* component={() => <Dashboard isAuthed={true} /> */}
-            <Route
-              path="/about"
-              render={(props) => <About {...props} summary={summary} />}
-            />
-            <Route path="/expertise" component={WhatIDo} />
-            <Route path="/experience" component={Timeline} />
-            <Route path="/home" component={Home} />
-            <Route exact path="/" component={Home} />
-          </Switch>
-        </div>
-        <Footer />
+    <div id="colorlib-page" style={{ backgroundColor: "#F4F5F4" }}>
+      <div
+        id="container-wrap"
+        style={{ marginLeft: "5rem", marginRight: "5rem" }}
+      >
+        <Introduction myLinks={myLinks} email={email} />
+        <Switch>
+          {/* use the render attribute to pass props to the route with the */}
+          {/* arrow function because this will update the component as opposed to */}
+          {/* component={() => <Dashboard isAuthed={true} /> */}
+          <Route
+            path="/about"
+            render={(props) => <About {...props} summary={summary} />}
+          />
+          <Route path="/expertise" component={WhatIDo} />
+          <Route path="/experience" component={Timeline} />
+          <Route path="/home" component={Home} />
+          <Route exact path="/" component={Home} />
+        </Switch>
       </div>
-    </Router>
+      <Footer />
+    </div>
   );
 };
 
