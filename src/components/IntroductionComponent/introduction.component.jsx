@@ -1,9 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Introduction = ({ myLinks, email }) => {
+import { aviHeader, introduction } from "./introduction.module.scss";
+
+const IntroductionComponent = ({ myLinks, email }) => {
   return (
-    // <>
     <div>
       <section
         className="colorlib-experience"
@@ -15,9 +16,9 @@ const Introduction = ({ myLinks, email }) => {
         }}
         data-section="home"
       >
-        <div className="introduction">
+        <div className={introduction}>
           <div
-            className="avi-header"
+            className={aviHeader}
             title="Kevin Denny II with a yellow hoodie that says Without Music The World Would B Flat"
           />
           <div
@@ -109,4 +110,4 @@ const Introduction = ({ myLinks, email }) => {
   );
 };
 
-export default Introduction;
+export default IntroductionComponent;

@@ -1,7 +1,7 @@
 import React from "react";
-import bcc from "../images/bcclog.png";
+import bcc from "../../images/bcclog.png";
 
-const Footer = () => {
+const FooterComponent = () => {
   return (
     <div>
       <div className="bccMember">
@@ -23,4 +23,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterComponent;

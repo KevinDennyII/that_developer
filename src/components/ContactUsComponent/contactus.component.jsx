@@ -1,9 +1,9 @@
 import React from "react";
 import emailjs from "emailjs-com";
 
-import "./ContactUs.css";
+import "./ContactusComponent.css";
 
-const ContactUs = () => {
+const ContactusComponent = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -33,4 +33,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default ContactusComponent;

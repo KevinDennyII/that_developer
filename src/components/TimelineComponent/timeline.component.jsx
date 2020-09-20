@@ -1,7 +1,7 @@
 import React from "react";
 
 // TODO
-const Timeline = () => {
+const TimelineComponent = () => {
   return (
     <div>
       <section className="colorlib-experience" data-section="timeline">
@@ -348,4 +348,4 @@ const Timeline = () => {
   );
 };
 
-export default Timeline;
+export default TimelineComponent;

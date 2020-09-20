@@ -1,6 +1,6 @@
 import React from "react";
 
-const WhatIDo = () => {
+const WhatidoComponent = () => {
   return (
     <section className="colorlib-about" data-section="whatido">
       <div className="colorlib-narrow-content">
@@ -37,8 +37,8 @@ const WhatIDo = () => {
               <div className="desc">
                 <h3>Data Structures & Algorithms</h3>
                 <p>
-                  As coming from the CS background, I have good grasp over
-                  fundamental concepts of DSA
+                  As coming from the Computer Science background, I have good
+                  grasp over fundamental concepts of DSA
                 </p>
               </div>
             </div>
@@ -63,4 +63,4 @@ const WhatIDo = () => {
     </section>
   );
 };
-export default WhatIDo;
+export default WhatidoComponent;

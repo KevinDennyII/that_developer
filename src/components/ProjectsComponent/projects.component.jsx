@@ -1,6 +1,6 @@
 import React from "react";
 
-function Projects() {
+function ProjectsComponent() {
   return (
     <div>
       <section className="colorlib-work" data-section="projects">
@@ -241,4 +241,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default ProjectsComponent;
