@@ -23,8 +23,9 @@ const Introduction = ({ myLinks, email }) => {
           <div
             style={{
               textAlign: "center",
-              margin: "auto 0px auto 0",
+              margin: "auto 0 auto 0",
               fontFamily: "Titillium Web, sans-serif",
+              width: "30rem",
             }}
           >
             <h4 style={{ lineHeight: "0.1rem", letterSpacing: "0.35em" }}>

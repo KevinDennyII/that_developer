@@ -447,13 +447,17 @@ body.offcanvas {
     flex-direction: column;
   }
   .avi-header {
-    width: 25rem;
+    width: 100%;
+    margin: 0;
   }
 
 }
 
 .introduction {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0 auto;
 }
 .author-img {
   background-size: cover;
@@ -986,13 +990,14 @@ body.offcanvas {
 
 .avi-header {
   background-size: 24rem 31rem;
-  margin: auto 0 auto 100px;
+  /*margin: auto 0 auto 100px;*/
+  margin: 0;
   background-image: url(../images/kevin_final.png);
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
   height: 28rem;
-  width: 45%;
+  width: 30rem;
 }
   .project .desc {
     position: absolute;
