@@ -1,4 +1,5 @@
 import React from "react";
+import { bccLogo } from "./footer.module.scss";
 import bcc from "../../images/bcclog.png";
 
 const FooterComponent = () => {
@@ -9,9 +10,7 @@ const FooterComponent = () => {
         <a href="https://blackcodecollective.com/">Black Code Collective</a>{" "}
         <img
           src={bcc}
-          width="29px"
-          height="25px"
-          style={{ borderRadius: "6px" }}
+          className={bccLogo}
           alt="Black Code Collective log with a black fist in between curly braces"
         />
       </div>

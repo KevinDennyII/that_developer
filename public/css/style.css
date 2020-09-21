@@ -442,23 +442,6 @@ body.offcanvas {
       padding-top: 5em;
       padding-bottom: 8em; } }
 
-@media screen and (max-width: 680px) {
-  .introduction {
-    flex-direction: column;
-  }
-  .avi-header {
-    width: 100%;
-    margin: 0;
-  }
-
-}
-
-.introduction {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto 0 auto;
-}
 .author-img {
   background-size: cover;
   background-position: center center;
@@ -988,17 +971,6 @@ body.offcanvas {
     .work-menu span a.active {
       color: #2c98f0; }
 
-.avi-header {
-  background-size: 24rem 31rem;
-  /*margin: auto 0 auto 100px;*/
-  margin: 0;
-  background-image: url(../images/kevin_final.png);
-  background-position: center center;
-  background-repeat: no-repeat;
-  position: relative;
-  height: 28rem;
-  width: 30rem;
-}
   .project .desc {
     position: absolute;
     top: 0;
