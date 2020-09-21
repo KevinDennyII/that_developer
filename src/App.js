@@ -13,18 +13,22 @@ const App = () => {
   const [summary, setSummary] = useState("");
   const [myLinks, setMyLinks] = useState([]);
 
+  // I need to grab the api data once this app has been loaded
   useEffect(() => {
+    // removing "callback hell" and using async/await
     const fetchData = async () => {
+      // grabbing my response from the api call with fetch()
       let response = await fetch(
         "https://gitconnected.com/v1/portfolio/kevindennyii"
       );
-
+      //converting response to json
       let data = await response.json();
-      //setName(result.basics.name);
+      //storing the data from my components in state
       setEmail(data.basics.email);
       setSummary(data.basics.summary);
       setMyLinks(data.basics.profiles);
     };
+
     fetchData().then((error) => console.error(error));
   }, []);
 
