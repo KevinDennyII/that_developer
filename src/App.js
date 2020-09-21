@@ -14,14 +14,18 @@ const App = () => {
   const [myLinks, setMyLinks] = useState([]);
 
   useEffect(() => {
-    fetch("https://gitconnected.com/v1/portfolio/kevindennyii")
-      .then((response) => response.json())
-      .then((data) => {
-        //setName(data.basics.name);
-        setEmail(data.basics.email);
-        setSummary(data.basics.summary);
-        setMyLinks(data.basics.profiles);
-      });
+    const fetchData = async () => {
+      let response = await fetch(
+        "https://gitconnected.com/v1/portfolio/kevindennyii"
+      );
+
+      let data = await response.json();
+      //setName(result.basics.name);
+      setEmail(data.basics.email);
+      setSummary(data.basics.summary);
+      setMyLinks(data.basics.profiles);
+    };
+    fetchData().then((error) => console.error(error));
   }, []);
 
   return (
