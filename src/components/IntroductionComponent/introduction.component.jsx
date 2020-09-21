@@ -1,9 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Introduction = ({ myLinks, email }) => {
+import {
+  aviHeader,
+  introduction,
+  links,
+  introInfo,
+} from "./introduction.module.scss";
+
+const IntroductionComponent = ({ myLinks, email }) => {
   return (
-    // <>
     <div>
       <section
         className="colorlib-experience"
@@ -15,33 +21,17 @@ const Introduction = ({ myLinks, email }) => {
         }}
         data-section="home"
       >
-        <div className="introduction">
+        <div className={introduction}>
           <div
-            className="avi-header"
+            className={aviHeader}
             title="Kevin Denny II with a yellow hoodie that says Without Music The World Would B Flat"
           />
-          <div
-            style={{
-              textAlign: "center",
-              margin: "auto 0 auto 0",
-              fontFamily: "Titillium Web, sans-serif",
-              width: "30rem",
-            }}
-          >
-            <h4 style={{ lineHeight: "0.1rem", letterSpacing: "0.35em" }}>
-              Kevin Denny II
-            </h4>
-            <h3 style={{ lineHeight: "0.1rem" }}>Web Developer</h3>
-            <h3 style={{ lineHeight: "0.1rem" }}>Music Curator</h3>
-            <h3 style={{ lineHeight: "0.1rem" }}>Life Long Learner</h3>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignContent: "space-between",
-                justifyContent: "center",
-              }}
-            >
+          <div className={introInfo}>
+            <h4>Kevin Denny II</h4>
+            <h3>Web Developer</h3>
+            <h3>Music Curator</h3>
+            <h3>Life Long Learner</h3>
+            <div className={links}>
               {myLinks.map((link) => (
                 <div key={link.network.toLowerCase()}>
                   <a href={link.url} target="_blank" rel="noopener noreferrer">
@@ -109,4 +99,4 @@ const Introduction = ({ myLinks, email }) => {
   );
 };
 
-export default Introduction;
+export default IntroductionComponent;

@@ -1,0 +1,50 @@
+.introduction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0 auto;
+}
+
+.aviHeader {
+  background-size: 24rem 31rem;
+  margin: 0;
+  background-image: url(../../images/kevin_final.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 28rem;
+  width: 30rem;
+}
+
+.introInfo {
+  text-align: center;
+  margin: auto 0 auto 0;
+  font-family: Titillium Web, sans-serif;
+  width: 30rem;
+}
+
+.introInfo h3 {
+  line-height: 0.1rem;
+}
+
+.introInfo h4 {
+  line-height: 0.1rem;
+  letter-spacing: 0.35em;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: center;
+}
+
+@media screen and (max-width: 680px) {
+  .introduction {
+    flex-direction: column;
+  }
+  .aviHeader {
+    width: 100%;
+    margin: 0;
+  }
+}

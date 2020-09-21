@@ -1,7 +1,8 @@
 import React from "react";
-import bcc from "../images/bcclog.png";
+import { bccLogo } from "./footer.module.scss";
+import bcc from "../../images/bcclog.png";
 
-const Footer = () => {
+const FooterComponent = () => {
   return (
     <div>
       <div className="bccMember">
@@ -9,9 +10,7 @@ const Footer = () => {
         <a href="https://blackcodecollective.com/">Black Code Collective</a>{" "}
         <img
           src={bcc}
-          width="5%"
-          height="5%"
-          style={{ borderRadius: "6px" }}
+          className={bccLogo}
           alt="Black Code Collective log with a black fist in between curly braces"
         />
       </div>
@@ -23,4 +22,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterComponent;

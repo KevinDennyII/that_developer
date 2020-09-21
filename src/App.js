@@ -1,27 +1,35 @@
 import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
-import Introduction from "./components/introduction";
-import Home from "./components/home";
-import About from "./components/about";
-import WhatIDo from "./components/whatido";
-import Timeline from "./components/timeline";
-import Footer from "./components/footer";
+import IntroductionComponent from "./components/IntroductionComponent/introduction.component";
+import HomeComponent from "./components/HomeComponent/home.component";
+import AboutComponent from "./components/AboutComponent/about.component";
+import WhatidoComponent from "./components/WhatIDoComponent/whatido..component";
+import TimelineComponent from "./components/TimelineComponent/timeline.component";
+import FooterComponent from "./components/FooterComponent/footer.component";
 
 const App = () => {
   const [email, setEmail] = useState("");
   const [summary, setSummary] = useState("");
   const [myLinks, setMyLinks] = useState([]);
 
+  // I need to grab the api data once this app has been loaded
   useEffect(() => {
-    fetch("https://gitconnected.com/v1/portfolio/kevindennyii")
-      .then((response) => response.json())
-      .then((data) => {
-        //setName(data.basics.name);
-        setEmail(data.basics.email);
-        setSummary(data.basics.summary);
-        setMyLinks(data.basics.profiles);
-      });
+    // removing "callback hell" and using async/await
+    const fetchData = async () => {
+      // grabbing my response from the api call with fetch()
+      let response = await fetch(
+        "https://gitconnected.com/v1/portfolio/kevindennyii"
+      );
+      //converting response to json
+      let data = await response.json();
+      //storing the data from my components in state
+      setEmail(data.basics.email);
+      setSummary(data.basics.summary);
+      setMyLinks(data.basics.profiles);
+    };
+
+    fetchData().then((error) => console.error(error));
   }, []);
 
   return (
@@ -30,22 +38,24 @@ const App = () => {
         id="container-wrap"
         style={{ marginLeft: "5rem", marginRight: "5rem" }}
       >
-        <Introduction myLinks={myLinks} email={email} />
+        <IntroductionComponent myLinks={myLinks} email={email} />
+        {console.log(myLinks)}
+        {console.log(email)}
         <Switch>
           {/* use the render attribute to pass props to the route with the */}
           {/* arrow function because this will update the component as opposed to */}
           {/* component={() => <Dashboard isAuthed={true} /> */}
+          <Route exact path="/" component={HomeComponent} />
           <Route
             path="/about"
-            render={(props) => <About {...props} summary={summary} />}
+            render={(props) => <AboutComponent {...props} summary={summary} />}
           />
-          <Route path="/expertise" component={WhatIDo} />
-          <Route path="/experience" component={Timeline} />
-          <Route path="/home" component={Home} />
-          <Route exact path="/" component={Home} />
+          <Route path="/expertise" component={WhatidoComponent} />
+          <Route path="/experience" component={TimelineComponent} />
+          <Route path="/home" component={HomeComponent} />
         </Switch>
       </div>
-      <Footer />
+      <FooterComponent />
     </div>
   );
 };

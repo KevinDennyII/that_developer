@@ -1,6 +1,6 @@
 import React from "react";
 
-const Sidebar = ({ name, email, myLinks }) => {
+const SidebarComponent = ({ name, email, myLinks }) => {
   return (
     <div>
       <div>
@@ -76,4 +76,4 @@ const Sidebar = ({ name, email, myLinks }) => {
     </div>
   );
 };
-export default Sidebar;
+export default SidebarComponent;

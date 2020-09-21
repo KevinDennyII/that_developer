@@ -1,7 +1,7 @@
 import React from "react";
 
-function Blog() {
+function BlogComponent() {
   return <div>Blog are outdated! Start a podcast</div>;
 }
 
-export default Blog;
+export default BlogComponent;
