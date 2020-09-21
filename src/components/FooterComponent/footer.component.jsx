@@ -9,8 +9,8 @@ const FooterComponent = () => {
         <a href="https://blackcodecollective.com/">Black Code Collective</a>{" "}
         <img
           src={bcc}
-          width="5%"
-          height="5%"
+          width="29px"
+          height="25px"
           style={{ borderRadius: "6px" }}
           alt="Black Code Collective log with a black fist in between curly braces"
         />
