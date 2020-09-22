@@ -6,7 +6,7 @@ const HomeComponent = () => {
       style={{
         marginBottom: "5rem",
         textAlign: "center",
-        fontFamily: "Chewy, cursive",
+        fontFamily: "Comic Sans MS",
         fontSize: "2rem",
       }}
     >
