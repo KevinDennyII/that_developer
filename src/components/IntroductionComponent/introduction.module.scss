@@ -39,6 +39,11 @@
   justify-content: center;
 }
 
+.menuItems {
+  text-align: center;
+}
+
+
 @media screen and (max-width: 680px) {
   .introduction {
     flex-direction: column;
@@ -46,5 +51,8 @@
   .aviHeader {
     width: 100%;
     margin: 0;
+  }
+  .menuItems {
+    margin-top: .7rem;
   }
 }

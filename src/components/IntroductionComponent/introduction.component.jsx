@@ -6,6 +6,7 @@ import {
   introduction,
   links,
   introInfo,
+  menuItems,
 } from "./introduction.module.scss";
 
 const IntroductionComponent = ({ myLinks, email }) => {
@@ -63,7 +64,7 @@ const IntroductionComponent = ({ myLinks, email }) => {
             </div>
           </div>
         </div>
-        <nav style={{ textAlign: "center" }}>
+        <nav className={menuItems}>
           <NavLink
             activeStyle={{ fontWeight: "700" }}
             className="menu-link"
