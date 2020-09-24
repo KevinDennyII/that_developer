@@ -1,15 +1,9 @@
 import React from "react";
+import { home } from "./home.module.scss";
 
 const HomeComponent = () => {
   return (
-    <div
-      style={{
-        marginBottom: "5rem",
-        textAlign: "center",
-        fontFamily: "Comic Sans MS",
-        fontSize: "2rem",
-      }}
-    >
+    <div className={home}>
       "When you change your perspective,
       <br />
       you tend to hear things differently."

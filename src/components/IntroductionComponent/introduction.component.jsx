@@ -81,6 +81,7 @@ const IntroductionComponent = ({ myLinks, email }) => {
           <NavLink
             activeStyle={{ fontWeight: "700" }}
             className="menu-link"
+            style={{ wordBreak: "normal" }}
             to="/expertise"
           >
             What I Do
