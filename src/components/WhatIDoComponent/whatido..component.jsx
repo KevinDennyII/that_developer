@@ -51,7 +51,7 @@ const WhatidoComponent = () => {
               <div className="desc">
                 <h3>Dev Ops</h3>
                 <p>
-                  I am Amazon Web Services (AWS) certified as a Developer
+                  I am a certified Amazon Web Services (AWS) Developer
                   Associate. I have 3 years of experiences in configuring and
                   managing data solution with AWS
                 </p>
