@@ -7,7 +7,7 @@ const HomeComponent = () => {
       "When you change your perspective,
       <br />
       you tend to hear things differently."
-      <br />- DJ Lookup
+      <br />- DJ LookUp
     </div>
   );
 };
