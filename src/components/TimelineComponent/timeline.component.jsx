@@ -76,7 +76,7 @@ const TimelineComponent = () => {
                           <ul>
                             <li>
                               <a
-                                href="https://www.notaryhand.com/"
+                                href="https://notaryhand.com/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
