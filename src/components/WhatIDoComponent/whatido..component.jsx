@@ -1,4 +1,5 @@
 import React from "react";
+import awsCert from "../../documents/AWS_Certified_Developer-Associate_Certificate.pdf";
 
 const WhatidoComponent = () => {
   return (
@@ -52,10 +53,7 @@ const WhatidoComponent = () => {
                 <h3>Dev Ops</h3>
                 <p>
                   I have been previously certified as an{" "}
-                  <a
-                    href="../../documents/AWS_Certified_Developer-Associate_Certificate.pdf"
-                    target="_blank"
-                  >
+                  <a href={awsCert} target="_blank" rel="noopener noreferrer">
                     Amazon Web Services (AWS) Developer Associate
                   </a>
                   . I have 4 years of experiences in configuring and managing
