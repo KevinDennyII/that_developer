@@ -1,5 +1,6 @@
 import React from "react";
 import awsCert from "../../documents/AWS_Certified_Developer-Associate_Certificate.pdf";
+import mcpCert from "../../documents/MCP_ProgrammingInHTML_JavaScript_CSS.pdf";
 
 const WhatidoComponent = () => {
   return (
@@ -25,7 +26,11 @@ const WhatidoComponent = () => {
                 <p>
                   I have experience building websites using Content Management
                   Systems like Wordpress. I have professional experience coding
-                  in JavaScript, HTML, CSS, and object-oriented languages.
+                  and{" "}
+                  <a href={mcpCert} target="_blank" rel="noopener noreferrer">
+                    Microsoft Certified in JavaScript, HTML, CSS
+                  </a>
+                  , and object-oriented languages.
                 </p>
               </div>
             </div>
