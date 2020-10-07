@@ -26,11 +26,10 @@ const WhatidoComponent = () => {
                 <p>
                   I have experience building websites using Content Management
                   Systems like Wordpress. I have professional experience coding
-                  and{" "}
+                  with object-oriented languages and I am{" "}
                   <a href={mcpCert} target="_blank" rel="noopener noreferrer">
                     Microsoft Certified in JavaScript, HTML, CSS
                   </a>
-                  , and object-oriented languages.
                 </p>
               </div>
             </div>
@@ -44,7 +43,8 @@ const WhatidoComponent = () => {
                 <h3>Data Structures & Algorithms</h3>
                 <p>
                   As coming from the Computer Science background, I have good
-                  grasp over fundamental concepts of DSA
+                  grasp over fundamental concepts of Data Structures &
+                  Algorithms
                 </p>
               </div>
             </div>
