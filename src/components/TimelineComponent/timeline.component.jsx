@@ -1,4 +1,5 @@
 import React from "react";
+import "./timeline.module.scss";
 
 // TODO
 const TimelineComponent = () => {
@@ -49,30 +50,97 @@ const TimelineComponent = () => {
                           Systems like WordPress and technologies such
                           JavaScript, CSS3 & HTML5.{" "}
                         </p>
-                        <p>
-                          Network Upgrade for{" "}
-                          <a
-                            href="http://www.idealnursing.org/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            Ideal Nursing Services, Inc.
-                          </a>{" "}
-                          : For this project, I hired two other professionals to
-                          assist with taking Ideal Nursing from a wired network
-                          to a wireless network. Measurements of the building
-                          were taken to create proper network diagrams for
-                          approval by Ideal Nursing. Wires were removed and
-                          Wireless Access Points (WAPs) were then installed and
-                          configured. All machines were upgraded and/or
-                          configured to connect to the WAPs. In addition, a new
-                          rack with POE ports was installed in their server room
-                          for their server, multi-port hub and router. This
-                          created a more efficient working space and alleviated
-                          unnecessary clutter.
-                        </p>
                         <div>
-                          Websites:
+                          <strong>Clients</strong>
+                          <ul>
+                            <li>
+                              <i>
+                                <a
+                                  href="http://www.caveonix.com/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  Caveonix, Inc
+                                </a>
+                                : Web Developer & Consultant,{" "}
+                                <strong>October 2020 - Present</strong>
+                              </i>
+                            </li>
+                            <ul>
+                              <li>
+                                Implementing & maintaining APIs with ExpressJS
+                                on a development following various Agile
+                                methodologies
+                              </li>
+                              <li>Assisting with technical documentation</li>
+                            </ul>
+                          </ul>
+                          <ul>
+                            <li>
+                              <i>
+                                <a
+                                  href="http://www.jacobdavidproperties.com/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  Jacob David Properties, LLC
+                                </a>
+                                : The IT Guy,{" "}
+                                <strong>August 2019 - Present</strong>
+                              </i>
+                            </li>
+                            <ul>
+                              <li>
+                                Acting as an Information Technology and
+                                Computing Consultant
+                              </li>
+                              <li>
+                                Performs regular maintenance on business website
+                              </li>
+                            </ul>
+                            <li>
+                              <i>
+                                <a
+                                  href="http://www.idealnursing.org/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  Ideal Nursing Services, Inc
+                                </a>
+                                : Computing & IT Consultant,{" "}
+                                <strong>June 2015 - August 2017</strong>
+                              </i>
+                            </li>
+                            <ul>
+                              <li>
+                                Performed various hardware task including
+                                removing and installing of operating systems,
+                                basic cyber security, networking, and
+                                troubleshooting of various issues
+                              </li>
+                              <li>
+                                <p>
+                                  Performed Network Upgrade: For this project, I
+                                  hired two other professionals to assist with
+                                  taking Ideal Nursing from a wired network to a
+                                  wireless network. Measurements of the building
+                                  were taken to create proper network diagrams
+                                  for approval by Ideal Nursing. Wires were
+                                  removed and Wireless Access Points (WAPs) were
+                                  then installed and configured. All machines
+                                  were upgraded and/or configured to connect to
+                                  the WAPs. In addition, a new rack with POE
+                                  ports was installed in their server room for
+                                  their server, multi-port hub and router. This
+                                  created a more efficient working space and
+                                  alleviated unnecessary clutter.
+                                </p>
+                              </li>
+                            </ul>
+                          </ul>
+                        </div>
+                        <div>
+                          <strong>Websites</strong>
                           <ul>
                             <li>
                               <a

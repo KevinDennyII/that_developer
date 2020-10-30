@@ -42,9 +42,8 @@ const WhatidoComponent = () => {
               <div className="desc">
                 <h3>Data Structures & Algorithms</h3>
                 <p>
-                  As coming from the Computer Science background, I have good
-                  grasp over fundamental concepts of Data Structures &
-                  Algorithms
+                  My Computer Science background laid a solid foundation on the
+                  fundamental concepts of Data Structures & Algorithms
                 </p>
               </div>
             </div>
@@ -61,8 +60,8 @@ const WhatidoComponent = () => {
                   <a href={awsCert} target="_blank" rel="noopener noreferrer">
                     Amazon Web Services (AWS) Developer Associate
                   </a>
-                  . I have 4 years of experiences in configuring and managing
-                  data solution with AWS
+                  . I have 4 years of experience in configuring and managing
+                  data solution with AWS.
                 </p>
               </div>
             </div>
