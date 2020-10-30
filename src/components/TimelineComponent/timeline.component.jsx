@@ -74,8 +74,6 @@ const TimelineComponent = () => {
                               </li>
                               <li>Assisting with technical documentation</li>
                             </ul>
-                          </ul>
-                          <ul>
                             <li>
                               <i>
                                 <a
