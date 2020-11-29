@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { get } from "lodash";
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import IntroductionComponent from "./components/IntroductionComponent/introduction.component";
@@ -12,6 +13,7 @@ const App = () => {
   const [email, setEmail] = useState("");
   const [summary, setSummary] = useState("");
   const [myLinks, setMyLinks] = useState([]);
+  const [experience, setExperience] = useState([]);
 
   // I need to grab the api data once this app has been loaded
   useEffect(() => {
@@ -24,9 +26,10 @@ const App = () => {
       //converting response to json
       let data = await response.json();
       //storing the data from my components in state
-      setEmail(data.basics.email);
-      setSummary(data.basics.summary);
-      setMyLinks(data.basics.profiles);
+      setEmail(get(data.basics, "email"));
+      setSummary(get(data.basics, "summary"));
+      setMyLinks(get(data.basics, "profiles"));
+      setExperience(data.work);
     };
 
     fetchData().then((error) => console.error(error));
@@ -39,8 +42,6 @@ const App = () => {
         style={{ marginLeft: "5rem", marginRight: "5rem" }}
       >
         <IntroductionComponent myLinks={myLinks} email={email} />
-        {console.log(myLinks)}
-        {console.log(email)}
         <Switch>
           {/* use the render attribute to pass props to the route with the */}
           {/* arrow function because this will update the component as opposed to */}
@@ -51,7 +52,12 @@ const App = () => {
             render={(props) => <AboutComponent {...props} summary={summary} />}
           />
           <Route path="/expertise" component={WhatidoComponent} />
-          <Route path="/experience" component={TimelineComponent} />
+          <Route
+            path="/experience"
+            render={(props) => (
+              <TimelineComponent {...props} experience={experience} />
+            )}
+          />
           <Route path="/home" component={HomeComponent} />
         </Switch>
       </div>

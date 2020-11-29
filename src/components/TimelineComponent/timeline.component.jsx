@@ -1,8 +1,34 @@
 import React from "react";
+import months from "./months";
+import { get } from "lodash";
 import "./timeline.module.scss";
+import ods from "./ohhDennyData.json";
 
 // TODO
-const TimelineComponent = () => {
+const TimelineComponent = ({ experience }) => {
+  // grabbing OhhDenny Services LLC information
+  const odsTitle = () => {
+    return { __html: ods.title };
+  };
+  const odsDateRange = () => {
+    return { __html: ods.dateRange };
+  };
+  const odsContent = () => {
+    return { __html: ods.content };
+  };
+
+  // grab the rest of the data experience
+  const summary = experience.map((e) => {
+    return e.summary;
+  });
+  const odsStartYear = experience.map((e) => {
+    return get(e.start, "year");
+  });
+  const odsStartMonth = experience.map((e) => {
+    return months[`${get(e.start, "month")}`];
+  });
+  console.log(odsStartMonth)
+
   return (
     <div>
       <section className="colorlib-experience" data-section="timeline">
@@ -29,160 +55,10 @@ const TimelineComponent = () => {
                     </div>
                     <div className="timeline-label">
                       <h2>
-                        Director of Operations at{" "}
-                        <a
-                          href="https://www.ohhdennyservices.com"
-                          style={{ color: "#2c98f0" }}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          OhhDenny Services, LLC
-                        </a>{" "}
-                        <br />
-                        <span>June 2015 - present</span>
+                        <div dangerouslySetInnerHTML={odsTitle()} />
+                        <span dangerouslySetInnerHTML={odsDateRange()} />
                       </h2>
-                      <div>
-                        <p>
-                          We assist smaller business, mostly concentrating on
-                          HIPPA, with Cyber Security, Software & Hardware
-                          Installation and Updates, and Network Configuration.
-                          We also build websites using Content Management
-                          Systems like WordPress and technologies such
-                          JavaScript, CSS3 & HTML5.{" "}
-                        </p>
-                        <div>
-                          <strong>Clients</strong>
-                          <ul>
-                            <li>
-                              <i>
-                                <a
-                                  href="http://www.caveonix.com/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  Caveonix, Inc
-                                </a>
-                                : Web Developer & Consultant,{" "}
-                                <strong>October 2020 - Present</strong>
-                              </i>
-                            </li>
-                            <ul>
-                              <li>
-                                Implementing & maintaining APIs with ExpressJS
-                                on a development following various Agile
-                                methodologies
-                              </li>
-                              <li>Assisting with technical documentation</li>
-                            </ul>
-                            <li>
-                              <i>
-                                <a
-                                  href="http://www.jacobdavidproperties.com/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  Jacob David Properties, LLC
-                                </a>
-                                : The IT Guy,{" "}
-                                <strong>August 2019 - Present</strong>
-                              </i>
-                            </li>
-                            <ul>
-                              <li>
-                                Acting as an Information Technology and
-                                Computing Consultant
-                              </li>
-                              <li>
-                                Performs regular maintenance on business website
-                              </li>
-                            </ul>
-                            <li>
-                              <i>
-                                <a
-                                  href="http://www.idealnursing.org/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  Ideal Nursing Services, Inc
-                                </a>
-                                : Computing & IT Consultant,{" "}
-                                <strong>June 2015 - August 2017</strong>
-                              </i>
-                            </li>
-                            <ul>
-                              <li>
-                                Performed various hardware task including
-                                removing and installing of operating systems,
-                                basic cyber security, networking, and
-                                troubleshooting of various issues
-                              </li>
-                              <li>
-                                <p>
-                                  Performed Network Upgrade: For this project, I
-                                  hired two other professionals to assist with
-                                  taking Ideal Nursing from a wired network to a
-                                  wireless network. Measurements of the building
-                                  were taken to create proper network diagrams
-                                  for approval by Ideal Nursing. Wires were
-                                  removed and Wireless Access Points (WAPs) were
-                                  then installed and configured. All machines
-                                  were upgraded and/or configured to connect to
-                                  the WAPs. In addition, a new rack with POE
-                                  ports was installed in their server room for
-                                  their server, multi-port hub and router. This
-                                  created a more efficient working space and
-                                  alleviated unnecessary clutter.
-                                </p>
-                              </li>
-                            </ul>
-                          </ul>
-                        </div>
-                        <div>
-                          <strong>Websites</strong>
-                          <ul>
-                            <li>
-                              <a
-                                href="https://notaryhand.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                The Notary Hand, LLC
-                              </a>{" "}
-                              - Selma , TX
-                            </li>
-                            <li>
-                              <a
-                                href="https://jacobdavidproperties.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                Jacob David Properties, LLC
-                              </a>{" "}
-                              - Selma , TX
-                            </li>
-                            <li>
-                              <a
-                                href="https://www.diamondgrovebaptist.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                Diamond Grove Baptist Church, Inc
-                              </a>{" "}
-                              - Franklin, VA
-                            </li>
-                            <li>
-                              <a
-                                href="https://www.oberryamezionchurch.org"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                O'Berry A. M. E. Zion Church
-                              </a>{" "}
-                              - Franklin, VA
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
+                      <div dangerouslySetInnerHTML={odsContent()} />
                     </div>
                   </div>
                 </article>

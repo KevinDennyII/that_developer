@@ -8,6 +8,7 @@ const HomeComponent = () => {
       <br />
       you tend to hear things differently."
       <br />- DJ LookUp
+      <br />
     </div>
   );
 };
