@@ -4,7 +4,6 @@ import { get } from "lodash";
 import "./timeline.module.scss";
 import ods from "./ohhDennyData.json";
 
-// TODO
 const TimelineComponent = ({ experience }) => {
   // grabbing OhhDenny Services LLC information
   const odsTitle = () => {
@@ -21,13 +20,25 @@ const TimelineComponent = ({ experience }) => {
   const summary = experience.map((e) => {
     return e.summary;
   });
-  const odsStartYear = experience.map((e) => {
-    return get(e.start, "year");
+  console.log(summary)
+  const startExperience = experience.map((e) => {
+    const startMonth = months[`${get(e.start, "month")}`]
+    const startYear = get(e.start, "year")
+    return `${startMonth.substring(0, 3)} ${startYear}`;
   });
-  const odsStartMonth = experience.map((e) => {
-    return months[`${get(e.start, "month")}`];
+  console.log(startExperience)
+  const endExperience = experience.map((e) => {
+    const endMonth = months[`${get(e.end, "month")}`]
+    const endYear = get(e.end, "year")
+    if(typeof endMonth === 'undefined' && typeof endYear === 'undefined'){
+      return `Present`
+    } else return `${endMonth.substring(0, 3)} ${endYear}`;
   });
-  console.log(odsStartMonth)
+  console.log(endExperience)
+
+  const content = (description) => {
+    return { __html: description };
+  };
 
   return (
     <div>
@@ -73,40 +84,9 @@ const TimelineComponent = ({ experience }) => {
                     <div className="timeline-label">
                       <h2>
                         Software Engineer at iHeartMedia, Inc <br />
-                        <span>Feb 2019 - July 2020</span>
+                        <span>{startExperience[1]} - {endExperience[1]}</span>
                       </h2>
-                      <p>
-                        Currently working on iHeartMedia's Music Lab team. I
-                        assist in the maintaining and improving of a web
-                        application that assist in helping program directors of
-                        iHeartRadio stations determine how air time (spins) for
-                        songs will be distributed across radio stations. I am
-                        working as both a Software Engineer and Data Analytics
-                        team liaison on the Music Lab team. Some of my tasks
-                        include architecting solutions with NodeJS, automating
-                        AWS CodeBuilds using CloudWatch events for our MySQL
-                        databases, improving technical documentation, and
-                        learning both our data analytics and software
-                        development stack (ReactJS) for Music Lab.
-                      </p>
-                      <p>
-                        I conducted a Proof of Concept analysis to present to VP
-                        of Data Engineering & Analytics for using an aiWare
-                        platform that uses GraphQL. This was an idea to help
-                        iHeartMedia automate the analysis of some of its market
-                        data like spots and digital impression
-                      </p>
-                      <p>
-                        Previously apart of the Salesforce team, working with
-                        the Campaign Recap application which kept track of
-                        iHeartMedia's clients radio ad campaigns. I briefly
-                        worked with our Kibana instance in attempt to improve
-                        logging. I updated our software architecture. I also
-                        performed a technical analysis with Vertione One in
-                        using there development platform with GraphiQ that could
-                        possible help iHeartMedia automate some of its
-                        processes.
-                      </p>
+                      <div dangerouslySetInnerHTML={content(summary[1])} />
                     </div>
                   </div>
                 </article>
@@ -121,49 +101,9 @@ const TimelineComponent = ({ experience }) => {
                     <div className="timeline-label">
                       <h2>
                         Lead Technologist at Booz Allen Hamilton, Inc <br />
-                        <span>Oct 2015 - Jan 2019</span>
+                        <span>{startExperience[2]} - {endExperience[2]}</span>
                       </h2>
-                      <div>
-                        I have written training documentation for the Air Force
-                        serving as an Elastic Stack Subject Matter Expert (SME)
-                        creating Elastic Stack training courses. This included
-                        modules for:
-                        <ul>
-                          <li>The Overview of Elastic Stack</li>
-                          <li>The understanding and use of Elasticsearch</li>
-                          <li>The understanding and use of Logstash</li>
-                          <li>
-                            The understanding and use of Kibana The
-                            understanding of Beats
-                          </li>
-                        </ul>
-                        I have created learning documentation for server
-                        configuration (Puppet) and YAML
-                        <br />
-                        <br />
-                        I participated as a member of an Agile Coaching team for
-                        the Air Force, practicing Scrum using Sprints. I wrote
-                        guidance for development teams such as how-to-guides and
-                        best practices for use of Agile methodologies.
-                        <br />
-                        <br />
-                        I served as a member of the DoD community working as an
-                        Application Lead/Senior Developer working with and
-                        managing Amazing Web Services (AWS) EC2 instances
-                        building a Java application that would create and
-                        maintain IT disaster recovery plans.
-                        <br />
-                        <br />
-                        I lead and participated on projects working with
-                        technologies such as PostgreSQL, MongoDB, ExpressDB,
-                        AngularJS and NodeJS (MEAN) web development, Java and
-                        other Microsoft technologies.
-                        <br />
-                        <br />
-                        Internally, for Booz Allen Hamilton, I have configured
-                        and implemented a prototype website using Drupal with
-                        Acquia cloud.
-                      </div>
+                      <div dangerouslySetInnerHTML={content(summary[2])} />
                     </div>
                   </div>
                 </article>
@@ -178,30 +118,9 @@ const TimelineComponent = ({ experience }) => {
                     <div className="timeline-label">
                       <h2>
                         Senior Web Developer at Sevatec, Inc <br />
-                        <span>Nov 2014 - Jun 2015</span>
+                        <span>{startExperience[3]} - {endExperience[3]}</span>
                       </h2>
-                      <p>
-                        I fulfilled the role of Web Developer as a member of the
-                        Implementation Team for Content Management System (CMS),
-                        redesigning of the <b>US Embassy websites</b> at the IIP
-                        bureau of the <b>Department of State</b>. We were part
-                        of the UI/UX team with this task. We conducted wireframe
-                        testing, user interviews, and analysis on the both
-                        tasks.
-                        <br />
-                        <br />
-                        As a web developer, I was responsible for the
-                        development of websites and mobile applications on
-                        Amazon Web Services (AWS) via WordPress, assisting with
-                        technical documentation and end-user training &
-                        development transition plans. I participated in weekly
-                        calls with WordPress VIP and Automattic (creators and
-                        founders of WordPress) to receive guidance towards
-                        implementing possible solutions for the client. I also
-                        created and implemented the US Embassy Travel Alert
-                        Wordpress plugin which incorporates travel warnings and
-                        alerts using a JSON file from travel.state.gov.
-                      </p>
+                      <div dangerouslySetInnerHTML={content(summary[3])} />
                     </div>
                   </div>
                 </article>
