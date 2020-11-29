@@ -9,6 +9,19 @@ const WorkExperienceComponent = ({ experience }) => {
     return { __html: description };
   };
 
+  const startExperience = (startExp) => {
+    const startMonth = months[`${get(startExp, "month")}`]
+    const startYear = get(startExp, "year")
+    return `${startMonth.substring(0, 3)} ${startYear}`;
+  };
+  const endExperience = (exp, endExp) => {
+    const endMonth = months[`${get(endExp, "month")}`]
+    const endYear = get(endExp, "year")
+    if(exp.isCurrentRole){
+      return `Present`
+    } else return `${endMonth.substring(0, 3)} ${endYear}`;
+  };
+
     return (
       <div>
         <div className="container-fluid">
@@ -21,7 +34,7 @@ const WorkExperienceComponent = ({ experience }) => {
                       <h4 className="panel-title">
                         <a className="collapsed" data-toggle="collapse" data-parent="#accordion" href={`#collapse${i}`} aria-expanded="false"
                            aria-controls={`collapse${i}`}>
-                          {item.position} at {item.company}
+                          {item.position} at {item.company}:  {startExperience(item.start)} - {endExperience(item, item.end)}
                         </a>
                       </h4>
 
