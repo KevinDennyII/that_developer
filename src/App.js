@@ -8,6 +8,7 @@ import AboutComponent from "./components/AboutComponent/about.component";
 import WhatidoComponent from "./components/WhatIDoComponent/whatido..component";
 import TimelineComponent from "./components/TimelineComponent/timeline.component";
 import FooterComponent from "./components/FooterComponent/footer.component";
+import WorkExperienceComponent from './components/WorkExperienceComponent/workexperience.component';
 
 const App = () => {
   const [email, setEmail] = useState("");
@@ -56,6 +57,12 @@ const App = () => {
             path="/experience"
             render={(props) => (
               <TimelineComponent {...props} experience={experience} />
+            )}
+          />
+          <Route
+            path="/work-experience"
+            render={(props) => (
+              <WorkExperienceComponent {...props} experience={experience} />
             )}
           />
           <Route path="/home" component={HomeComponent} />
