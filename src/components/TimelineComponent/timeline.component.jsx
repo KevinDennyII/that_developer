@@ -17,6 +17,12 @@ const TimelineComponent = ({ experience }) => {
   };
 
   // grab the rest of the data experience
+  const summaryTitle = experience.map((e) => {
+    const jobTitle = e.position;
+    const company = e.company;
+    return `${jobTitle} at ${company}`;
+  });
+  console.log(summaryTitle)
   const summary = experience.map((e) => {
     return e.summary;
   });
@@ -30,7 +36,7 @@ const TimelineComponent = ({ experience }) => {
   const endExperience = experience.map((e) => {
     const endMonth = months[`${get(e.end, "month")}`]
     const endYear = get(e.end, "year")
-    if(typeof endMonth === 'undefined' && typeof endYear === 'undefined'){
+    if(e.isCurrentRole){
       return `Present`
     } else return `${endMonth.substring(0, 3)} ${endYear}`;
   });
@@ -83,7 +89,7 @@ const TimelineComponent = ({ experience }) => {
                     </div>
                     <div className="timeline-label">
                       <h2>
-                        Software Engineer at iHeartMedia, Inc <br />
+                        {summaryTitle[1]}<br />
                         <span>{startExperience[1]} - {endExperience[1]}</span>
                       </h2>
                       <div dangerouslySetInnerHTML={content(summary[1])} />
@@ -100,7 +106,7 @@ const TimelineComponent = ({ experience }) => {
                     </div>
                     <div className="timeline-label">
                       <h2>
-                        Lead Technologist at Booz Allen Hamilton, Inc <br />
+                        {summaryTitle[2]}<br />
                         <span>{startExperience[2]} - {endExperience[2]}</span>
                       </h2>
                       <div dangerouslySetInnerHTML={content(summary[2])} />
@@ -117,7 +123,7 @@ const TimelineComponent = ({ experience }) => {
                     </div>
                     <div className="timeline-label">
                       <h2>
-                        Senior Web Developer at Sevatec, Inc <br />
+                        {summaryTitle[3]}<br />
                         <span>{startExperience[3]} - {endExperience[3]}</span>
                       </h2>
                       <div dangerouslySetInnerHTML={content(summary[3])} />
