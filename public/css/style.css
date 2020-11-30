@@ -496,6 +496,7 @@ body.offcanvas {
 
   /* for WorkExperienceComponent */
 .panel-heading a {
+  font-family: Titillium Web, sans-serif;
   }
 .panel-title > a:before {
   float: left !important;
