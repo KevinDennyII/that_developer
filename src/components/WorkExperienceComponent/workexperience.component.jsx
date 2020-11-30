@@ -1,8 +1,7 @@
 import React from "react";
 import months from "./months";
 import { get } from "lodash";
-import {descriptionTitle, descriptionWebsite} from "./workexperience.module.scss";
-import ods from "./ohhDennyData.json";
+import {descriptionTitle} from "./workexperience.module.scss";
 
 const WorkExperienceComponent = ({ experience }) => {
   const content = (description) => {
