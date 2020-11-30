@@ -49,7 +49,7 @@ const WorkExperienceComponent = ({ experience }) => {
                     </div>
                     <div id={`collapse${i}`} className="panel-collapse collapse" role="tabpanel"
                          aria-labelledby={`heading${i}`}>
-                      <span style={{paddingLeft: "15px", fontSize: "1.4rem", fontStyle: "italic"}}>Website: <a href={item.website}>{item.website}</a></span>
+                      <span style={{paddingLeft: "15px", fontSize: "1.4rem", fontStyle: "italic"}}><a href={item.website}>{item.website}</a></span>
                       <div className="panel-body" dangerouslySetInnerHTML={content(item.summary)} />
                     </div>
                   </div>
