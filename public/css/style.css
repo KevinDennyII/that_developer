@@ -494,58 +494,25 @@ body.offcanvas {
     bordeR: 1px solid #000;
     padding: 2px 10px; }
 
-.fancy-collapse-panel .panel-default > .panel-heading {
-  padding: 0; }
-
+  /* for WorkExperienceComponent */
 .panel-heading a {
-  padding: 20px 25px;
-  display: block;
-  width: 100%;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-family: "Quicksand", Arial, sans-serif;
-  background-color: #2c98f0;
-  color: #fff;
-  position: relative;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  -ms-box-shadow: none !important;
-  -o-box-shadow: none !important;
-  box-shadow: none !important; }
-
-.panel {
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  -ms-box-shadow: none !important;
-  -o-box-shadow: none !important;
-  box-shadow: none !important;
-  border: none; }
-
-.panel-heading a:after {
-  font-family: "icomoon";
-  content: "\e115";
-  position: absolute;
-  right: 20px;
-  font-size: 14px;
-  font-weight: 400;
-  top: 50%;
-  line-height: 1;
-  margin-top: -7px; }
-
-.panel-heading a.collapsed:after {
-  content: "\e114"; }
-
-.panel-heading a.collapsed {
-  background: #E3E3E3;
-  border: 1px solid #e6e6e6 !important;
-  color: #333333; }
-
-.panel-body {
-  padding: 1.5em;
-  margin-top: 5px;
-  border: 1px solid #e6e6e6 !important; }
+  font-family: Titillium Web, sans-serif;
+  }
+.panel-title > a:before {
+  float: left !important;
+  font-family: FontAwesome, serif;
+  content:"\f068";
+  padding-right: 5px;
+}
+.panel-title > a.collapsed:before {
+  float: left !important;
+  content:"\f067";
+}
+.panel-title > a:hover,
+.panel-title > a:active,
+.panel-title > a:focus  {
+  text-decoration:none;
+}
 
 .timeline-centered {
   position: relative;

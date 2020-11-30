@@ -94,6 +94,13 @@ const IntroductionComponent = ({ myLinks, email }) => {
           >
             Experience
           </NavLink>
+          {/*<NavLink*/}
+          {/*  activeStyle={{ fontWeight: "700" }}*/}
+          {/*  className="menu-link"*/}
+          {/*  to="/work-experience"*/}
+          {/*>*/}
+          {/*  Work Experience*/}
+          {/*</NavLink>*/}
         </nav>
       </section>
       <hr className="divider gradient" contentEditable />
