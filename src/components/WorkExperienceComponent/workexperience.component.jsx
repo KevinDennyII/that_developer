@@ -29,7 +29,7 @@ const WorkExperienceComponent = ({ experience }) => {
             data-animate-effect="fadeInLeft"
           >
             <span className="heading-meta">experience</span>
-            <h2 className="colorlib-heading animate-box">Timeline</h2>
+            <h2 className="colorlib-heading animate-box" style={{marginBottom: "1em"}}>Timeline</h2>
           </div>
         </div>
         <div className="container-fluid">
