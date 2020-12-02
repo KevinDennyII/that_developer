@@ -22,17 +22,14 @@ const TimelineComponent = ({ experience }) => {
     const company = e.company;
     return `${jobTitle} at ${company}`;
   });
-  console.log(summaryTitle)
   const summary = experience.map((e) => {
     return e.summary;
   });
-  console.log(summary)
   const startExperience = experience.map((e) => {
     const startMonth = months[`${get(e.start, "month")}`]
     const startYear = get(e.start, "year")
     return `${startMonth.substring(0, 3)} ${startYear}`;
   });
-  console.log(startExperience)
   const endExperience = experience.map((e) => {
     const endMonth = months[`${get(e.end, "month")}`]
     const endYear = get(e.end, "year")
@@ -40,7 +37,6 @@ const TimelineComponent = ({ experience }) => {
       return `Present`
     } else return `${endMonth.substring(0, 3)} ${endYear}`;
   });
-  console.log(endExperience)
 
   const content = (description) => {
     return { __html: description };

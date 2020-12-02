@@ -1,7 +1,7 @@
 import React from "react";
 import months from "./months";
 import { get } from "lodash";
-import {descriptionTitle} from "./workexperience.module.scss";
+import {descriptionTitle, descriptionBackground} from "./workexperience.module.scss";
 
 const WorkExperienceComponent = ({ experience }) => {
   const content = (description) => {
@@ -47,9 +47,9 @@ const WorkExperienceComponent = ({ experience }) => {
                       </h4>
 
                     </div>
-                    <div id={`collapse${i}`} className="panel-collapse collapse" role="tabpanel"
+                    <div id={`collapse${i}`} className={`panel-collapse collapse ${descriptionBackground}`} role="tabpanel"
                          aria-labelledby={`heading${i}`}>
-                      <span style={{paddingLeft: "15px", fontSize: "1.4rem", fontStyle: "italic"}}><a href={item.website}>{item.website}</a></span>
+                      <span style={{paddingLeft: "15px", fontSize: "1.4rem"}}><a href={item.website}>{item.website}</a></span>
                       <div className="panel-body" dangerouslySetInnerHTML={content(item.summary)} />
                     </div>
                   </div>
