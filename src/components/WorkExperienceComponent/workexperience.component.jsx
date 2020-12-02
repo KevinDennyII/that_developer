@@ -1,7 +1,7 @@
 import React from "react";
 import months from "./months";
 import { get } from "lodash";
-import {descriptionTitle, descriptionBackground} from "./workexperience.module.scss";
+import {descriptionTitle, descriptionBackground, panelHeadingBottomBorder} from "./workexperience.module.scss";
 
 const WorkExperienceComponent = ({ experience }) => {
   const content = (description) => {
@@ -38,7 +38,7 @@ const WorkExperienceComponent = ({ experience }) => {
               <div className="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 {experience.map((item, i) => (
                   <div className="panel panel-default">
-                    <div className="panel-heading" role="tab" id={`heading${i}`}>
+                    <div className={`panel-heading ${panelHeadingBottomBorder}`} role="tab" id={`heading${i}`}>
                       <h4 className="panel-title">
                         <a className="collapsed" data-toggle="collapse" data-parent="#accordion" href={`#collapse${i}`} aria-expanded="false"
                            aria-controls={`collapse${i}`}>
