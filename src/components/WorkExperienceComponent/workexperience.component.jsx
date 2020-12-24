@@ -45,12 +45,11 @@ const WorkExperienceComponent = ({ experience }) => {
                           <span style={{descriptionTitle}}>{item.position} at {item.company}</span>:  {startExperience(item.start)} - {endExperience(item, item.end)}
                         </a>
                       </h4>
-
                     </div>
                     <div id={`collapse${i}`} className={`panel-collapse collapse ${descriptionBackground}`} role="tabpanel"
                          aria-labelledby={`heading${i}`}>
                       <span style={{paddingLeft: "15px", fontSize: "1.4rem"}}><a href={item.website}>{item.website}</a></span>
-                      <div className="panel-body" dangerouslySetInnerHTML={content(item.summary)} />
+                      <div style={{fontSize: "1.5rem"}} className="panel-body" dangerouslySetInnerHTML={content(item.summary)} />
                     </div>
                   </div>
                 ))}

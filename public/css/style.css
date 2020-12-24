@@ -36,14 +36,14 @@ body {
   font-size: 1.2rem;}
 
 a {
-  color: #2c98f0;
+  color: #407ec3;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
-  a:hover, a:active, a:focus {
-    color: #2c98f0;
-    outline: none;
-    text-decoration: none !important; }
+a:hover, a:active, a:focus {
+  color: #407ec3;
+  outline: none;
+  text-decoration: none !important; }
 
 p {
   margin-bottom: 1.5em; }
@@ -53,13 +53,11 @@ p {
   justify-content: center;
   align-items: center;
   border-radius: 4px;
-  /*background-color: #eceff1;*/
 }
 
 .navbar__link {
   margin: 1em;
   font-size: 0.85em;
-  /*font-family: 'Roboto', sans-serif;*/
   cursor: pointer;
   text-decoration: none;
   letter-spacing: .3em;
