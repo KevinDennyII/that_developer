@@ -3,15 +3,16 @@ import { NavLink } from "react-router-dom";
 
 import {
   aviHeader,
+  headerBkg,
   introduction,
-  links,
   introInfo,
+  links,
   menuItems,
 } from "./introduction.module.scss";
 
 const IntroductionComponent = ({ myLinks, email }) => {
   return (
-    <div>
+    <div className={headerBkg}>
       <section
         className="colorlib-experience"
         style={{
