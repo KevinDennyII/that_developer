@@ -28,7 +28,7 @@ const WhatidoComponent = () => {
                   Systems like Wordpress. I have professional experience coding
                   with object-oriented languages and I am{" "}
                   <a href={mcpCert} target="_blank" rel="noopener noreferrer">
-                    Microsoft Certified in JavaScript, HTML, CSS
+                    Microsoft Certified in JavaScript, HTML, and CSS
                   </a>
                 </p>
               </div>
@@ -61,7 +61,7 @@ const WhatidoComponent = () => {
                     Amazon Web Services (AWS) Developer Associate
                   </a>
                   . I have 4 years of experience in configuring and managing
-                  data solution with AWS.
+                  data solutions with AWS.
                 </p>
               </div>
             </div>
