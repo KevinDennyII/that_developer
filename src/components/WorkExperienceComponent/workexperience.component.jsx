@@ -1,7 +1,7 @@
 import React from "react";
 import months from "./months";
 import { get } from "lodash";
-import {descriptionTitle, descriptionBackground, panelHeadingBottomBorder} from "./workexperience.module.scss";
+import {descriptionTitle, descriptionBackground, panelHeadingBottomBorder, resumeLink} from "./workexperience.module.scss";
 
 const WorkExperienceComponent = ({ experience }) => {
   const content = (description) => {
@@ -56,6 +56,11 @@ const WorkExperienceComponent = ({ experience }) => {
               </div>
             </div>
           </div>
+        </div>
+        <div className={resumeLink}>
+          <a href="https://docs.google.com/document/d/1h-Pi7jl5yO8-LQX4-ygTm79MlQIYqxr1P3fgcQK2OTQ/edit?usp=sharing">
+            <button>Download My Resume</button>
+          </a>
         </div>
       </div>
     );

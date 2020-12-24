@@ -22,3 +22,32 @@ ul > ul > li {
 .panelHeadingBottomBorder {
   border-bottom: 1px solid LightGrey !important;
 }
+
+.resumeLink{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1.5rem;
+}
+
+.resumeLink button{
+  color: white;
+  background-color: #67aae9;
+  font-size: 15px;
+  border-radius: 15px;
+  margin-left: .25rem;
+  margin-right: .25rem;
+  box-shadow: 0 9px #999;
+  cursor: pointer;
+}
+
+.resumeLink button:hover {
+  background-color: #0f81ef;
+}
+
+.resumeLink button:active {
+  background-color: #0f81ef;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+

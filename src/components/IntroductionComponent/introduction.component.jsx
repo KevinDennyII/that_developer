@@ -7,7 +7,7 @@ import {
   introduction,
   introInfo,
   links,
-  menuItems,
+  menuItems
 } from "./introduction.module.scss";
 
 const IntroductionComponent = ({ myLinks, email }) => {
