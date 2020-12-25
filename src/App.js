@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import { get } from "lodash";
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
-import IntroductionComponent from "./components/IntroductionComponent/introduction.component";
-import HomeComponent from "./components/HomeComponent/home.component";
+
 import AboutComponent from "./components/AboutComponent/about.component";
-import WhatidoComponent from "./components/WhatIDoComponent/whatido..component";
-import TimelineComponent from "./components/TimelineComponent/timeline.component";
+import ContactusComponent from './components/ContactUsComponent/contactus.component';
 import FooterComponent from "./components/FooterComponent/footer.component";
+import HomeComponent from "./components/HomeComponent/home.component";
+import IntroductionComponent from "./components/IntroductionComponent/introduction.component";
+import TimelineComponent from "./components/TimelineComponent/timeline.component";
+import WhatidoComponent from "./components/WhatIDoComponent/whatido..component";
 import WorkExperienceComponent from './components/WorkExperienceComponent/workexperience.component';
 
 const App = () => {
@@ -65,6 +67,7 @@ const App = () => {
               <WorkExperienceComponent {...props} experience={experience} />
             )}
           />
+          <Route path="/contact-us" component={ContactusComponent} />
           <Route path="/home" component={HomeComponent} />
         </Switch>
       </div>
