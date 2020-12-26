@@ -3,10 +3,15 @@ import emailjs from 'emailjs-com';
 import { contactUsForm } from './contactus.module.scss';
 
 const ContactusComponent = () => {
+  // boolean for keeping state when an email has been successfully sent
   const [emailSent, setEmailSent] = useState('');
+
+  // setting state of input values
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+
+  // boolean for tracking an empty value on form
   const [emptyVal, setEmptyVal] = useState('');
 
   // capturing input values
@@ -23,6 +28,7 @@ const ContactusComponent = () => {
     setEmptyVal(false);
   };
 
+  // Sending email
   const sendEmail = (e) => {
     e.preventDefault();
     if (email === '' || name === '' || message === '') {
@@ -39,10 +45,13 @@ const ContactusComponent = () => {
           (result) => {
             console.log(result.text);
             console.log(`Name: ${name}`, `Email: ${email}`, `Message: ${message}`);
+            // email sent successfully
             setEmailSent(true);
+            // resetting values
             setName('');
             setEmail('');
             setMessage('');
+            // refreshing page after all is done with email
             setTimeout(() => {
               window.location.reload(1);
             }, 5000);
