@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function BlogComponent() {
   return <div>Blog are outdated! Start a podcast</div>;

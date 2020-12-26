@@ -1,46 +1,36 @@
-import React from "react";
-import months from "./months";
-import { get } from "lodash";
-import "./timeline.module.scss";
-import ods from "./ohhDennyData.json";
+import React from 'react';
+import { get } from 'lodash';
+import months from './months';
+import './timeline.module.scss';
+import ods from './ohhDennyData.json';
 
 const TimelineComponent = ({ experience }) => {
   // grabbing OhhDenny Services LLC information
-  const odsTitle = () => {
-    return { __html: ods.title };
-  };
-  const odsDateRange = () => {
-    return { __html: ods.dateRange };
-  };
-  const odsContent = () => {
-    return { __html: ods.content };
-  };
+  const odsTitle = () => ({ __html: ods.title });
+  const odsDateRange = () => ({ __html: ods.dateRange });
+  const odsContent = () => ({ __html: ods.content });
 
   // grab the rest of the data experience
   const summaryTitle = experience.map((e) => {
     const jobTitle = e.position;
-    const company = e.company;
+    const { company } = e;
     return `${jobTitle} at ${company}`;
   });
-  const summary = experience.map((e) => {
-    return e.summary;
-  });
+  const summary = experience.map((e) => e.summary);
   const startExperience = experience.map((e) => {
-    const startMonth = months[`${get(e.start, "month")}`]
-    const startYear = get(e.start, "year")
+    const startMonth = months[`${get(e.start, 'month')}`];
+    const startYear = get(e.start, 'year');
     return `${startMonth.substring(0, 3)} ${startYear}`;
   });
   const endExperience = experience.map((e) => {
-    const endMonth = months[`${get(e.end, "month")}`]
-    const endYear = get(e.end, "year")
-    if(e.isCurrentRole){
-      return `Present`
-    } else return `${endMonth.substring(0, 3)} ${endYear}`;
+    const endMonth = months[`${get(e.end, 'month')}`];
+    const endYear = get(e.end, 'year');
+    if (e.isCurrentRole) {
+      return 'Present';
+    } return `${endMonth.substring(0, 3)} ${endYear}`;
   });
 
-  const content = (description) => {
-    return { __html: description };
-  };
+  const content = (description) => ({ __html: description });
 
   return (
     <div>
@@ -85,8 +75,15 @@ const TimelineComponent = ({ experience }) => {
                     </div>
                     <div className="timeline-label">
                       <h2>
-                        {summaryTitle[1]}<br />
-                        <span>{startExperience[1]} - {endExperience[1]}</span>
+                        {summaryTitle[1]}
+                        <br />
+                        <span>
+                          {startExperience[1]}
+                          {' '}
+                          -
+                          {' '}
+                          {endExperience[1]}
+                        </span>
                       </h2>
                       <div dangerouslySetInnerHTML={content(summary[1])} />
                     </div>
@@ -102,8 +99,15 @@ const TimelineComponent = ({ experience }) => {
                     </div>
                     <div className="timeline-label">
                       <h2>
-                        {summaryTitle[2]}<br />
-                        <span>{startExperience[2]} - {endExperience[2]}</span>
+                        {summaryTitle[2]}
+                        <br />
+                        <span>
+                          {startExperience[2]}
+                          {' '}
+                          -
+                          {' '}
+                          {endExperience[2]}
+                        </span>
                       </h2>
                       <div dangerouslySetInnerHTML={content(summary[2])} />
                     </div>
@@ -119,8 +123,15 @@ const TimelineComponent = ({ experience }) => {
                     </div>
                     <div className="timeline-label">
                       <h2>
-                        {summaryTitle[3]}<br />
-                        <span>{startExperience[3]} - {endExperience[3]}</span>
+                        {summaryTitle[3]}
+                        <br />
+                        <span>
+                          {startExperience[3]}
+                          {' '}
+                          -
+                          {' '}
+                          {endExperience[3]}
+                        </span>
                       </h2>
                       <div dangerouslySetInnerHTML={content(summary[3])} />
                     </div>
@@ -136,7 +147,9 @@ const TimelineComponent = ({ experience }) => {
                     </div>
                     <div className="timeline-label">
                       <h2>
-                        Software Developer at Buchanan & Edwards, Inc <br />
+                        Software Developer at Buchanan & Edwards, Inc
+                        {' '}
+                        <br />
                         <span>Nov 2013 - Oct 2014</span>
                       </h2>
                     </div>
@@ -188,7 +201,9 @@ const TimelineComponent = ({ experience }) => {
                     </div>
                     <div className="timeline-label">
                       <h2>
-                        IT Specialist at IBM, Inc <br />
+                        IT Specialist at IBM, Inc
+                        {' '}
+                        <br />
                         <span>Aug 2007 - Sep 2009</span>
                       </h2>
                     </div>

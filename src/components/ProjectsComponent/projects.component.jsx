@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function ProjectsComponent() {
   return (
@@ -21,7 +21,7 @@ function ProjectsComponent() {
             >
               <div
                 className="project"
-                style={{ backgroundImage: "url(images/img-1.jpg)" }}
+                style={{ backgroundImage: 'url(images/img-1.jpg)' }}
               >
                 <div className="desc">
                   <div className="con">
@@ -37,12 +37,16 @@ function ProjectsComponent() {
                       </span>
                       <span>
                         <a href="#">
-                          <i className="icon-eye" /> 100
+                          <i className="icon-eye" />
+                          {' '}
+                          100
                         </a>
                       </span>
                       <span>
                         <a href="#">
-                          <i className="icon-heart" /> 49
+                          <i className="icon-heart" />
+                          {' '}
+                          49
                         </a>
                       </span>
                     </p>
@@ -56,7 +60,7 @@ function ProjectsComponent() {
             >
               <div
                 className="project"
-                style={{ backgroundImage: "url(images/img-2.jpg)" }}
+                style={{ backgroundImage: 'url(images/img-2.jpg)' }}
               >
                 <div className="desc">
                   <div className="con">
@@ -72,12 +76,16 @@ function ProjectsComponent() {
                       </span>
                       <span>
                         <a href="#">
-                          <i className="icon-eye" /> 100
+                          <i className="icon-eye" />
+                          {' '}
+                          100
                         </a>
                       </span>
                       <span>
                         <a href="#">
-                          <i className="icon-heart" /> 49
+                          <i className="icon-heart" />
+                          {' '}
+                          49
                         </a>
                       </span>
                     </p>
@@ -91,7 +99,7 @@ function ProjectsComponent() {
             >
               <div
                 className="project"
-                style={{ backgroundImage: "url(images/img-3.jpg)" }}
+                style={{ backgroundImage: 'url(images/img-3.jpg)' }}
               >
                 <div className="desc">
                   <div className="con">
@@ -107,12 +115,16 @@ function ProjectsComponent() {
                       </span>
                       <span>
                         <a href="#">
-                          <i className="icon-eye" /> 100
+                          <i className="icon-eye" />
+                          {' '}
+                          100
                         </a>
                       </span>
                       <span>
                         <a href="#">
-                          <i className="icon-heart" /> 49
+                          <i className="icon-heart" />
+                          {' '}
+                          49
                         </a>
                       </span>
                     </p>
@@ -126,7 +138,7 @@ function ProjectsComponent() {
             >
               <div
                 className="project"
-                style={{ backgroundImage: "url(images/img-4.jpg)" }}
+                style={{ backgroundImage: 'url(images/img-4.jpg)' }}
               >
                 <div className="desc">
                   <div className="con">
@@ -142,12 +154,16 @@ function ProjectsComponent() {
                       </span>
                       <span>
                         <a href="#">
-                          <i className="icon-eye" /> 100
+                          <i className="icon-eye" />
+                          {' '}
+                          100
                         </a>
                       </span>
                       <span>
                         <a href="#">
-                          <i className="icon-heart" /> 49
+                          <i className="icon-heart" />
+                          {' '}
+                          49
                         </a>
                       </span>
                     </p>
@@ -161,7 +177,7 @@ function ProjectsComponent() {
             >
               <div
                 className="project"
-                style={{ backgroundImage: "url(images/img-5.jpg)" }}
+                style={{ backgroundImage: 'url(images/img-5.jpg)' }}
               >
                 <div className="desc">
                   <div className="con">
@@ -177,12 +193,16 @@ function ProjectsComponent() {
                       </span>
                       <span>
                         <a href="#">
-                          <i className="icon-eye" /> 100
+                          <i className="icon-eye" />
+                          {' '}
+                          100
                         </a>
                       </span>
                       <span>
                         <a href="#">
-                          <i className="icon-heart" /> 49
+                          <i className="icon-heart" />
+                          {' '}
+                          49
                         </a>
                       </span>
                     </p>
@@ -196,7 +216,7 @@ function ProjectsComponent() {
             >
               <div
                 className="project"
-                style={{ backgroundImage: "url(images/img-6.jpg)" }}
+                style={{ backgroundImage: 'url(images/img-6.jpg)' }}
               >
                 <div className="desc">
                   <div className="con">
@@ -212,12 +232,16 @@ function ProjectsComponent() {
                       </span>
                       <span>
                         <a href="#">
-                          <i className="icon-eye" /> 100
+                          <i className="icon-eye" />
+                          {' '}
+                          100
                         </a>
                       </span>
                       <span>
                         <a href="#">
-                          <i className="icon-heart" /> 49
+                          <i className="icon-heart" />
+                          {' '}
+                          49
                         </a>
                       </span>
                     </p>
@@ -230,7 +254,9 @@ function ProjectsComponent() {
             <div className="col-md-12 animate-box">
               <p>
                 <a href="#" className="btn btn-primary btn-lg btn-load-more">
-                  Load more <i className="icon-reload" />
+                  Load more
+                  {' '}
+                  <i className="icon-reload" />
                 </a>
               </p>
             </div>

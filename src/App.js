@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from "react";
-import { get } from "lodash";
-import { Switch, Route } from "react-router-dom";
-import "./App.css";
+import React, { useState, useEffect } from 'react';
+import { get } from 'lodash';
+import { Switch, Route } from 'react-router-dom';
+import './App.css';
 
-import AboutComponent from "./components/AboutComponent/about.component";
+import AboutComponent from './components/AboutComponent/about.component';
 import ContactusComponent from './components/ContactUsComponent/contactus.component';
-import FooterComponent from "./components/FooterComponent/footer.component";
-import HomeComponent from "./components/HomeComponent/home.component";
-import IntroductionComponent from "./components/IntroductionComponent/introduction.component";
-import TimelineComponent from "./components/TimelineComponent/timeline.component";
-import WhatidoComponent from "./components/WhatIDoComponent/whatido..component";
+import FooterComponent from './components/FooterComponent/footer.component';
+import HomeComponent from './components/HomeComponent/home.component';
+import IntroductionComponent from './components/IntroductionComponent/introduction.component';
+import TimelineComponent from './components/TimelineComponent/timeline.component';
+import WhatidoComponent from './components/WhatIDoComponent/whatido..component';
 import WorkExperienceComponent from './components/WorkExperienceComponent/workexperience.component';
 
 const App = () => {
-  const [email, setEmail] = useState("");
-  const [summary, setSummary] = useState("");
+  const [email, setEmail] = useState('');
+  const [summary, setSummary] = useState('');
   const [myLinks, setMyLinks] = useState([]);
   const [experience, setExperience] = useState([]);
 
@@ -23,15 +23,15 @@ const App = () => {
     // removing "callback hell" and using async/await
     const fetchData = async () => {
       // grabbing my response from the api call with fetch()
-      let response = await fetch(
-        "https://gitconnected.com/v1/portfolio/kevindennyii"
+      const response = await fetch(
+        'https://gitconnected.com/v1/portfolio/kevindennyii',
       );
-      //converting response to json
-      let data = await response.json();
-      //storing the data from my components in state
-      setEmail(get(data.basics, "email"));
-      setSummary(get(data.basics, "summary"));
-      setMyLinks(get(data.basics, "profiles"));
+      // converting response to json
+      const data = await response.json();
+      // storing the data from my components in state
+      setEmail(get(data.basics, 'email'));
+      setSummary(get(data.basics, 'summary'));
+      setMyLinks(get(data.basics, 'profiles'));
       setExperience(data.work);
     };
 
@@ -39,10 +39,10 @@ const App = () => {
   }, []);
 
   return (
-    <div id="colorlib-page" style={{ backgroundColor: "#F4F5F4" }}>
+    <div id="colorlib-page" style={{ backgroundColor: '#F4F5F4' }}>
       <div
         id="container-wrap"
-        style={{ marginLeft: "5rem", marginRight: "5rem" }}
+        style={{ marginLeft: '5rem', marginRight: '5rem' }}
       >
         <IntroductionComponent myLinks={myLinks} email={email} />
         <Switch>
@@ -67,7 +67,7 @@ const App = () => {
               <WorkExperienceComponent {...props} experience={experience} />
             )}
           />
-          <Route path="/contact-us" component={ContactusComponent} />
+          <Route path="/send-message" component={ContactusComponent} />
           <Route path="/home" component={HomeComponent} />
         </Switch>
       </div>
