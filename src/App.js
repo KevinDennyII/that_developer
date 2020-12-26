@@ -5,6 +5,7 @@ import './App.css';
 
 import AboutComponent from './components/AboutComponent/about.component';
 import ContactusComponent from './components/ContactUsComponent/contactus.component';
+import ErrorComponent from './components/ErrorComponent/error.component';
 import FooterComponent from './components/FooterComponent/footer.component';
 import HomeComponent from './components/HomeComponent/home.component';
 import IntroductionComponent from './components/IntroductionComponent/introduction.component';
@@ -54,21 +55,24 @@ const App = () => {
             path="/about"
             render={(props) => <AboutComponent {...props} summary={summary} />}
           />
-          <Route path="/expertise" component={WhatidoComponent} />
+          <Route exact path="/expertise" component={WhatidoComponent} />
           <Route
+            exact
             path="/experience"
             render={(props) => (
               <TimelineComponent {...props} experience={experience} />
             )}
           />
           <Route
+            exact
             path="/work-experience"
             render={(props) => (
               <WorkExperienceComponent {...props} experience={experience} />
             )}
           />
-          <Route path="/send-message" component={ContactusComponent} />
-          <Route path="/home" component={HomeComponent} />
+          <Route exact path="/send-message" component={ContactusComponent} />
+          <Route exact path="/home" component={HomeComponent} />
+          <Route component={ErrorComponent} />
         </Switch>
       </div>
       <FooterComponent />
