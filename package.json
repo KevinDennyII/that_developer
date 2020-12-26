@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://thatdeveloper.dev",
   "dependencies": {
+    "debug": "^4.3.1",
     "emailjs-com": "^2.6.3",
     "gh-pages": "^2.0.1",
     "history": "^5.0.0",
