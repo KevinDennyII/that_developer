@@ -1,3 +1,7 @@
 .contactUsForm {
   padding: 0 15rem;
 }
+
+@media screen and (max-width: 680px) {
+  padding: 0;
+}
