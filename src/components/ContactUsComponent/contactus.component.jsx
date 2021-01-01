@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-import { contactUsForm } from './contactus.module.scss';
+import { contactUsForm, sendMsgTitle } from './contactus.module.scss';
 
 const ContactusComponent = () => {
   // boolean for keeping state when an email has been successfully sent
@@ -65,47 +65,50 @@ const ContactusComponent = () => {
   };
 
   return (
-    <form className={contactUsForm} onSubmit={sendEmail}>
-      <div className="form-group">
-        <label htmlFor="name">Name</label>
-        <input type="hidden" name="contact_number" />
-        <input
-          className="form-control"
-          id="name"
-          type="text"
-          name="from_name"
-          value={name}
-          onChange={onChangeValueName}
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="email">Email</label>
-        <input
-          className="form-control"
-          id="email"
-          type="email"
-          name="reply_to"
-          value={email}
-          onChange={onChangeValueEmail}
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="message">Message</label>
-        <textarea className="form-control" id="message" name="message" value={message} onChange={onChangeValueMessage} />
-      </div>
-      <button className="btn btn-primary" type="submit" value="Send">
-        Submit
-      </button>
-      {emailSent && (
+    <div>
+      <div className={sendMsgTitle}><h3>Send Me A Message!</h3></div>
+      <form className={contactUsForm} onSubmit={sendEmail}>
+        <div className="form-group">
+          <label htmlFor="name">Name</label>
+          <input type="hidden" name="contact_number" />
+          <input
+            className="form-control"
+            id="name"
+            type="text"
+            name="from_name"
+            value={name}
+            onChange={onChangeValueName}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            className="form-control"
+            id="email"
+            type="email"
+            name="reply_to"
+            value={email}
+            onChange={onChangeValueEmail}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="message">Message</label>
+          <textarea className="form-control" id="message" name="message" value={message} onChange={onChangeValueMessage} />
+        </div>
+        <button className="btn btn-primary" type="submit" value="Send">
+          Submit
+        </button>
+        {emailSent && (
         <p className="text-success" style={{ fontWeight: '700' }}>Email message was sent successfully!</p>
-      )}
-      {emailSent === false && (
+        )}
+        {emailSent === false && (
         <p className="text-danger" style={{ fontWeight: '700' }}>Oh no! Your email was not sent successfully :-(</p>
-      )}
-      {emptyVal && (
+        )}
+        {emptyVal && (
         <p className="text-danger" style={{ fontWeight: '700' }}>Please fill in all inputs appropriately</p>
-      )}
-    </form>
+        )}
+      </form>
+    </div>
   );
 };
 
