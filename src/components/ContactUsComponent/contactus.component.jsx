@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-import { contactUsForm, sendMsgTitle } from './contactus.module.scss';
+import BlackManTyping from '../../images/Black-Man-Using-Laptop-A.png';
+import BlackWomanTyping from '../../images/Black-Woman-Using-Laptop-D.png';
+import {
+  contactUsForm, sendMsgTitle, sendMsgImg, row, column,
+} from './contactus.module.scss';
 
 const ContactusComponent = () => {
   // boolean for keeping state when an email has been successfully sent
@@ -66,7 +70,15 @@ const ContactusComponent = () => {
 
   return (
     <div>
-      <div className={sendMsgTitle}><h3>Send Me A Message!</h3></div>
+      <div className={row}>
+        <div className={column}>
+          <img src={BlackManTyping} className={sendMsgImg} alt="Black man sitting at desk typing on a laptop" />
+        </div>
+        <div className={`${column} ${sendMsgTitle}`}><h3>Send Me A Message!</h3></div>
+        <div className={column}>
+          <img src={BlackWomanTyping} className={sendMsgImg} alt="Black woman sitting at desk typing on a laptop" />
+        </div>
+      </div>
       <form className={contactUsForm} onSubmit={sendEmail}>
         <div className="form-group">
           <label htmlFor="name">Name</label>

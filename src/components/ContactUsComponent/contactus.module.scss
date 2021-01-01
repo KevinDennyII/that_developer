@@ -1,5 +1,20 @@
+.sendMsgImg {
+  width: 15rem;
+  height: 15rem;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  margin:auto
+}
 .sendMsgTitle {
   text-align: center;
+  margin-left: -3rem;
+  margin-right: -3rem;
   font-family: Titillium Web, sans-serif;
 }
 
