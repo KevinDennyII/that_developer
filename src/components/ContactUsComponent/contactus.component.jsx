@@ -120,7 +120,7 @@ const ContactusComponent = () => {
         <p className="text-danger" style={{ fontWeight: '700' }}>Oh no! Your email was not sent successfully :-(</p>
         )}
         {emptyVal && (
-        <p className="text-danger" style={{ fontWeight: '700' }}>Please fill in all inputs appropriately</p>
+        <p className="text-danger" style={{ fontWeight: '700' }}>Please check your inputs and fill in all inputs appropriately</p>
         )}
       </form>
     </div>
