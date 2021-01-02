@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import ReCAPTCHA from 'react-google-recaptcha';
 import BlackManTyping from '../../images/Black-Man-Using-Laptop-A.png';
 import BlackWomanTyping from '../../images/Black-Woman-Using-Laptop-D.png';
 import {
@@ -108,6 +109,9 @@ const ContactusComponent = () => {
           <textarea className="form-control" id="message" name="message" value={message} onChange={onChangeValueMessage} />
         </div>
         <div className="g-recaptcha" data-sitekey="6LfOpR0aAAAAANVkCaGd7_BRUFktzEgZaMVttv21" />
+        <ReCAPTCHA
+          sitekey="6LfOpR0aAAAAANVkCaGd7_BRUFktzEgZaMVttv21-SStt"
+        />
         <button className="btn btn-primary" type="submit" value="Send">
           Submit
         </button>
