@@ -74,7 +74,7 @@ const ContactusComponent = () => {
         <div className={column}>
           <img src={BlackManTyping} className={sendMsgImg} alt="Black man sitting at desk typing on a laptop" />
         </div>
-        <div className={`${column} ${sendMsgTitle}`}><h3>Send Me A Message!</h3></div>
+        <div className={`${column} ${sendMsgTitle}`}><h3>Share what's on your mind and heart.</h3></div>
         <div className={column}>
           <img src={BlackWomanTyping} className={sendMsgImg} alt="Black woman sitting at desk typing on a laptop" />
         </div>
