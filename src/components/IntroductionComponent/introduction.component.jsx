@@ -8,6 +8,8 @@ import {
   introInfo,
   links,
   menuItems,
+  emailLink,
+  emailIcon,
 } from './introduction.module.scss';
 
 const IntroductionComponent = ({ myLinks, email }) => (
@@ -58,8 +60,15 @@ const IntroductionComponent = ({ myLinks, email }) => (
           </div>
           <div>
             <span className="email">
-              <i className="icon-mail" />
-              <a href={`mailto:${email}`}>{email}</a>
+              <i className={`icon-mail ${emailIcon}`} />
+              <NavLink
+                activeStyle={{ fontWeight: '700' }}
+                className={emailLink}
+                to="/send-message"
+              >
+                Send Me A Message!
+              </NavLink>
+              {/* <a href={`mailto:${email}`}>{email}</a> */}
             </span>
           </div>
         </div>
