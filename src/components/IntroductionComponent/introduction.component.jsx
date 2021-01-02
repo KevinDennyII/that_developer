@@ -64,6 +64,7 @@ const IntroductionComponent = ({ myLinks, email }) => (
               <NavLink
                 activeStyle={{ fontWeight: '700' }}
                 className={emailLink}
+                onClick={() => window.location.reload()}
                 to="/send-message"
               >
                 Send Me A Message!
