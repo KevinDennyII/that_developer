@@ -5,7 +5,7 @@
   "homepage": "https://thatdeveloper.dev",
   "dependencies": {
     "debug": "^4.3.1",
-    "emailjs-com": "^2.6.3",
+    "emailjs-com": "^2.6.4",
     "gh-pages": "^2.0.1",
     "history": "^5.0.0",
     "lodash": "^4.17.20",
