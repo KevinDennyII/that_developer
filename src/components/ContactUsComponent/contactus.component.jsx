@@ -109,9 +109,7 @@ const ContactusComponent = () => {
           <textarea className="form-control" id="message" name="message" value={message} onChange={onChangeValueMessage} />
         </div>
         {/* <div className="g-recaptcha" data-sitekey="6LfOpR0aAAAAANVkCaGd7_BRUFktzEgZaMVttv21" /> */}
-        <ReCAPTCHA
-          sitekey="6LfOpR0aAAAAANVkCaGd7_BRUFktzEgZaMVttv21"
-        />
+        <ReCAPTCHA sitekey="6LfOpR0aAAAAANVkCaGd7_BRUFktzEgZaMVttv21" />
         <button className="btn btn-primary" type="submit" value="Send">
           Submit
         </button>
