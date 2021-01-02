@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 import {
   aviHeader,
@@ -64,7 +64,7 @@ const IntroductionComponent = ({ myLinks, email }) => (
               <NavLink
                 activeStyle={{ fontWeight: '700' }}
                 className={emailLink}
-                onClick={() => window.location.reload()}
+                tag={Link}
                 to="/send-message"
               >
                 Send Me A Message!
