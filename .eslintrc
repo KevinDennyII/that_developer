@@ -1,9 +1,13 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
+  "extends": ["airbnb", "airbnb/hooks"],
   "env": {
     "browser": true,
     "node": true
+  },
+  "rules": {
+    "quotes": [2, "single", { "avoidEscape": true }],
+    "max-len": ["error", { "code": 100 }]
   },
   "settings": {
     "react": {

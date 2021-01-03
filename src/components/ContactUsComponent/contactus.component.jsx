@@ -4,7 +4,11 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import BlackManTyping from '../../images/Black-Man-Using-Laptop-A.png';
 import BlackWomanTyping from '../../images/Black-Woman-Using-Laptop-D.png';
 import {
-  contactUsForm, sendMsgTitle, sendMsgImg, row, column,
+  contactUsForm,
+  sendMsgTitle,
+  sendMsgImg,
+  row,
+  column,
 } from './contactus.module.scss';
 
 const ContactusComponent = () => {
@@ -49,8 +53,12 @@ const ContactusComponent = () => {
         .then(
           (result) => {
             console.log(result.text);
-            console.log(`Name: ${name}`, `Email: ${email}`, `Message: ${message}`);
-            // email sent successfully
+            console.log(
+              `Name: ${name}`,
+              `Email: ${email}`,
+              `Message: ${message}`,
+            );
+            // email sent successfully, clear form values
             setEmailSent(true);
             // resetting values
             setName('');
@@ -73,11 +81,21 @@ const ContactusComponent = () => {
     <div>
       <div className={row}>
         <div className={column}>
-          <img src={BlackManTyping} className={sendMsgImg} alt="Black man sitting at desk typing on a laptop" />
+          <img
+            src={BlackManTyping}
+            className={sendMsgImg}
+            alt="Black man sitting at desk typing on a laptop"
+          />
         </div>
-        <div className={`${column} ${sendMsgTitle}`}><h3>Share what&apos;s on your heart and mind.</h3></div>
+        <div className={`${column} ${sendMsgTitle}`}>
+          <h3>Share what&apos;s on your heart and mind.</h3>
+        </div>
         <div className={column}>
-          <img src={BlackWomanTyping} className={sendMsgImg} alt="Black woman sitting at desk typing on a laptop" />
+          <img
+            src={BlackWomanTyping}
+            className={sendMsgImg}
+            alt="Black woman sitting at desk typing on a laptop"
+          />
         </div>
       </div>
       <form className={contactUsForm} onSubmit={sendEmail}>
@@ -106,7 +124,13 @@ const ContactusComponent = () => {
         </div>
         <div className="form-group">
           <label htmlFor="message">Message</label>
-          <textarea className="form-control" id="message" name="message" value={message} onChange={onChangeValueMessage} />
+          <textarea
+            className="form-control"
+            id="message"
+            name="message"
+            value={message}
+            onChange={onChangeValueMessage}
+          />
         </div>
         {/* <div className="g-recaptcha" data-sitekey="6LfOpR0aAAAAANVkCaGd7_BRUFktzEgZaMVttv21" /> */}
         <ReCAPTCHA sitekey="6LfOpR0aAAAAANVkCaGd7_BRUFktzEgZaMVttv21" />
@@ -114,13 +138,19 @@ const ContactusComponent = () => {
           Submit
         </button>
         {emailSent && (
-        <p className="text-success" style={{ fontWeight: '700' }}>Email message was sent successfully!</p>
+          <p className="text-success" style={{ fontWeight: '700' }}>
+            Email message was sent successfully!
+          </p>
         )}
         {emailSent === false && (
-        <p className="text-danger" style={{ fontWeight: '700' }}>Oh no! Your email was not sent successfully :-(</p>
+          <p className="text-danger" style={{ fontWeight: '700' }}>
+            Oh no! Your email was not sent successfully :-(
+          </p>
         )}
         {emptyVal && (
-        <p className="text-danger" style={{ fontWeight: '700' }}>Please check your inputs and fill in all inputs appropriately</p>
+          <p className="text-danger" style={{ fontWeight: '700' }}>
+            Please check your inputs and fill in all inputs appropriately
+          </p>
         )}
       </form>
     </div>
