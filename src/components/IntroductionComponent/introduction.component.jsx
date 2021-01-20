@@ -8,7 +8,7 @@ import {
   introInfo,
   links,
   menuItems,
-  emailLink,
+  headerLinks,
   emailIcon,
 } from './introduction.module.scss';
 
@@ -39,7 +39,7 @@ const IntroductionComponent = ({ myLinks, email }) => (
               <div key={link.network.toLowerCase()}>
                 <a href={link.url} target="_blank" rel="noopener noreferrer">
                   <i
-                    className={`icon-social-${link.network.toLowerCase()}`}
+                    className={`icon-social-${link.network.toLowerCase()} ${headerLinks}`}
                     style={{ fontSize: '25px' }}
                   />
                 </a>
@@ -52,7 +52,7 @@ const IntroductionComponent = ({ myLinks, email }) => (
                 rel="noopener noreferrer"
               >
                 <i
-                  className="icon-instagram"
+                  className={`icon-instagram ${headerLinks}`}
                   style={{ fontSize: '15px' }}
                 />
               </a>
@@ -63,7 +63,7 @@ const IntroductionComponent = ({ myLinks, email }) => (
               <i className={`icon-mail ${emailIcon}`} />
               <NavLink
                 activeStyle={{ fontWeight: '700' }}
-                className={emailLink}
+                className={headerLinks}
                 to="/send-message"
               >
                 Send Me A Message!
