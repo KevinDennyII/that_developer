@@ -2,7 +2,7 @@ $font-primary: 'Quicksand', Arial, sans-serif;
 $font-secondary: 'Playfair Display', Georgia, serif;
 
 // Overrides
-$grid-gutter-width: 40px !default; 
+$grid-gutter-width: 40px !default;
 $border-radius-base:  4px !default;
 $padding-base-vertical: 14px !default;
 
@@ -61,16 +61,16 @@ $form-group-margin-bottom:       30px !default;
           border-radius: $radius;
 }
 @mixin flex() {
-	display: -webkit-box;      
-  	display: -moz-box;         
-  	display: -ms-flexbox;      
-  	display: -webkit-flex;     
-  	display: flex;             
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
 }
 @mixin flexwrap() {
 	flex-wrap: wrap;
-	-webkit-flex-wrap: wrap; 
-	-moz-flex-wrap: wrap; 
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
 }
 
 @font-face {
@@ -85,7 +85,7 @@ $form-group-margin-bottom:       30px !default;
 }
 
 @mixin icomoon() {
-	
+
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -97,10 +97,10 @@ $form-group-margin-bottom:       30px !default;
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	
+
 }
 
-// Import 
+// Import
 @import 'bootstrap/mixins';
 @import 'bootstrap/variables';
 
@@ -109,7 +109,7 @@ $form-group-margin-bottom:       30px !default;
 
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *	Edit this section
 *
 * ======================================================= */
@@ -123,7 +123,7 @@ body {
 	color: rgba(0,0,0,.7);
 	@media screen and (max-width: $screen-md) {
 		font-size: 16px;
-	}	
+	}
 }
 a {
 	color: $brand-primary;
@@ -273,7 +273,7 @@ figure {
 					&:hover {
 						text-decoration: none;
 						color: rgba(0,0,0,1);
-						
+
 						&:after {
 							visibility: visible;
 							-webkit-transform: scaleX(1);
@@ -295,40 +295,6 @@ figure {
 							-o-transform: scaleX(1);
 							transform: scaleX(1);
 						}
-					}
-				}
-			}
-		}
-	}
-	.colorlib-footer {
-		font-size: 15px;
-		text-align: center;
-		font-weight: 400;
-		color: rgba(0,0,0,.5);
-		padding: 0 20px;
-		width: 100%;
-		@media screen and (max-width: $screen-sm) {
-			position: relative;
-			bottom: 0;
-		}
-		span {
-			display: block;
-		}
-		ul {
-			padding: 0;
-			margin: 0;
-			li {
-				padding: 0;
-				margin: 0;
-				display: inline;
-				list-style: none;
-				a {
-					color: rgba(255,255,255,.3);
-					padding: 4px;
-					&:hover, &:active, &:focus {
-						text-decoration: none;
-						outline: none;
-						color: $brand-primary;
 					}
 				}
 			}
@@ -451,12 +417,9 @@ figure {
 					@media screen and (max-width: $screen-sm){
 						font-size: 30px;
 					}
-				}s
-				.colorlib-lead{
-					font-size: 20px;
-					color: $brand-white;
 				}
-				p{
+
+        p{
 					margin-bottom: 0;
 				}
 				.btn{
@@ -496,44 +459,13 @@ body {
 			z-index: 999;
 			position: fixed;
 		}
-		#colorlib-main, .colorlib-nav-toggle {
-			top: 0;
-			@include translateX(300px);
-		}
-	}
+  }
 }
 
-.colorlib-narrow-content{
-	padding: 0 2.5em;
-	@media screen and(max-width: $screen-sm){
-		padding: 0;
-	}
-}
 .no-gutters{
 	margin: 0;
 	padding: 0;
 }
-
-.colorlib-experience,
-.colorlib-skills,
-.colorlib-education,
-.colorlib-blog,
-.colorlib-work,
-.colorlib-about,
-.colorlib-services,
-.colorlib-contact{
-	padding-top: 4em;
-	padding-bottom: 9em;
-	clear: both;
-	width: 100%;
-	display: block;
-	@media screen and(max-width: $screen-sm){
-		padding-top: 5em;
-		padding-bottom: 8em;
-	}
-}
-
-
 
 
 //COVER BG
@@ -544,21 +476,6 @@ body {
 	position: relative;
 }
 
-.colorlib-heading {
-	font-size: 18px;
-	margin-bottom: 4em;
-	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	line-height: 1.8;
-	position: relative;
-	span {
-		display: block;
-	}
-	@media screen and (max-width: $screen-sm ) {
-		margin-bottom: 3em;
-	}
-}
 .heading-meta{
 	margin-bottom: 15px;
 	display: block;
@@ -575,14 +492,7 @@ body {
 	height: 600px;
 	margin-bottom: 30px;
 }
-.about-desc{
-	h3{
-		font-size: 18px;
-		text-transform: uppercase;
-		letter-spacing: 5px;
-		font-weight: 500;
-	}
-}
+
 .hire{
 	padding: 2em;
 	background: $brand-color-3;
@@ -704,41 +614,6 @@ position: relative;
 margin-left: -20px;
 }
 
-
-.timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon {
-	display: block;
-	width: 40px;
-	height: 40px;
-	background: $brand-primary;
-	@include border-radius(50%);
-	text-align: center;
-	-moz-box-shadow: 0 0 0 5px $brand-gray;
-	-webkit-box-shadow: 0 0 0 5px $brand-gray;
-	box-shadow: 0 0 0 5px $brand-gray;
-	line-height: 40px;
-	float: left;
-	i{
-		color: $brand-white;	
-	}
-	&.color-2{
-		background: $brand-color-2;
-	}
-	&.color-3{
-		background: $brand-color-3;
-	}
-	&.color-4{
-		background: $brand-color-4;
-	}
-	&.color-5{
-		background: $brand-color-5;
-	}
-	&.color-none{
-		background: $brand-white;
-		width: 20px;
-		height: 20px;
-		margin-left: 10px;
-	}
-}
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
 	position: relative;
@@ -1055,66 +930,6 @@ margin-left: -20px;
 }
 
 
-.colorlib-feature {
-	text-align: left;
-	width: 100%;
-	float: left;
-	margin-bottom: 40px;
-	position: relative;
-	.colorlib-icon {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100px;
-		height: 100px;
-		display: table;
-		text-align: center;
-		background: $brand-gray;
-		@include border-radius(2px);
-		i {
-			display: table-cell;
-			vertical-align: middle;
-			color: $brand-primary;
-			font-size: 60px;
-			height: 100px;
-			@media screen and (max-width: $screen-lg) {
-				font-size: 40px;
-			}
-		}
-	}
-	.colorlib-text {
-		padding-left: 120px;
-		width: 100%;
-		h2, h3 {
-			margin: 0;
-			padding: 0;
-		}
-		h3 {
-			font-weight: 500;
-			margin-bottom: 20px;
-			color: rgba(0,0,0,.7);
-			font-size: 14px;
-			letter-spacing: 3px;
-			text-transform: uppercase;
-		}
-	}
-	&.colorlib-feature-sm {
-		.colorlib-text {
-			margin-top: 30px;
-		}
-		.colorlib-icon {
-			i {
-				color: $brand-primary;
-				font-size: 40px;
-				@media screen and (max-width: $screen-lg) {
-					font-size: 28px;
-				}
-			}
-		}
-	}
-}
-
-
 //BLOG
 .blog-entry{
 	width: 100%;
@@ -1318,102 +1133,14 @@ margin-left: -20px;
 	clear: both;
 	margin-bottom: 5em;
 }
-.colorlib-counters {
-	padding: 3em 0;
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: center center;
-	.overlay {
-		z-index: 0;
-		position: absolute;
-		bottom: 0;
-		top: 0;
-		left: 0;
-		right: 0;
-		background: rgba($brand-black,.4);
-	}
-	.icon{
-		width: 100px;
-		height: 100px;
-		display: table;
-		margin: 0 auto;
-		margin-bottom: 20px;
-		i{
-			display: table-cell;
-			vertical-align: middle;
-			width: 100px;
-			height: 100px;
-			font-size: 50px;
-			color: $brand-primary;
-			background: $brand-white;
-			@include border-radius(50%);
-		}
-	}
-	.counter-wrap{
-		border: 1px solid red !important;
-	}
-	.colorlib-counter {
-		font-size: 40px;
-		display: block;
-		color: rgba($brand-white,1);
-		font-family: $font-primary;
-		width: 100%;
-		font-weight: 700;
-		margin-bottom: .3em;
-	}
-	.colorlib-counter-label {
-		color: rgba($brand-white,.7);
-		text-transform: uppercase;
-		font-size: 14px;
-		letter-spacing: 5px;
-		margin-bottom: 2em;
-		display: block;
-	}
-}
-
-
-.colorlib-social {
-	padding: 0;
-	margin: 0;
-	text-align: center;
-	li {
-		padding: 0;
-		margin: 0;
-		list-style: none;
-		@include inline-block;
-		a {
-			font-size: 22px;
-			color: $brand-black;
-			padding: 10px;
-			@include inline-block;
-			@include border-radius(7px);
-			@media screen and (max-width: $screen-sm) {
-				padding: 10px 8px;
-			}
-			&:hover {
-				color: $brand-primary;
-			}
-			&:hover, &:active, &:focus {
-				outline: none;
-				text-decoration: none;
-				color: $brand-primary;
-			}
-		}
-	}
-}
 
 
 #map {
 	width: 100%;
-	height: 700px;	
+	height: 700px;
 	@media screen and (max-width: $screen-sm) {
 		height: 200px;
 	}
-}
-
-.colorlib-bg-color{
-	background: lighten($brand-black,98%);
-	position: relative;
 }
 
 
@@ -1468,10 +1195,8 @@ margin-left: -20px;
 	&.btn-sm {
 		padding: 4px 15px!important;
 	}
-	&.btn-md {
-		padding: 8px 20px!important;
-	}
-	&.btn-lg {
+
+  &.btn-lg {
 		padding: 18px 36px!important;
 	}
 	&:hover, &:active, &:focus {
@@ -1606,59 +1331,6 @@ margin-left: -20px;
 }
 
 // Burger Menu
-.colorlib-nav-toggle {
-  cursor: pointer;
-  text-decoration: none;
-  &.active i {
-		&::before, &::after {
-			background: $brand-black;
-		}
-  }
-  &.dark {
-  	&.active i {
-			&::before, &::after {
-				background: $brand-black;
-			}
-	  }
-  }
-  &:hover, &:focus, &:active {
-  	outline: none;
-  	border-bottom: none!important;
-  }
-  i {
-  	position: relative;
-	  @include inline-block;
-	  width: 30px;
-	  height: 2px;
-	  color: $brand-black;
-	  font:bold 14px/.4 Helvetica;
-	  text-transform: uppercase;
-	  text-indent:-55px;
-	  background: $brand-black;
-	  transition: all .2s ease-out;
-		 &::before, &::after {
-	  	  content:'';
-		  width: 30px;
-		  height: 2px;
-		  background: $brand-black;
-		  position: absolute;
-		  left:0;
-		  @include transition(.2s);
-	  }
-  }
-  &.dark {
-  	i {
-	  	position: relative;
-		  color: $brand-black;
-		  background: $brand-black;
-		  transition: all .2s ease-out;
-			 &::before, &::after {
-			  background: $brand-black;
-			  @include transition(.2s);
-		  }
-	  }
-  }
-}
 
 .colorlib-nav-toggle i::before {
   top: -7px;
@@ -1691,52 +1363,9 @@ margin-left: -20px;
        -o-transform: rotateZ(-45deg);
           transform: rotateZ(-45deg);
 }
-.colorlib-nav-toggle {
-  	position: fixed;
-  	left: -5px;
-	top: 0px;
-	z-index: 9999;
-	cursor: pointer;
-	opacity: 1;
-	visibility: hidden;
-	padding: 20px;
-	@include transition(.5s);
-  	@media screen and (max-width: $screen-sm) {
-  		opacity: 1;
-		visibility: visible;
-  	}
-  
-}
 
 
 // Helper Class
-.col-xxs-12 {
-	@media screen and (max-width: 480px) {
-		float: none;
-		width: 100%;
-	}
-}
-.row-bottom-padded-lg {
-	padding-bottom: 7em;
-	@media screen and (max-width: $screen-sm ) {
-		padding-bottom: 1em;
-	}
-}
-.row-bottom-padded-md {
-	padding-bottom: 3em;
-	@media screen and (max-width: $screen-sm ) {
-		padding-bottom: 1em;
-	}	
-}
-.row-bottom-padded-sm {
-	padding-bottom: 1em;
-	@media screen and (max-width: $screen-sm ) {
-		padding-bottom: 1em;
-	}	
-}
-.row-pt-md{
-	padding-top: 3em;
-}
 .col-padding{
 	padding: 10px !important;
 }
