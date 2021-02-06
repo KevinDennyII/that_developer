@@ -18,3 +18,17 @@
   margin-right: 20px;
   height: 200px;
 }
+
+@media screen and (max-width: 1045px) {
+  .container {
+    flex-direction: row;
+    margin: 5px 10px 5px 10px;
+  }
+  .aboutImg {
+    margin: 0;
+    height: 125px;
+  }
+  .container p {
+    font-size: 1.25rem;
+  }
+}

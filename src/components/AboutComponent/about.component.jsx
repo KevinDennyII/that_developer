@@ -62,9 +62,7 @@ const AboutComponent = () => (
                     />
                     {/* eslint-disable-next-line max-len */}
                     <p>
-                      I love reading all types of books but when it comes to web development.
-                      I particular have keen interest in JavaScript.
-                      I am avid fan of Kyle Simpson and his "You Don't Know JS" series and "Functional-Light JavaScript"
+                      I love reading all types of books but when it comes to web development I like book series such as "You Dont Know JS" by Kyle Simpson.
                     </p>
                   </div>
                   <div className={container}>
