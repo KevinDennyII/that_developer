@@ -1,3 +1,10 @@
+.unstaggered{
+  display:none;
+}
+
+.staggered{
+  display: block;
+}
 .container {
   display: flex;
   align-items: center;
@@ -19,16 +26,46 @@
   height: 200px;
 }
 
-@media screen and (max-width: 1045px) {
+@media screen and (max-width: 992px) {
+  .staggered {
+    display:none;
+  }
+  .unstaggered {
+    display:block;
+  }
   .container {
-    flex-direction: row;
-    margin: 5px 10px 5px 10px;
+    flex-direction: column;
+    margin: 5px 10px;
   }
   .aboutImg {
     margin: 0;
     height: 125px;
   }
   .container p {
+    text-align: center;
     font-size: 1.25rem;
+    margin: 5px 75px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .staggered {
+    display:none;
+  }
+  .unstaggered {
+    display:block;
+  }
+  .container {
+    flex-direction: column;
+    margin: 5px 10px;
+  }
+  .aboutImg {
+    margin: 0;
+    height: 125px;
+  }
+  .container p {
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 5px 5px;
   }
 }
