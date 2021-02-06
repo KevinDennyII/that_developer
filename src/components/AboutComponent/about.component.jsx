@@ -66,13 +66,12 @@ const AboutComponent = () => (
                     </p>
                   </div>
                   <div className={container}>
-                    <p>I am a curator of music; a DJ and hip hop enthusiast</p>
+                    <p>I am a curator of music; a DJ and hip hop enthusiast.</p>
                     <img
                       className={aboutImg}
                       src={blackPeopleDancing}
                       alt="black people dancing"
                     />
-                    .
                   </div>
                 </div>
               </div>
