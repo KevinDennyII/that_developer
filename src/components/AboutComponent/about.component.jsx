@@ -24,7 +24,6 @@ const AboutComponent = () => (
                   <div className={container}>
                     <img
                       className={aboutImg}
-                      width="350px"
                       src={blackFamily}
                       alt="black family sitting on couch"
                     />
@@ -34,7 +33,6 @@ const AboutComponent = () => (
                     <p>I am a computer scientist graduate of Virginia Tech, class of 2007</p>
                     <img
                       className={aboutImg}
-                      width="350px"
                       src={blackManGraduate}
                       alt="black man graduate"
                     />
@@ -43,7 +41,6 @@ const AboutComponent = () => (
                   <div className={container}>
                     <img
                       className={aboutImg}
-                      width="350px"
                       src={blackManUsingLaptop}
                       alt="black man programming"
                     />
@@ -53,7 +50,6 @@ const AboutComponent = () => (
                     <p>I have a passion to continuously learn.</p>
                     <img
                       className={aboutImg}
-                      width="350px"
                       src={blackManLearning}
                       alt="black man write on white board"
                     />
@@ -61,7 +57,6 @@ const AboutComponent = () => (
                   <div className={container}>
                     <img
                       className={aboutImg}
-                      width="350px"
                       src={blackManReading}
                       alt="black man reading on couch"
                     />
@@ -76,7 +71,6 @@ const AboutComponent = () => (
                     <p>I am a curator of music; a DJ and hip hop enthusiast</p>
                     <img
                       className={aboutImg}
-                      width="350px"
                       src={blackPeopleDancing}
                       alt="black people dancing"
                     />
