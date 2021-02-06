@@ -37,7 +37,7 @@ const AboutComponent = () => (
                       </p>
                     </div>
                     <div className={container}>
-                      <p>I am a computer scientist graduate of Virginia Tech, class of 2007</p>
+                      <p>I am a computer science graduate of Virginia Tech, class of 2007</p>
                       <img
                         className={aboutImg}
                         src={blackManGraduate}
@@ -100,7 +100,7 @@ const AboutComponent = () => (
                         src={blackManGraduate}
                         alt="black man graduate"
                       />
-                      <p>I am a computer scientist graduate of Virginia Tech, class of 2007</p>
+                      <p>I am a computer science graduate of Virginia Tech, class of 2007</p>
                     </div>
                     <div className={container}>
                       <img
