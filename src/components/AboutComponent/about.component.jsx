@@ -47,8 +47,7 @@ const AboutComponent = () => (
                       <ImageLazyLoader src={blackManReading} width={null} height="200px" alt="black man reading on couch" />
                       {/* eslint-disable-next-line max-len */}
                       <p>
-                        {`I love reading all types of books but when it comes to web development
-                        I like book series such as "You Dont Know JS" by Kyle Simpson.`}
+                        I love reading all types of books.
                       </p>
                     </div>
                     <div className={container}>
@@ -82,8 +81,7 @@ const AboutComponent = () => (
                     <div className={container}>
                       <ImageLazyLoader src={blackManReading} width={null} height="200px" alt="black man reading on couch" />
                       <p>
-                        {`I love reading all types of books but when it comes to web development
-                        I like book series such as "You Dont Know JS" by Kyle Simpson.`}
+                        I love reading all types of books.
                       </p>
                     </div>
                     <div className={container}>
