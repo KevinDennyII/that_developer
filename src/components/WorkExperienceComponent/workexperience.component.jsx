@@ -68,9 +68,11 @@ const WorkExperienceComponent = ({ experience }) => {
                           {item.company}
                         </span>
                         :
+                        {' '}
                         {startExperience(item.start)}
                         {' '}
                         -
+                        {' '}
                         {endExperience(item, item.end)}
                       </a>
                     </h4>
