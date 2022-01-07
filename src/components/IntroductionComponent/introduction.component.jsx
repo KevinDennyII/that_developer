@@ -59,7 +59,7 @@ const IntroductionComponent = ({ myLinks, email }) => (
               </a>
             </div>
           </div>
-          <div>
+          <div style={{ paddingTop: '5px' }}>
             <div>
               <span className="email">
                 <i className={`icon-mail ${emailIcon}`} />
@@ -67,10 +67,10 @@ const IntroductionComponent = ({ myLinks, email }) => (
                   activeStyle={{ fontWeight: '700' }}
                   className={headerLinks}
                   to="/send-message"
+                  style={{ fontSize: '15px' }}
                 >
                   Send Me A Message!
                 </NavLink>
-                {/* <a href={`mailto:${email}`}>{email}</a> */}
               </span>
             </div>
             <div className={resumeLink}>

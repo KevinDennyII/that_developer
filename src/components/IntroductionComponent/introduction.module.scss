@@ -64,10 +64,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 1.5rem;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
-  text-shadow: 0 2px #d2cfcf;
+  text-shadow:
+    1px 0px 1px #c4c4c4, 0px 1px 1px #e7e7e7;
 }
 
 .resumeLink button{
