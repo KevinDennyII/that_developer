@@ -60,6 +60,38 @@
   text-shadow: 0 2px #d2cfcf;
 }
 
+.resumeLink{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  font-size: 15px;
+  font-weight: bold;
+  text-shadow: 0 2px #d2cfcf;
+}
+
+.resumeLink button{
+  color: white;
+  background-color: #074e76;
+  font-size: 15px;
+  border-radius: 10px;
+  margin-left: .25rem;
+  margin-right: .25rem;
+  box-shadow: 0 5px #999;
+  cursor: pointer;
+}
+
+
+.resumeLink button:hover {
+  background-color: #0f81ef;
+}
+
+.resumeLink button:active {
+  background-color: #0f81ef;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 
 @media screen and (max-width: 680px) {
   .introduction {

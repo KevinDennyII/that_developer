@@ -10,6 +10,7 @@ import {
   menuItems,
   headerLinks,
   emailIcon,
+  resumeLink,
 } from './introduction.module.scss';
 
 const IntroductionComponent = ({ myLinks, email }) => (
@@ -59,17 +60,29 @@ const IntroductionComponent = ({ myLinks, email }) => (
             </div>
           </div>
           <div>
-            <span className="email">
-              <i className={`icon-mail ${emailIcon}`} />
-              <NavLink
-                activeStyle={{ fontWeight: '700' }}
-                className={headerLinks}
-                to="/send-message"
+            <div>
+              <span className="email">
+                <i className={`icon-mail ${emailIcon}`} />
+                <NavLink
+                  activeStyle={{ fontWeight: '700' }}
+                  className={headerLinks}
+                  to="/send-message"
+                >
+                  Send Me A Message!
+                </NavLink>
+                {/* <a href={`mailto:${email}`}>{email}</a> */}
+              </span>
+            </div>
+            <div className={resumeLink}>
+              <a
+                href="https://docs.google.com/document/d/1h-Pi7jl5yO8-LQX4-ygTm79MlQIYqxr1P3fgcQK2OTQ/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Send Me A Message!
-              </NavLink>
-              {/* <a href={`mailto:${email}`}>{email}</a> */}
-            </span>
+                Download My Resume
+              </a>
+            </div>
+
           </div>
         </div>
       </div>
