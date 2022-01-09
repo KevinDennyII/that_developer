@@ -1,6 +1,22 @@
 .home {
-  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
-  font-family: Comic Sans MS;
+  font-family: Comic Sans MS, serif;
   font-size: 2rem;
+}
+
+.quote {
+  margin-bottom: 5rem;
+}
+
+.music {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 680px) {
+  .home{
+    font-size: 1.5rem
+  }
 }
