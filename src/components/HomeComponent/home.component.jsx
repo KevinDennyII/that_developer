@@ -11,7 +11,7 @@ const HomeComponent = () => (
       - DJ LookUp
     </div>
     <div className={music}>
-      This is my go to list whenever I need to get in the zone for coding!
+      This is my go to list whenever I need to get in the zone!
       <br />
       <iframe
         title="DJ LookUp's No Lyrics Just Listen Spotify Playlist"
