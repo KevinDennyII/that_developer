@@ -8,16 +8,20 @@
 }
 
 .quote {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .music {
   margin-bottom: 2rem;
   font-weight: 550;
+  width: 50%
 }
 
 @media screen and (max-width: 680px) {
   .home{
     font-size: 1.5rem
+  }
+  .music {
+    width: 100%
   }
 }

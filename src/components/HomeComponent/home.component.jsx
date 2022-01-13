@@ -4,15 +4,13 @@ import { home, music, quote } from './home.module.scss';
 const HomeComponent = () => (
   <div className={home}>
     <div className={quote}>
-      "When you change your perspective,
+      &quot;When you change your perspective,
       <br />
-      you tend to hear things differently."
+      you tend to hear things differently.&quot;
       <br />
       - DJ LookUp
     </div>
     <div className={music}>
-      This is my go to list whenever I need to get in the zone!
-      <br />
       <iframe
         title="DJ LookUp's No Lyrics Just Listen Spotify Playlist"
         src="https://open.spotify.com/embed/playlist/5c4WKwIIouBRNZclEqvM62?utm_source=generator"
