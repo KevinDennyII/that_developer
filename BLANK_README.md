@@ -36,7 +36,7 @@
 
 <h3 align="center">Portfolio Site</h3>
 
-  <p align="center">
+  <p >
     Creating my own portfolio site based in ReactJS. Much of my resume data in the <strong>Experience</strong> section of the portfolio site is coming from <a href='"https://gitconnected.com">GitConnected</a>
     <br />
     <a href="https://github.com/kevindennyii/that_developer"><strong>Explore the docs »</strong></a>
@@ -83,7 +83,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://thatdeveloper.dev)
 
 ### Built With
 
