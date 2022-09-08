@@ -29,7 +29,7 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
+<div >
   <a href="https://github.com/kevindennyii/that_developer">
     <img src="../that_developer/public/images/logo.png" alt="Logo" width="80" height="80">
   </a>
