@@ -165,7 +165,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Kevin Denny II - [@twitter_handle](https://twitter.com/thatdeveloper2) - kevin.dennyii@gmail.com
+Kevin Denny II - [@thatdeveloper2](https://twitter.com/thatdeveloper2) - kevin.dennyii@gmail.com
 
 Project Link: [https://github.com/kevindennyii/that_developer](https://github.com/kevindennyii/that_developer)
 
