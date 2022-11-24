@@ -55,7 +55,7 @@
     "eslint-plugin-react-hooks": "4.0.0",
     "jest": "23.6.0",
     "jsdom": "^16.4.0",
-    "mocha": "^8.2.1",
+    "mocha": "^10.1.0",
     "purify-css": "^1.2.5",
     "sass": "^1.56.1"
   }
