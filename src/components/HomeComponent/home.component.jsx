@@ -10,8 +10,8 @@ const HomeComponent = () => (
       <br />
       - DJ LookUp
     </div>
-    <div style={{flexDirection: 'row', justifyContent: 'center'}}>
-    <div className={music}>
+    <div style={{flexDirection: 'row'}}>
+    <div style={{flexGrow: 1}} className={music}>
       <iframe
         title="DJ LookUp's No Lyrics Just Listen Spotify Playlist"
         src="https://open.spotify.com/embed/playlist/5c4WKwIIouBRNZclEqvM62?utm_source=generator"
@@ -22,7 +22,7 @@ const HomeComponent = () => (
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       />
     </div>
-    <div
+    <div style={{flexGrow: 1}}
       className={music}>
       <iframe
         title="DJ LookUp's No Lyrics Just Listen Tidal Playlist"
