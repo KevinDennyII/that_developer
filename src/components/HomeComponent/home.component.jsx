@@ -10,7 +10,7 @@ const HomeComponent = () => (
       <br />
       - DJ LookUp
     </div>
-    <div style={{flexDirection: 'row'}}>
+    <div style={{display: 'flex', flexDirection: 'row'}}>
     <div style={{flexGrow: 1}} className={music}>
       <iframe
         title="DJ LookUp's No Lyrics Just Listen Spotify Playlist"
