@@ -75,7 +75,7 @@ const IntroductionComponent = ({ myLinks, email }) => (
             </div>
             <div className={resumeLink}>
               <a
-                href="https://docs.google.com/document/d/1h-Pi7jl5yO8-LQX4-ygTm79MlQIYqxr1P3fgcQK2OTQ/edit?usp=sharing"
+                href="https://docs.google.com/document/d/1oLTOrlvB4jscqGfbCjJ6vhLh3NgH29oMwb4OLCRjFYA/edit?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
