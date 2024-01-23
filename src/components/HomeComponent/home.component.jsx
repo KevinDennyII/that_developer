@@ -16,7 +16,8 @@ const HomeComponent = () => (
         src="https://open.spotify.com/embed/playlist/5c4WKwIIouBRNZclEqvM62?utm_source=generator"
         width="100%"
         height="380"
-        allowFullScreen=""
+        frameBorder="0"
+        allowFullScreen
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       />
     </div>
@@ -25,7 +26,11 @@ const HomeComponent = () => (
       <iframe
         title="DJ LookUp's No Lyrics Just Listen Tidal Playlist"
         src="https://embed.tidal.com/playlists/c216b6a4-2bd8-4db0-b96b-6c905a455434?layout=gridify"
-        allowFullScreen=""
+        width="100%"
+        height="380"
+        frameBorder="0"
+        allowFullScreen
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         ></iframe>
     </div>
   </div>
