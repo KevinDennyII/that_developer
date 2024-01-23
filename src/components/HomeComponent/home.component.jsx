@@ -10,6 +10,7 @@ const HomeComponent = () => (
       <br />
       - DJ LookUp
     </div>
+    <div style={{flexDirection: 'row', justifyContent: 'center'}}>
     <div className={music}>
       <iframe
         title="DJ LookUp's No Lyrics Just Listen Spotify Playlist"
@@ -32,6 +33,7 @@ const HomeComponent = () => (
         allowFullScreen
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         ></iframe>
+    </div>
     </div>
   </div>
 );
