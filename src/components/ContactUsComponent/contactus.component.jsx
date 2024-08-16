@@ -11,9 +11,9 @@ import {
   column,
 } from './contactus.module.scss';
 
-const ContactusComponent = () => {
+function ContactusComponent(){
   // boolean for keeping state when an email has been successfully sent
-  const [emailSent, setEmailSent] = useState('');
+  const [emailSent, setEmailSent] = useState(false);
 
   // setting state of input values
   const [name, setName] = useState('');
@@ -21,7 +21,7 @@ const ContactusComponent = () => {
   const [message, setMessage] = useState('');
 
   // boolean for tracking an empty value on form
-  const [emptyVal, setEmptyVal] = useState('');
+  const [emptyVal, setEmptyVal] = useState(true);
 
   // capturing input values
   const onChangeValueName = (e) => {
@@ -132,7 +132,6 @@ const ContactusComponent = () => {
             onChange={onChangeValueMessage}
           />
         </div>
-        {/* <div className="g-recaptcha" data-sitekey="6LfOpR0aAAAAANVkCaGd7_BRUFktzEgZaMVttv21" /> */}
         <ReCAPTCHA sitekey="6LfOpR0aAAAAANVkCaGd7_BRUFktzEgZaMVttv21" />
         <button className="btn btn-primary" type="submit" value="Send">
           Submit

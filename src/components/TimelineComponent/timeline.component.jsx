@@ -4,7 +4,7 @@ import months from './months';
 import './timeline.module.scss';
 import ods from './ohhDennyData.json';
 
-const TimelineComponent = ({ experience }) => {
+function TimelineComponent({ experience }){
   // grabbing OhhDenny Services LLC information
   const odsTitle = () => ({ __html: ods.title });
   const odsDateRange = () => ({ __html: ods.dateRange });

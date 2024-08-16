@@ -2,7 +2,7 @@ import React from 'react';
 import awsCert from '../../documents/AWS_Certified_Developer-Associate_Certificate.pdf';
 import mcpCert from '../../documents/MCP_ProgrammingInHTML_JavaScript_CSS.pdf';
 
-const WhatidoComponent = () => (
+const WhatIDoComponent = () => (
   <section className="colorlib-about" data-section="whatido">
     <div className="colorlib-narrow-content">
       <div className="row">
@@ -71,4 +71,4 @@ const WhatidoComponent = () => (
     </div>
   </section>
 );
-export default WhatidoComponent;
+export default WhatIDoComponent;

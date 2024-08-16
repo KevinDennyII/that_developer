@@ -5,7 +5,7 @@ import {
   descriptionTitle, descriptionBackground, panelHeadingBottomBorder,
 } from './workexperience.module.scss';
 
-const WorkExperienceComponent = ({ experience }) => {
+function WorkExperienceComponent({ experience }) {
   const content = (description) => ({ __html: description });
 
   const startExperience = (startExp) => {

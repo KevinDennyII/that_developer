@@ -8,8 +8,9 @@ import blackPeopleDancing from '../../images/black-people-dancing.png';
 import { staggered, unstaggered, container } from './about.module.scss';
 import ImageLazyLoader from './ImageLazyLoader';
 
-const AboutComponent = () => (
-  <div>
+function AboutComponent() {
+  return (
+    <div>
     <section className="colorlib-about" data-section="about">
       <div className="colorlib-narrow-content">
         <div className="row">
@@ -97,6 +98,7 @@ const AboutComponent = () => (
       </div>
     </section>
   </div>
-);
+  );
+};
 
 export default AboutComponent;

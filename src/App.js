@@ -10,7 +10,7 @@ import FooterComponent from './components/FooterComponent/footer.component';
 import HomeComponent from './components/HomeComponent/home.component';
 import IntroductionComponent from './components/IntroductionComponent/introduction.component';
 import TimelineComponent from './components/TimelineComponent/timeline.component';
-import WhatidoComponent from './components/WhatIDoComponent/whatido..component';
+import WhatIDoComponent from './components/WhatIDoComponent/whatido..component';
 import WorkExperienceComponent from './components/WorkExperienceComponent/workexperience.component';
 
 const App = () => {
@@ -55,7 +55,7 @@ const App = () => {
             path="/about"
             render={(props) => <AboutComponent {...props} summary={summary} />}
           />
-          <Route exact path="/expertise" component={WhatidoComponent} />
+          <Route exact path="/expertise" component={WhatIDoComponent} />
           <Route
             exact
             path="/experience"
