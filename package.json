@@ -9,6 +9,7 @@
     "eslint-webpack-plugin": "^4.2.0",
     "gh-pages": "^2.0.1",
     "history": "^5.0.0",
+    "jest-worker": "^29.7.0",
     "lodash": "^4.17.20",
     "purgecss": "^6.0.0",
     "react": "^16.8.3",
