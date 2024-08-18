@@ -27,7 +27,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build --legacy-peer-deps",
-    "predeploy": "yarn run build",
+    "predeploy": "yarn run build --legacy-peer-deps",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
