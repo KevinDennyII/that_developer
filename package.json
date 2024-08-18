@@ -20,7 +20,7 @@
     "react-google-recaptcha": "^2.1.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.0",
     "travis": "^0.1.1",
     "yarn": "^1.22.19"
   },
