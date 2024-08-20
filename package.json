@@ -38,9 +38,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -48,12 +45,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-airbnb-base": "14.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "4.0.0",
     "jsdom": "^16.4.0",
     "mocha": "^10.7.3",
     "node-sass": "npm:sass@^1.62.0",
