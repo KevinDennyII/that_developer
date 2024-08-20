@@ -29,9 +29,9 @@
     "yarn": "^1.22.22"
   },
   "scripts": {
-    "start": "react-scripts start --legacy-peer-deps",
-    "build": "react-scripts build --legacy-peer-deps",
-    "predeploy": "yarn run build --legacy-peer-deps",
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
+    "predeploy": "export NODE_OPTIONS=--openssl-legacy-provider && yarn run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
