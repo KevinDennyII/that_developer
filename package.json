@@ -27,7 +27,7 @@
     "react-scripts": "^3.0.1",
     "travis": "^0.1.1",
     "typescript": "^5.5.4",
-    "yarn": "^1.22.19"
+    "yarn": "^1.22.22"
   },
   "scripts": {
     "start": "react-scripts start",
