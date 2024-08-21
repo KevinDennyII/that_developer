@@ -5,10 +5,14 @@ import {
   descriptionTitle, descriptionBackground, panelHeadingBottomBorder,
 } from './workexperience.module.scss';
 
-function WorkExperienceComponent({ experience }) {
-  const content = (description) => ({ __html: description });
+type Experience = {
+  experience: [];
+}
 
-  const startExperience = (startExp) => {
+function WorkExperienceComponent({experience}: Experience) {
+  console.log(experience);
+  const content = (description: string) => ({ __html: description });
+  function startExperience(startExp) {
     const startMonth = months[`${get(startExp, 'month')}`];
     const startYear = get(startExp, 'year');
     return (
@@ -19,7 +23,9 @@ function WorkExperienceComponent({ experience }) {
       </span>
     );
   };
-  const endExperience = (exp, endExp) => {
+  function endExperience(exp: {}, endExp: {}):{}{
+    console.log(exp);
+    console.log(endExp);
     const endMonth = months[`${get(endExp, 'month')}`];
     const endYear = get(endExp, 'year');
     if (exp.isCurrentRole) {
@@ -94,5 +100,5 @@ function WorkExperienceComponent({ experience }) {
       </div>
     </div>
   );
-};
+}
 export default WorkExperienceComponent;
