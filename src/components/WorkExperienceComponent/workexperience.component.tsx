@@ -15,13 +15,17 @@ type ExperienceItems = {
   summary: string;
   website: string;
   start: {month: number, year: number};
-  end: {};
+  end: {month: number, year: number};
+}
+
+type ExperienceDate = {
+  month: number;
+  year: number;
 }
 
 function WorkExperienceComponent({experience}: Experience) {
-  console.log(experience);
   const content = (description: string) => ({ __html: description });
-  function startExperience(startExp: {}): {} {
+  function startExperience(startExp: ExperienceDate) {
     const startMonth = months[`${get(startExp, 'month')}`];
     const startYear = get(startExp, 'year');
     return (
@@ -32,7 +36,7 @@ function WorkExperienceComponent({experience}: Experience) {
       </span>
     );
   }
-  function endExperience(exp: ExperienceItems, endExp: {}): {} {
+  function endExperience(exp: ExperienceItems, endExp: ExperienceDate) {
     const endMonth = months[`${get(endExp, 'month')}`];
     const endYear = get(endExp, 'year');
 

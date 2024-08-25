@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { createBrowserHistory } from 'history';
+import { createHashHistory } from 'history';
 import { HashRouter } from 'react-router-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const history = createBrowserHistory();
+const history = createHashHistory();
 
 ReactDOM.render(
   <HashRouter history={history}>
