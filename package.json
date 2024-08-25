@@ -53,6 +53,6 @@
     "purify-css": "^1.1.9",
     "sass": "^1.62.0",
     "typed-scss-modules": "^8.0.1",
-    "typescript": "^5.5.4"
+    "typescript": "^4.9.5"
   }
 }
