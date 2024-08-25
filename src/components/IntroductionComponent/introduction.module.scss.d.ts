@@ -1,0 +1,9 @@
+export declare const aviHeader: string;
+export declare const emailIcon: string;
+export declare const headerBkg: string;
+export declare const headerLinks: string;
+export declare const introduction: string;
+export declare const introInfo: string;
+export declare const links: string;
+export declare const menuItems: string;
+export declare const resumeLink: string;
