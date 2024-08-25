@@ -33,6 +33,7 @@ const App = () => {
       setEmail(get(data.basics, 'email'));
       setSummary(get(data.basics, 'summary'));
       setMyLinks(get(data.basics, 'profiles'));
+      console.log(data.work);
       setExperience(data.work);
     };
 
