@@ -1,9 +1,8 @@
 import React from 'react';
 import { get } from 'lodash';
 import months from './months';
-import {
-  descriptionTitle, descriptionBackground, panelHeadingBottomBorder,
-} from './workexperience.module.scss';
+import { descriptionTitle, descriptionBackground, panelHeadingBottomBorder }
+  from './workexperience.module.scss';
 
 type Experience = {
   experience: [];
