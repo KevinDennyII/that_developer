@@ -9,10 +9,20 @@ type Experience = {
   experience: [];
 }
 
+type ExperienceItems = {
+  isCurrentRole: boolean;
+  position: string;
+  company: string;
+  summary: string;
+  website: string;
+  start: {month: number, year: number};
+  end: {};
+}
+
 function WorkExperienceComponent({experience}: Experience) {
   console.log(experience);
   const content = (description: string) => ({ __html: description });
-  function startExperience(startExp) {
+  function startExperience(startExp: {}): {} {
     const startMonth = months[`${get(startExp, 'month')}`];
     const startYear = get(startExp, 'year');
     return (
@@ -22,12 +32,11 @@ function WorkExperienceComponent({experience}: Experience) {
         {startYear}
       </span>
     );
-  };
-  function endExperience(exp: {}, endExp: {}):{}{
-    console.log(exp);
-    console.log(endExp);
+  }
+  function endExperience(exp: ExperienceItems, endExp: {}): {} {
     const endMonth = months[`${get(endExp, 'month')}`];
     const endYear = get(endExp, 'year');
+
     if (exp.isCurrentRole) {
       return <span style={{ fontStyle: 'italic', color: '#808080' }}>Present</span>;
     } return (
@@ -37,7 +46,28 @@ function WorkExperienceComponent({experience}: Experience) {
         {endYear}
       </span>
     );
-  };
+  }
+
+  function experienceDescription(item: ExperienceItems){
+    return (
+      <>
+        <span className={`${descriptionTitle}`}>
+          {item?.position}
+          {' '}
+          at
+          {' '}
+          {item.company}
+        </span>
+        :
+        {' '}
+        {startExperience(item.start)}
+        {' '}
+        -
+        {' '}
+        {endExperience(item, item.end)}
+      </>
+    )
+  }
 
   return (
     <div>
@@ -54,40 +84,27 @@ function WorkExperienceComponent({experience}: Experience) {
         <div className="row justify-content-center">
           <div className="col-md-12">
             <div className="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-              {experience.map((item, i) => (
-                <div className="panel panel-default">
-                  <div className={`panel-heading ${panelHeadingBottomBorder}`} role="tab" id={`heading${i}`}>
+              {experience.map((item: ExperienceItems, index: number) => (
+                <div key={index} className="panel panel-default">
+                  <div className={`panel-heading ${panelHeadingBottomBorder}`} role="tab" id={`heading${index}`}>
                     <h4 className="panel-title">
                       <a
                         className="collapsed"
                         data-toggle="collapse"
                         data-parent="#accordion"
-                        href={`#collapse${i}`}
+                        href={`#collapse${index}`}
                         aria-expanded="false"
-                        aria-controls={`collapse${i}`}
+                        aria-controls={`collapse${index}`}
                       >
-                        <span style={{ descriptionTitle }}>
-                          {item.position}
-                          {' '}
-                          at
-                          {' '}
-                          {item.company}
-                        </span>
-                        :
-                        {' '}
-                        {startExperience(item.start)}
-                        {' '}
-                        -
-                        {' '}
-                        {endExperience(item, item.end)}
+                        {experienceDescription(item)}
                       </a>
                     </h4>
                   </div>
                   <div
-                    id={`collapse${i}`}
+                    id={`collapse${index}`}
                     className={`panel-collapse collapse ${descriptionBackground}`}
                     role="tabpanel"
-                    aria-labelledby={`heading${i}`}
+                    aria-labelledby={`heading${index}`}
                   >
                     <span style={{ paddingLeft: '15px', fontSize: '1.4rem' }}><a href={item.website}>{item.website}</a></span>
                     <div style={{ fontSize: '1.5rem' }} className="panel-body" dangerouslySetInnerHTML={content(item.summary)} />
