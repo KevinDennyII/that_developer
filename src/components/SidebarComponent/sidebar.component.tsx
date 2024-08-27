@@ -1,12 +1,18 @@
 import React from 'react';
 
-function SidebarComponent({ name, email, myLinks }) {
+type SidebarComponents = {
+  name: string;
+  email: string;
+  myLinks: [];
+}
+
+function SidebarComponent({ name, email, myLinks } :SidebarComponents) {
 
   return (
     <div>
       <div>
         <nav
-          href="#navbar"
+          data-href="#navbar"
           className="js-colorlib-nav-toggle colorlib-nav-toggle"
           data-toggle="collapse"
           data-target="#navbar"
@@ -59,7 +65,7 @@ function SidebarComponent({ name, email, myLinks }) {
           </nav>
           <nav id="colorlib-main-menu">
             <ul>
-              {myLinks.map((link) => (
+              {myLinks.map((link: { network: string; url: string | undefined; }) => (
                 <li key={link.network.toLowerCase()}>
                   <a href={link.url}>
                     {' '}

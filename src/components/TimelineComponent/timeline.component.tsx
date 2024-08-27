@@ -4,33 +4,48 @@ import months from './months';
 import './timeline.module.scss';
 import ods from './ohhDennyData.json';
 
-function TimelineComponent({ experience }){
+type Experience = {
+  experience: [ExperienceItems];
+}
+
+type ExperienceItems = {
+  isCurrentRole: boolean;
+  position: string;
+  company: string;
+  summary: string;
+  website: string;
+  start: {month: number, year: number};
+  end: {month: number, year: number};
+}
+
+function TimelineComponent( {experience} : Experience ){
   // grabbing OhhDenny Services LLC information
-  const odsTitle = () => ({ __html: ods.title });
-  const odsDateRange = () => ({ __html: ods.dateRange });
-  const odsContent = () => ({ __html: ods.content });
+  function odsTitle(){ return {__html: ods.title }}
+  function odsDateRange (){ return {__html: ods.dateRange }};
+  function odsContent (){ return {__html: ods.content} };
 
   // grab the rest of the data experience
-  const summaryTitle = experience.map((e) => {
-    const jobTitle = e.position;
-    const { company } = e;
+  const summaryTitle = experience.map((description) => {
+    const jobTitle = description.position;
+    const { company } = description;
     return `${jobTitle} at ${company}`;
   });
-  const summary = experience.map((e) => e.summary);
-  const startExperience = experience.map((e) => {
-    const startMonth = months[`${get(e.start, 'month')}`];
-    const startYear = get(e.start, 'year');
+  const summary = experience.map((description) => description.summary);
+
+  const startExperience = experience.map((description) => {
+    const startMonth = months[`${get(description.start, 'month')}`];
+    const startYear = get(description.start, 'year');
     return `${startMonth.substring(0, 3)} ${startYear}`;
   });
-  const endExperience = experience.map((e) => {
-    const endMonth = months[`${get(e.end, 'month')}`];
-    const endYear = get(e.end, 'year');
-    if (e.isCurrentRole) {
+  const endExperience = experience.map((description) => {
+    const endMonth = months[`${get(description.end, 'month')}`];
+    const endYear = get(description.end, 'year');
+    if (description.isCurrentRole) {
       return 'Present';
     } return `${endMonth.substring(0, 3)} ${endYear}`;
   });
 
-  const content = (description) => ({ __html: description });
+  function content(description: string) {return { __html: description }};
 
   return (
     <div>

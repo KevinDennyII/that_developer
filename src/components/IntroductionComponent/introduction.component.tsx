@@ -13,7 +13,10 @@ import {
   resumeLink,
 } from './introduction.module.scss';
 
-function IntroductionComponent({ myLinks, email }) {
+type Links = {
+  myLinks: []
+}
+function IntroductionComponent({ myLinks } : Links) {
 
   return (
     <div className={headerBkg}>
@@ -38,7 +41,7 @@ function IntroductionComponent({ myLinks, email }) {
             <h3>Music Curator</h3>
             <h3>Life Long Learner</h3>
             <div className={links}>
-              {myLinks.map((link) => (
+              {myLinks.map((link: { network: string; url: string | undefined; }) => (
                 <div key={link.network.toLowerCase()}>
                   <a href={link.url} target="_blank" rel="noopener noreferrer">
                     <i
