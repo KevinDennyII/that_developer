@@ -65,19 +65,19 @@ function IntroductionComponent({ myLinks } : Links) {
               </div>
             </div>
             <div style={{ paddingTop: '5px' }}>
-              <div>
-              <span className="email">
-                <i className={`icon-mail ${emailIcon}`} />
-                <NavLink
-                  activeStyle={{ fontWeight: '700' }}
-                  className={headerLinks}
-                  to="/send-message"
-                  style={{ fontSize: '15px' }}
-                >
-                  Send Me A Message!
-                </NavLink>
-              </span>
-              </div>
+              {/*<div>*/}
+              {/*<span className="email">*/}
+              {/*  <i className={`icon-mail ${emailIcon}`} />*/}
+              {/*  <NavLink*/}
+              {/*    activeStyle={{ fontWeight: '700' }}*/}
+              {/*    className={headerLinks}*/}
+              {/*    to="/send-message"*/}
+              {/*    style={{ fontSize: '15px' }}*/}
+              {/*  >*/}
+              {/*    Send Me A Message!*/}
+              {/*  </NavLink>*/}
+              {/*</span>*/}
+              {/*</div>*/}
               <div className={resumeLink}>
                 <a
                   href="https://docs.google.com/document/d/1oLTOrlvB4jscqGfbCjJ6vhLh3NgH29oMwb4OLCRjFYA/edit?usp=sharing"
