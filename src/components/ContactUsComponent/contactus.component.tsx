@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { FormEvent, FormEventHandler, useState } from 'react';
 import emailjs from 'emailjs-com';
 import ReCAPTCHA from 'react-google-recaptcha';
 import BlackManTyping from '../../images/Black-Man-Using-Laptop-A.png';
@@ -11,7 +11,27 @@ import {
   column,
 } from './contactus.module.scss';
 
-function ContactusComponent(){
+type DOMEvent = {
+  target: {
+    value: React.SetStateAction<string>
+  }
+}
+
+// Our form is an HTMLFormElement with some known elements.
+// So we extend HTMLFormElement and override the elements to have the elements
+// we want it to. The HTMLFormElement['elements'] type is a
+// HTMLFormControlsCollection, so make our own version of that interface as well.
+interface FormElements extends HTMLFormControlsCollection {
+  emailInput: HTMLInputElement;
+  nameInput: HTMLInputElement;
+  messageInput: HTMLInputElement;
+}
+interface SendEmailFormElement extends HTMLFormElement {
+  elements: FormElements
+}
+
+
+function ContactusComponent() {
   // boolean for keeping state when an email has been successfully sent
   const [emailSent, setEmailSent] = useState(false);
 
@@ -19,63 +39,81 @@ function ContactusComponent(){
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-
   // boolean for tracking an empty value on form
   const [emptyVal, setEmptyVal] = useState(true);
 
   // capturing input values
-  const onChangeValueName = (e) => {
-    setName(e.target.value);
+  function onChangeValueName(event: DOMEvent) {
+    setName(event.target.value);
     setEmptyVal(false);
-  };
-  const onChangeValueEmail = (e) => {
-    setEmail(e.target.value);
-    setEmptyVal(false);
-  };
-  const onChangeValueMessage = (e) => {
-    setMessage(e.target.value);
-    setEmptyVal(false);
-  };
+  }
 
+  function onChangeValueEmail(event: DOMEvent) {
+    setEmail(event.target.value);
+    setEmptyVal(false);
+  }
+
+  function onChangeValueMessage(event: DOMEvent) {
+    setMessage(event.target.value);
+    setEmptyVal(false);
+  }
+
+  function onSubmitEmail(
+    name: string,
+    email: string,
+    message: string,
+    event: React.FormEvent<SendEmailFormElement>
+  ){
+  if (email === '' || name === '' || message === '') {
+    setEmptyVal(true);
+  } else {
+    emailjs
+      .sendForm(
+        'service_l0rvoye',
+        'template_vndqkt5',
+        event.currentTarget,
+        'user_l0oK6TFE1fDsOnX5tnF76',
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log(
+            `Name: ${name}`,
+            `Email: ${email}`,
+            `Message: ${message}`,
+          );
+          // email sent successfully, clear form values
+          setEmailSent(true);
+          // resetting values
+          setName('');
+          setEmail('');
+          setMessage('');
+          // refreshing page after all is done with email
+          setTimeout(() => {
+            window.location.reload();
+          }, 5000);
+        },
+        (error) => {
+          console.log(error.text);
+          setEmailSent(false);
+        },
+      );
+  }
+}
   // Sending email
-  const sendEmail = (e) => {
-    e.preventDefault();
-    if (email === '' || name === '' || message === '') {
-      setEmptyVal(true);
-    } else {
-      emailjs
-        .sendForm(
-          'service_l0rvoye',
-          'template_vndqkt5',
-          e.target,
-          'user_l0oK6TFE1fDsOnX5tnF76',
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-            console.log(
-              `Name: ${name}`,
-              `Email: ${email}`,
-              `Message: ${message}`,
-            );
-            // email sent successfully, clear form values
-            setEmailSent(true);
-            // resetting values
-            setName('');
-            setEmail('');
-            setMessage('');
-            // refreshing page after all is done with email
-            setTimeout(() => {
-              window.location.reload(1);
-            }, 5000);
-          },
-          (error) => {
-            console.log(error.text);
-            setEmailSent(false);
-          },
-        );
-    }
-  };
+  function handleSubmit(event: React.FormEvent<SendEmailFormElement>){
+    event.preventDefault();
+    console.log("here")
+    console.log(event.currentTarget.elements.emailInput.value)
+    console.log(event.currentTarget.elements.nameInput.value)
+    console.log(event.currentTarget.elements.messageInput.value)
+    onSubmitEmail(
+      event.currentTarget.elements.nameInput.value,
+      event.currentTarget.elements.emailInput.value,
+      event.currentTarget.elements.messageInput.value,
+      event
+    )
+  }
 
   return (
     <div>
@@ -98,7 +136,7 @@ function ContactusComponent(){
           />
         </div>
       </div>
-      <form className={contactUsForm} onSubmit={sendEmail}>
+      <form className={contactUsForm} onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name</label>
           <input type="hidden" name="contact_number" />
@@ -141,7 +179,7 @@ function ContactusComponent(){
             Email message was sent successfully!
           </p>
         )}
-        {emailSent === false && (
+        {!emailSent && (
           <p className="text-danger" style={{ fontWeight: '700' }}>
             Oh no! Your email was not sent successfully :-(
           </p>
@@ -154,6 +192,6 @@ function ContactusComponent(){
       </form>
     </div>
   );
-};
+}
 
 export default ContactusComponent;
