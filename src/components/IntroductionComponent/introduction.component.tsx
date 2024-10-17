@@ -9,7 +9,7 @@ import {
   links,
   menuItems,
   headerLinks,
-  emailIcon,
+  // emailIcon,
   resumeLink,
 } from './introduction.module.scss';
 

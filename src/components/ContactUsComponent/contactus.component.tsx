@@ -1,4 +1,4 @@
-import React, { FormEvent, FormEventHandler, useState } from 'react';
+import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import ReCAPTCHA from 'react-google-recaptcha';
 import BlackManTyping from '../../images/Black-Man-Using-Laptop-A.png';
