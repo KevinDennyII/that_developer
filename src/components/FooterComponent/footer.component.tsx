@@ -19,7 +19,7 @@ function FooterComponent() {
       </div>
       <div style={{ textAlign: 'center' }}>
         {' '}
-        Kevin Denny II &#169; 2024 All Rights Reserved.
+        Kevin Denny II &#169; 2025 All Rights Reserved.
         {' '}
         <br />
       </div>
