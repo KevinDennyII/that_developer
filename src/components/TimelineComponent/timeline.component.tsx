@@ -21,8 +21,8 @@ type ExperienceItems = {
 function TimelineComponent( {experience} : Experience ){
   // grabbing OhhDenny Services LLC information
   function odsTitle(){ return {__html: ods.title }}
-  function odsDateRange (){ return {__html: ods.dateRange }};
-  function odsContent (){ return {__html: ods.content} };
+  function odsDateRange (){ return {__html: ods.dateRange }}
+  function odsContent (){ return {__html: ods.content} }
 
   // grab the rest of the data experience
   const summaryTitle = experience.map((description) => {
