@@ -11,9 +11,9 @@
 }
 
 .aviHeader {
-  background-size: 24rem 31rem;
+  background-size: 30rem 30rem;
   margin: 0;
-  background-image: url(../../images/kevin_final.png);
+  background-image: url(../../images/kevin_avatar_transparent.png);
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
@@ -67,7 +67,7 @@
   font-size: 14px;
   font-weight: bold;
   text-shadow:
-    1px 0px 1px #c4c4c4, 0px 1px 1px #e7e7e7;
+    1px 0 1px #c4c4c4, 0 1px 1px #e7e7e7;
 }
 
 .resumeLink button{
