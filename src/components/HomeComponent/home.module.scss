@@ -12,9 +12,13 @@
 }
 
 .music {
+  border-radius: 10px;
+  //width: 300px;
+  overflow: hidden;
   margin-bottom: 2rem;
   font-weight: 550;
-  width: 50%
+  width: 50%;
+  height: 50%;
 }
 
 @media screen and (max-width: 680px) {

@@ -14,13 +14,12 @@ function HomeComponent() {
       </div>
       <div className={music}>
         <iframe
-          title="DJ LookUp's No Lyrics Just Listen Spotify Playlist"
-          src="https://open.spotify.com/embed/playlist/5c4WKwIIouBRNZclEqvM62?utm_source=generator"
+          src="https://embed.tidal.com/playlists/c389461c-5076-4a42-8897-4d4c87cdb8a9"
           width="100%"
           height="380"
-          frameBorder="0"
           allowFullScreen={true}
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          sandbox="allow-same-origin allow-scripts allow-forms allow-popups" title="TIDAL Embed Player"
         />
       </div>
     </div>
