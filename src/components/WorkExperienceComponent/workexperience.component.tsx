@@ -1,7 +1,7 @@
 import React from 'react';
 import { get } from 'lodash';
 import months from './months';
-import { descriptionTitle, descriptionBackground, panelHeadingBottomBorder }
+import { descriptionTitle, descriptionBackground, panelHeadingBottomBorder, highlights }
   from './workexperience.module.scss';
 
 type Experience = {
@@ -13,6 +13,7 @@ type ExperienceItems = {
   position: string;
   company: string;
   summary: string;
+  highlights: [];
   website: string;
   start: {month: number, year: number};
   end: {month: number, year: number};
@@ -111,6 +112,17 @@ function WorkExperienceComponent({experience}: Experience) {
                   >
                     <span style={{ paddingLeft: '15px', fontSize: '1.4rem' }}><a href={item.website}>{item.website}</a></span>
                     <div style={{ fontSize: '1.5rem' }} className="panel-body" dangerouslySetInnerHTML={content(item.summary)} />
+                    {!!item.highlights.length &&
+                      <div className={`panel-body ${highlights}`}><strong>Highlights</strong>
+                        <ul>
+                          {item.highlights.map((highlight) => (
+                              <li style={{ fontSize: '1.5rem' }} dangerouslySetInnerHTML={content(highlight)} />
+                          ))}
+                        </ul>
+                      </div>
+                    }
+
+
                   </div>
                 </div>
               ))}

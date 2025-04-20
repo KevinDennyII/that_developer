@@ -56,6 +56,8 @@ const App = () => {
             render={(props) => <AboutComponent {...props} summary={summary} />}
           />
           <Route exact path="/expertise" component={WhatIDoComponent} />
+
+          {/* THIS ROUTE IS HIDDEN FROM THE MENU */}
           <Route
             exact
             path="/experience"

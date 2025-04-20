@@ -23,5 +23,13 @@ ul > ul > li {
   border-bottom: 1px solid LightGrey !important;
 }
 
+.highlights {
+  font-weight: bold;
+  ul > li {
+    font-weight: normal;
+    font-style: italic;
+  }
+}
+
 
 

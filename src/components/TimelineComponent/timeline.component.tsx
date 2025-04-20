@@ -13,6 +13,7 @@ type ExperienceItems = {
   position: string;
   company: string;
   summary: string;
+  highlights: [];
   website: string;
   start: {month: number, year: number};
   end: {month: number, year: number};
@@ -31,6 +32,7 @@ function TimelineComponent( {experience} : Experience ){
     return `${jobTitle} at ${company}`;
   });
   const summary = experience.map((description) => description.summary);
+  const highlights = experience.map((description) => description.highlights);
 
   const startExperience = experience.map((description) => {
     const startMonth = months[`${get(description.start, 'month')}`];
@@ -45,7 +47,7 @@ function TimelineComponent( {experience} : Experience ){
     } return `${endMonth.substring(0, 3)} ${endYear}`;
   });
 
-  function content(description: string) {return { __html: description }};
+  function content(description: string) {return { __html: description }}
 
   return (
     <div>
@@ -101,6 +103,9 @@ function TimelineComponent( {experience} : Experience ){
                         </span>
                       </h2>
                       <div dangerouslySetInnerHTML={content(summary[1])} />
+                      {highlights[1].map((highlight, i) => (
+                        <div dangerouslySetInnerHTML={content(highlight[i])} />
+                      ))}
                     </div>
                   </div>
                 </article>
@@ -125,6 +130,9 @@ function TimelineComponent( {experience} : Experience ){
                         </span>
                       </h2>
                       <div dangerouslySetInnerHTML={content(summary[2])} />
+                      {highlights[2].map((highlight, i) => (
+                        <div dangerouslySetInnerHTML={content(highlight[i])} />
+                      ))}
                     </div>
                   </div>
                 </article>
@@ -149,6 +157,9 @@ function TimelineComponent( {experience} : Experience ){
                         </span>
                       </h2>
                       <div dangerouslySetInnerHTML={content(summary[3])} />
+                      {highlights[3].map((highlight, i) => (
+                        <div dangerouslySetInnerHTML={content(highlight[i])} />
+                      ))}
                     </div>
                   </div>
                 </article>
@@ -239,6 +250,6 @@ function TimelineComponent( {experience} : Experience ){
       </section>
     </div>
   );
-};
+}
 
 export default TimelineComponent;
