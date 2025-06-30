@@ -37,6 +37,12 @@ function IntroductionComponent({ myLinks } : Links) {
           />
           <div className={introInfo}>
             <h4>Kevin Denny II</h4>
+            <h3><a
+              href="https://bitesizedhuman.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{textDecoration: 'none', color: '#000'}}
+            >Published Author</a></h3>
             <h3>Web Developer</h3>
             <h3>Music Curator</h3>
             <h3>Life Long Learner</h3>
