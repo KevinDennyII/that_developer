@@ -12,12 +12,21 @@ import {
   // emailIcon,
   resumeLink,
 } from './introduction.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBluesky } from '@fortawesome/free-brands-svg-icons';
+
+
+type Link = {
+  network: string;
+  username: string;
+  url: string;
+};
+
 
 type Links = {
-  myLinks: []
+  myLinks: Link[]
 }
 function IntroductionComponent({ myLinks } : Links) {
-
   return (
     <div className={headerBkg}>
       <section
@@ -67,6 +76,16 @@ function IntroductionComponent({ myLinks } : Links) {
                     className={`icon-instagram ${headerLinks}`}
                     style={{ fontSize: '15px' }}
                   />
+                </a>
+              </div>
+              <div key="Bluesky">
+                <a
+                  href="https://bsky.app/profile/thatdeveloper.bsky.social
+"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faBluesky} size="1x" style={{ fontSize: '15px' }} className={headerLinks} />
                 </a>
               </div>
             </div>
