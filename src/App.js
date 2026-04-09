@@ -26,9 +26,9 @@ const App = () => {
     // removing "callback hell" and using async/await
     const fetchData = async () => {
       // grabbing my response from the api call with fetch()
-      const response = await fetch(
-        "https://gitconnected.com/v1/portfolio/kevindennyii",
-      );
+      // const response = await fetch(
+      //   'https://gitconnected.com/v1/portfolio/kevindennyii',
+      // );
       // converting response to json
       const data = gitConnectedata;
       // storing the data from my components in state
