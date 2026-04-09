@@ -1,5 +1,6 @@
 import React from 'react';
 import { home, music, quote } from './home.module.scss';
+import LazyIframe from '../LazyIframe/LazyIframe';
 
 function HomeComponent() {
 
@@ -13,7 +14,7 @@ function HomeComponent() {
         - DJ LookUp
       </div>
       <div className={music}>
-        <iframe
+        <LazyIframe
           src="https://embed.tidal.com/playlists/c389461c-5076-4a42-8897-4d4c87cdb8a9"
           width="100%"
           height="380"

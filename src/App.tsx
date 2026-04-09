@@ -11,62 +11,65 @@ import ErrorComponent from "./components/ErrorComponent/error.component";
 import FooterComponent from "./components/FooterComponent/footer.component";
 import HomeComponent from "./components/HomeComponent/home.component";
 import IntroductionComponent from "./components/IntroductionComponent/introduction.component";
+import SidebarComponent from "./components/SidebarComponent/sidebar.component";
 import TimelineComponent from "./components/TimelineComponent/timeline.component";
 import WhatIDoComponent from "./components/WhatIDoComponent/whatido..component";
 import WorkExperienceComponent from "./components/WorkExperienceComponent/workexperience.component";
 
+interface Basics {
+  name: string;
+  roles: any[];
+  profiles: any[];
+}
+
 const App = () => {
-  const [email, setEmail] = useState("");
-  const [summary, setSummary] = useState("");
-  const [myLinks, setMyLinks] = useState([]);
-  const [experience, setExperience] = useState([]);
+  const [basics, setBasics] = useState<Basics>({
+    name: '',
+    roles: [],
+    profiles: []
+  });
+  const [experience, setExperience] = useState<any[]>([]);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
 
-  // I need to grab the api data once this app has been loaded
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
+
   useEffect(() => {
-    // removing "callback hell" and using async/await
-    const fetchData = async () => {
-      // grabbing my response from the api call with fetch()
-      // const response = await fetch(
-      //   'https://gitconnected.com/v1/portfolio/kevindennyii',
-      // );
-      // converting response to json
-      const data = gitConnectedata;
-      // storing the data from my components in state
-      setEmail(get(data.basics, "email"));
-      setSummary(get(data.basics, "summary"));
-      setMyLinks(get(data.basics, "profiles"));
-      setExperience(data.work);
-    };
-
-    fetchData().then((error) => console.error(error));
+    const data = gitConnectedata as any;
+    setBasics(data.basics);
+    setExperience(data.work);
   }, []);
+
+  if (!basics) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div id="colorlib-page" style={{ backgroundColor: "#F4F5F4" }}>
+      <SidebarComponent
+        basics={basics}
+        isOpen={isSidebarOpen}
+        toggleSidebar={toggleSidebar}
+      />
       <div
         id="container-wrap"
         style={{ marginLeft: "5rem", marginRight: "5rem" }}
       >
-        <IntroductionComponent myLinks={myLinks} email={email} />
+        <button onClick={toggleSidebar} className="menu-btn">☰</button>
+        <IntroductionComponent basics={basics} />
         <Switch>
-          {/* use the render attribute to pass props to the route with the */}
-          {/* arrow function because this will update the component as opposed to */}
-          {/* component={() => <Dashboard isAuthed={true} /> */}
           <Route exact path="/" component={HomeComponent} />
           <Route
             path="/about"
-            render={(props) => (
-              <AboutComponent {...props} summary={summary} />
-            )}
+            render={(props) => <AboutComponent {...props} />}
           />
           <Route exact path="/expertise" component={WhatIDoComponent} />
-
-          {/* THIS ROUTE IS HIDDEN FROM THE MENU */}
           <Route
             exact
             path="/experience"
             render={(props) => (
-              <TimelineComponent {...props} experience={experience} />
+              <TimelineComponent {...props} experience={experience as any} />
             )}
           />
           <Route
@@ -75,7 +78,7 @@ const App = () => {
             render={(props) => (
               <WorkExperienceComponent
                 {...props}
-                experience={experience}
+                experience={experience as any}
               />
             )}
           />

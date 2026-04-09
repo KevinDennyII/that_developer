@@ -1,87 +1,78 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { get } from 'lodash';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBluesky, faGithub, faGit, faLinkedin, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
-type SidebarComponents = {
-  name: string;
-  email: string;
-  myLinks: [];
+interface SidebarProps {
+  basics: any;
+  isOpen: boolean;
+  toggleSidebar: () => void;
 }
 
-function SidebarComponent({ name, email, myLinks } :SidebarComponents) {
+const SidebarComponent: React.FC<SidebarProps> = ({ basics, isOpen, toggleSidebar }) => {
+  const socialIcons: { [key: string]: IconDefinition } = {
+    gitconnected: faGit,
+    github: faGithub,
+    linkedin: faLinkedin,
+    instagram: faInstagram,
+    x: faXTwitter,
+    bluesky: faBluesky,
+  };
 
   return (
-    <div>
-      <div>
-        <nav
-          data-href="#navbar"
-          className="js-colorlib-nav-toggle colorlib-nav-toggle"
-          data-toggle="collapse"
-          data-target="#navbar"
-          aria-expanded="false"
-          aria-controls="navbar"
-        >
-          <i />
-        </nav>
-        <aside id="colorlib-aside" className="border js-fullheight">
-          <div className="text-center">
-            <div
-              className="author-img"
-              style={{
-                backgroundImage: 'url(images/Kevin_as_Mighty_Mouse.jpg)',
-              }}
-            />
-            <h1 id="colorlib-logo">
-              <a href="index.html">{name}</a>
-            </h1>
-            <span className="email">
-            <i className="icon-mail" />
-              {email}
-          </span>
-          </div>
-          <nav id="colorlib-main-menu" role="navigation" className="navbar">
-            <div id="navbar" className="collapse">
-              <ul>
-                <li className="active">
-                  <a href="#home" data-nav-section="home">
-                    Introduction
-                  </a>
-                </li>
-                <li>
-                  <a href="#about" data-nav-section="about">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="#whatido" data-nav-section="whatido">
-                    What I Do?
-                  </a>
-                </li>
-                <li>
-                  <a href="#timeline" data-nav-section="timeline">
-                    Timeline
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-          <nav id="colorlib-main-menu">
-            <ul>
-              {myLinks.map((link: { network: string; url: string | undefined; }) => (
-                <li key={link.network.toLowerCase()}>
-                  <a href={link.url}>
-                    {' '}
-                    <i
-                      className={`icon-social-${link.network.toLowerCase()}`}
-                      style={{ fontSize: '25px' }}
-                    />
-                    {' '}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </aside>
+    <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
+      <button onClick={toggleSidebar} className="close-btn">×</button>
+      <div className="text-center">
+        <div
+          className="author-img"
+          style={{
+            backgroundImage: `url(${get(basics, "image")})`,
+          }}
+        />
+        <h1 id="colorlib-logo">
+          <a href="index.html">{get(basics, "name")}</a>
+        </h1>
+        <span className="email">
+          <i className="icon-mail" />
+          {get(basics, "email")}
+        </span>
       </div>
-    </div>
+      <nav id="colorlib-main-menu" role="navigation" className="navbar">
+        <div id="navbar" className="collapse">
+          <ul>
+            <li className="active">
+              <NavLink to="/" exact onClick={toggleSidebar}>Introduction</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" onClick={toggleSidebar}>About</NavLink>
+            </li>
+            <li>
+              <NavLink to="/expertise" onClick={toggleSidebar}>What I Do?</NavLink>
+            </li>
+            <li>
+              <NavLink to="/work-experience" onClick={toggleSidebar}>Experience</NavLink>
+            </li>
+            <li>
+              <NavLink to="/send-message" onClick={toggleSidebar}>Contact</NavLink>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <nav id="colorlib-main-menu">
+        <ul>
+          {get(basics, "profiles", []).map((profile: any) => (
+            <li key={profile.network.toLowerCase()}>
+              <a href={profile.url} target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={socialIcons[profile.network.toLowerCase()]} size="1x" />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </aside>
   );
-}
+};
+
 export default SidebarComponent;

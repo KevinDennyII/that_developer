@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { get } from 'lodash';
 
 import {
   aviHeader,
@@ -7,26 +8,43 @@ import {
   introduction,
   introInfo,
   links,
-  menuItems,
   headerLinks,
-  // emailIcon,
   resumeLink,
 } from './introduction.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBluesky } from '@fortawesome/free-brands-svg-icons';
+import { faBluesky, faGithub, faGit, faLinkedin, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
-
-type Link = {
-  network: string;
-  username: string;
-  url: string;
-};
-
-
-type Links = {
-  myLinks: Link[]
+interface Role {
+  title: string;
+  url?: string;
 }
-function IntroductionComponent({ myLinks } : Links) {
+
+interface Profile {
+  network: string;
+  url: string;
+}
+
+interface Basics {
+  name: string;
+  roles: Role[];
+  profiles: Profile[];
+}
+
+interface IntroductionProps {
+  basics: Basics;
+}
+
+const IntroductionComponent: React.FC<IntroductionProps> = ({ basics }) => {
+  const socialIcons: { [key: string]: IconDefinition } = {
+    gitconnected: faGit,
+    github: faGithub,
+    linkedin: faLinkedin,
+    instagram: faInstagram,
+    x: faXTwitter,
+    bluesky: faBluesky,
+  };
+
   return (
     <div className={headerBkg}>
       <section
@@ -45,110 +63,38 @@ function IntroductionComponent({ myLinks } : Links) {
             title="Kevin Denny II with a yellow hoodie that says Without Music The World Would B Flat"
           />
           <div className={introInfo}>
-            <h4>Kevin Denny II</h4>
-            <h3><a
-              href="https://bitesizedhuman.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{textDecoration: 'none', color: '#000'}}
-            >Published Author</a></h3>
-            <h3>Web Developer</h3>
-            <h3>Music Curator</h3>
-            <h3>Life Long Learner</h3>
+            <h4>{get(basics, "name")}</h4>
+            {get(basics, "roles", []).map((role: Role) => (
+              <h3 key={role.title}>
+                {role.url ? (
+                  <a href={role.url} target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: '#000'}}>
+                    {role.title}
+                  </a>
+                ) : (
+                  role.title
+                )}
+              </h3>
+            ))}
             <div className={links}>
-              {myLinks.map((link: { network: string; url: string | undefined; }) => (
-                <div key={link.network.toLowerCase()}>
-                  <a href={link.url} target="_blank" rel="noopener noreferrer">
-                    <i
-                      className={`icon-social-${link.network.toLowerCase()} ${headerLinks}`}
-                      style={{ fontSize: '25px' }}
-                    />
+              {get(basics, "profiles", []).map((profile: Profile) => (
+                <div key={profile.network.toLowerCase()}>
+                  <a href={profile.url} target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={socialIcons[profile.network.toLowerCase()]} size="1x" style={{ fontSize: '15px' }} className={headerLinks} />
+                    <span className="sr-only">{profile.network}</span>
                   </a>
                 </div>
               ))}
-              <div key="Instagram">
-                <a
-                  href="https://instagram.com/djlookup"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i
-                    className={`icon-instagram ${headerLinks}`}
-                    style={{ fontSize: '15px' }}
-                  />
-                </a>
-              </div>
-              <div key="Bluesky">
-                <a
-                  href="https://bsky.app/profile/thatdeveloper.bsky.social
-"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon icon={faBluesky} size="1x" style={{ fontSize: '15px' }} className={headerLinks} />
-                </a>
-              </div>
             </div>
             <div style={{ paddingTop: '5px' }}>
-              {/*<div>*/}
-              {/*<span className="email">*/}
-              {/*  <i className={`icon-mail ${emailIcon}`} />*/}
-              {/*  <NavLink*/}
-              {/*    activeStyle={{ fontWeight: '700' }}*/}
-              {/*    className={headerLinks}*/}
-              {/*    to="/send-message"*/}
-              {/*    style={{ fontSize: '15px' }}*/}
-              {/*  >*/}
-              {/*    Send Me A Message!*/}
-              {/*  </NavLink>*/}
-              {/*</span>*/}
-              {/*</div>*/}
               <div className={resumeLink}>
-                <a
-                  href="https://docs.google.com/document/d/1oLTOrlvB4jscqGfbCjJ6vhLh3NgH29oMwb4OLCRjFYA/edit?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Download My Resume
+                <a href="https://gitconnected.com/kevindennyii/resume" target="_blank" rel="noopener noreferrer">
+                  <button type="submit">View Resume</button>
                 </a>
               </div>
-
             </div>
           </div>
         </div>
-        <nav className={menuItems}>
-          <NavLink
-            activeStyle={{ fontWeight: '700' }}
-            className="menu-link"
-            to="/home"
-          >
-            Home
-          </NavLink>
-          <NavLink
-            activeStyle={{ fontWeight: '700' }}
-            className="menu-link"
-            to="/about"
-          >
-            About
-          </NavLink>
-          <NavLink
-            activeStyle={{ fontWeight: '700' }}
-            className="menu-link"
-            style={{ wordBreak: 'normal' }}
-            to="/expertise"
-          >
-            What I Do
-          </NavLink>
-          <NavLink
-            activeStyle={{ fontWeight: '700' }}
-            className="menu-link"
-            to="/work-experience"
-          >
-            Experience
-          </NavLink>
-        </nav>
       </section>
-      <hr className="divider gradient" contentEditable />
     </div>
   );
 }

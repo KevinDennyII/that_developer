@@ -1,6 +1,6 @@
 import React from 'react';
-import awsCert from '../../documents/AWS_Certified_Developer-Associate_Certificate.pdf';
-import mcpCert from '../../documents/MCP_ProgrammingInHTML_JavaScript_CSS.pdf';
+import { whatIDoData } from './whatido.data';
+import ExpertiseItem from './ExpertiseItem';
 
 const WhatIDoComponent = () => (
   <section className="colorlib-about" data-section="whatido">
@@ -15,60 +15,12 @@ const WhatIDoComponent = () => (
         </div>
       </div>
       <div className="row row-pt-md">
-        <div className="col-md-4 text-center animate-box">
-          <div className="services color-1">
-            <span className="icon">
-              <i className="icon-bulb" />
-            </span>
-            <div className="desc">
-              <h3>Web Development </h3>
-              <p>
-                I have experience building websites using Content Management
-                Systems like Wordpress. I have professional experience coding
-                with object-oriented languages and I am
-                {' '}
-                <a href={mcpCert} target="_blank" rel="noopener noreferrer">
-                  Microsoft Certified in JavaScript, HTML, and CSS
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-4 text-center animate-box">
-          <div className="services color-3">
-            <span className="icon">
-              <i className="icon-phone3" />
-            </span>
-            <div className="desc">
-              <h3>Data Structures & Algorithms</h3>
-              <p>
-                My Computer Science background laid a solid foundation on the
-                fundamental concepts of Data Structures & Algorithms
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-4 text-center animate-box">
-          <div className="services color-5">
-            <span className="icon">
-              <i className="icon-data" />
-            </span>
-            <div className="desc">
-              <h3>Dev Ops</h3>
-              <p>
-                I have been previously certified as an
-                {' '}
-                <a href={awsCert} target="_blank" rel="noopener noreferrer">
-                  Amazon Web Services (AWS) Developer Associate
-                </a>
-                . I have 4 years of experience in configuring and managing
-                data solutions with AWS.
-              </p>
-            </div>
-          </div>
-        </div>
+        {whatIDoData.map((item, index) => (
+          <ExpertiseItem item={item} key={index} />
+        ))}
       </div>
     </div>
   </section>
 );
 export default WhatIDoComponent;
+

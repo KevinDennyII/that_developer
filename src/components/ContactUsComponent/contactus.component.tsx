@@ -11,109 +11,65 @@ import {
   column,
 } from './contactus.module.scss';
 
-type DOMEvent = {
-  target: {
-    value: React.SetStateAction<string>
-  }
-}
+const ContactusComponent: React.FC = () => {
+  const [formData, setFormData] = useState({
+    from_name: '',
+    reply_to: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [emailSent, setEmailSent] = useState<boolean | null>(null);
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
-// Our form is an HTMLFormElement with some known elements.
-// So we extend HTMLFormElement and override the elements to have the elements
-// we want it to. The HTMLFormElement['elements'] type is a
-// HTMLFormControlsCollection, so make our own version of that interface as well.
-interface FormElements extends HTMLFormControlsCollection {
-  emailInput: HTMLInputElement;
-  nameInput: HTMLInputElement;
-  messageInput: HTMLInputElement;
-}
-interface SendEmailFormElement extends HTMLFormElement {
-  elements: FormElements
-}
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
+  };
 
+  const validate = (): boolean => {
+    const tempErrors: { [key: string]: string } = {};
+    if (!formData.from_name) tempErrors.from_name = 'Name is required.';
+    if (!formData.reply_to) {
+      tempErrors.reply_to = 'Email is required.';
+    } else if (!/\S+@\S+\.\S+/.test(formData.reply_to)) {
+      tempErrors.reply_to = 'Email is not valid.';
+    }
+    if (!formData.message) tempErrors.message = 'Message is required.';
+    if (!recaptchaToken) tempErrors.recaptcha = 'Please complete the ReCAPTCHA.';
+    
+    setErrors(tempErrors);
+    return Object.keys(tempErrors).length === 0;
+  };
 
-function ContactusComponent() {
-  // boolean for keeping state when an email has been successfully sent
-  const [emailSent, setEmailSent] = useState(false);
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!validate()) return;
 
-  // setting state of input values
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  // boolean for tracking an empty value on form
-  const [emptyVal, setEmptyVal] = useState(true);
+    setIsSubmitting(true);
+    setEmailSent(null);
 
-  // capturing input values
-  function onChangeValueName(event: DOMEvent) {
-    setName(event.target.value);
-    setEmptyVal(false);
-  }
+    const formElement = e.currentTarget;
 
-  function onChangeValueEmail(event: DOMEvent) {
-    setEmail(event.target.value);
-    setEmptyVal(false);
-  }
-
-  function onChangeValueMessage(event: DOMEvent) {
-    setMessage(event.target.value);
-    setEmptyVal(false);
-  }
-
-  function onSubmitEmail(
-    name: string,
-    email: string,
-    message: string,
-    event: React.FormEvent<SendEmailFormElement>
-  ){
-  if (email === '' || name === '' || message === '') {
-    setEmptyVal(true);
-  } else {
-    emailjs
-      .sendForm(
-        'service_l0rvoye',
-        'template_vndqkt5',
-        event.currentTarget,
-        'user_l0oK6TFE1fDsOnX5tnF76',
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          console.log(
-            `Name: ${name}`,
-            `Email: ${email}`,
-            `Message: ${message}`,
-          );
-          // email sent successfully, clear form values
-          setEmailSent(true);
-          // resetting values
-          setName('');
-          setEmail('');
-          setMessage('');
-          // refreshing page after all is done with email
-          setTimeout(() => {
-            window.location.reload();
-          }, 5000);
-        },
-        (error) => {
-          console.log(error.text);
-          setEmailSent(false);
-        },
-      );
-  }
-}
-  // Sending email
-  function handleSubmit(event: React.FormEvent<SendEmailFormElement>){
-    event.preventDefault();
-    console.log("here")
-    console.log(event.currentTarget.elements.emailInput.value)
-    console.log(event.currentTarget.elements.nameInput.value)
-    console.log(event.currentTarget.elements.messageInput.value)
-    onSubmitEmail(
-      event.currentTarget.elements.nameInput.value,
-      event.currentTarget.elements.emailInput.value,
-      event.currentTarget.elements.messageInput.value,
-      event
+    emailjs.sendForm(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID || 'service_l0rvoye',
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'template_vndqkt5',
+      formElement,
+      process.env.REACT_APP_EMAILJS_USER_ID || 'user_l0oK6TFE1fDsOnX5tnF76'
     )
-  }
+    .then((result) => {
+      console.log('Email successfully sent!', result.text);
+      setEmailSent(true);
+      setFormData({ from_name: '', reply_to: '', message: '' });
+      // Consider resetting ReCAPTCHA if needed
+    }, (error) => {
+      console.log('Failed to send email.', error.text);
+      setEmailSent(false);
+    })
+    .finally(() => {
+      setIsSubmitting(false);
+    });
+  };
 
   return (
     <div>
@@ -136,62 +92,64 @@ function ContactusComponent() {
           />
         </div>
       </div>
-      <form className={contactUsForm} onSubmit={handleSubmit}>
+      <form className={contactUsForm} onSubmit={handleSubmit} noValidate>
+        <input type="hidden" name="contact_number" />
         <div className="form-group">
           <label htmlFor="name">Name</label>
-          <input type="hidden" name="contact_number" />
           <input
-            className="form-control"
             id="name"
             type="text"
             name="from_name"
-            value={name}
-            onChange={onChangeValueName}
+            className="form-control"
+            value={formData.from_name}
+            onChange={handleChange}
           />
+          {errors.from_name && <p className="text-danger">{errors.from_name}</p>}
         </div>
         <div className="form-group">
           <label htmlFor="email">Email</label>
           <input
-            className="form-control"
             id="email"
             type="email"
             name="reply_to"
-            value={email}
-            onChange={onChangeValueEmail}
+            className="form-control"
+            value={formData.reply_to}
+            onChange={handleChange}
           />
+          {errors.reply_to && <p className="text-danger">{errors.reply_to}</p>}
         </div>
         <div className="form-group">
           <label htmlFor="message">Message</label>
           <textarea
-            className="form-control"
             id="message"
             name="message"
-            value={message}
-            onChange={onChangeValueMessage}
+            className="form-control"
+            value={formData.message}
+            onChange={handleChange}
           />
+          {errors.message && <p className="text-danger">{errors.message}</p>}
         </div>
-        <ReCAPTCHA sitekey="6LfOpR0aAAAAANVkCaGd7_BRUFktzEgZaMVttv21" />
-        <button className="btn btn-primary" type="submit" value="Send">
-          Submit
+        <ReCAPTCHA
+          sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY || "6LfOpR0aAAAAANVkCaGd7_BRUFktzEgZaMVttv21"}
+          onChange={(token) => setRecaptchaToken(token)}
+        />
+        {errors.recaptcha && <p className="text-danger">{errors.recaptcha}</p>}
+        <button className="btn btn-primary" type="submit" disabled={isSubmitting}>
+          {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
-        {emailSent && (
+        {emailSent === true && (
           <p className="text-success" style={{ fontWeight: '700' }}>
             Email message was sent successfully!
           </p>
         )}
-        {!emailSent && (
+        {emailSent === false && (
           <p className="text-danger" style={{ fontWeight: '700' }}>
             Oh no! Your email was not sent successfully :-(
-          </p>
-        )}
-        {emptyVal && (
-          <p className="text-danger" style={{ fontWeight: '700' }}>
-            Please check your inputs and fill in all inputs appropriately
           </p>
         )}
       </form>
     </div>
   );
-}
+};
 
 export default ContactusComponent;

@@ -1,0 +1,52 @@
+.services {
+  margin-bottom: 30px;
+  padding: 1.5em;
+  -webkit-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
+  -ms-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
+  -o-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
+  box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
+  border-bottom: 2px solid #2c98f0;
+}
+
+.services .icon {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.services .icon i {
+  font-size: 60px;
+  color: #2c98f0;
+}
+
+.services .desc h3 {
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600 !important;
+  font-family: "Quicksand", Arial, sans-serif;
+}
+
+.web-development {
+  border-bottom: 2px solid #2c98f0;
+}
+
+.web-development .icon i {
+  color: #2c98f0;
+}
+
+.data-structures {
+  border-bottom: 2px solid #ec5453;
+}
+
+.data-structures .icon i {
+  color: #ec5453;
+}
+
+.dev-ops {
+  border-bottom: 2px solid #f9bf3f;
+}
+
+.dev-ops .icon i {
+  color: #f9bf3f;
+}

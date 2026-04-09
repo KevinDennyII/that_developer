@@ -5,6 +5,21 @@
     "image": "https://avatars1.githubusercontent.com/u/12628502?v=4",
     "email": "kevin.dennyii@gmail.com",
     "url": "https://thatdeveloper.dev",
+    "roles": [
+      {
+        "title": "Published Author",
+        "url": "https://bitesizedhuman.com/"
+      },
+      {
+        "title": "Web Developer"
+      },
+      {
+        "title": "Music Curator"
+      },
+      {
+        "title": "Life Long Learner"
+      }
+    ],
     "profiles": [
       {
         "network": "gitconnected",
@@ -20,6 +35,26 @@
         "network": "LinkedIn",
         "username": "kodii",
         "url": "https://linkedin.com/in/kodii"
+      },
+      {
+        "network": "Instagram",
+        "username": "djlookup",
+        "url": "https://instagram.com/djlookup"
+      },
+      {
+        "network": "X",
+        "username": "thatdeveloper",
+        "url": "https://x.com/thatdeveloper"
+      },
+      {
+        "network": "Bluesky",
+        "username": "thatdeveloper.bsky.social",
+        "url": "https://bsky.app/profile/thatdeveloper.bsky.social"
+      },
+      {
+        "network": "Book",
+        "username": "Bite-Sized Human",
+        "url": "https://bitesizedhuman.com/"
       }
     ]
   },
@@ -53,8 +88,15 @@
       "position": "Director of Operations",
       "url": "https://www.ohhdennyservices.com",
       "startDate": "2015-06-01",
-      "summary": "\u003Cdiv\u003E\n    \u003Cp\u003EWe assist small businesses, mostly concentrating on HIPPA, with Cyber Security, Software &amp; Hardware\n        Installation and Updates, and Network Configuration. We also build websites using Content Management Systems\n        like WordPress and technologies such JavaScript, CSS3 &amp; HTML5. \u003C/p\u003E\n    \u003Cdiv\u003E\u003Cstrong\u003EClients\u003C/strong\u003E\n        \u003Cul\u003E\n            \u003Cli\u003E\u003Ci\u003E\u003Ca href='http://www.rayvillepm.com/' target=\\”_blank\\” rel=\"noopener noreferrer\"\u003ERay-ville \n                Enterprises, LLC\u003C/a\u003E: \u003Cstrong\u003EThe IT Guy\u003C/strong\u003E, March 2025 - Present\u003C/i\u003E\u003C/li\u003E\n            \u003Cul\u003E\n                \u003Cli\u003EActing as an Information Technology and Computing Consultant\u003C/li\u003E\n                \u003Cli\u003EPerforms regular maintenance on WordPress business websites\u003C/li\u003E\n                \u003Cli\u003ECreated One Page Landing site for Ray-ville Enterprise, LLC businesses\u003C/li\u003E\n                \u003Cli\u003ECreated Logos for Real Lead and Home Inspections, Ray-ville Enterprises, Ray-ville Home Improvement\u003C/li\u003E\n            \u003C/ul\u003E\n            \u003Cli\u003E\u003Ci\u003E\u003Ca href='http://www.jacobdavidproperties.com/' target=\\”_blank\\” rel=\"noopener noreferrer\"\u003EJacob\n                        David Properties, LLC\u003C/a\u003E: \u003Cstrong\u003EThe IT Guy\u003C/strong\u003E, August 2019 - March 2023\u003C/i\u003E\u003C/li\u003E\n            \u003Cul\u003E\n                \u003Cli\u003EActing as an Information Technology and Computing Consultant\u003C/li\u003E\n                \u003Cli\u003EPerforms regular maintenance on business website\u003C/li\u003E\n            \u003C/ul\u003E\n            \u003Cli\u003E\u003Ci\u003E\u003Ca href='http://www.kronickdigitalmedia.com/' target=\\”_blank\\” rel=\"noopener noreferrer\"\u003EKronick\n                        Digital Magazine, LLC\u003C/a\u003E: \u003Cstrong\u003EIT Consultant\u003C/strong\u003E, April 2022 - September 2022\u003C/i\u003E\u003C/li\u003E\n            \u003Cul\u003E\n                \u003Cli\u003EAssisting in building NFT assets through the implementation of Smart Contracts\u003C/li\u003E\n                \u003Cli\u003EAssisting building initial website\u003C/li\u003E\n            \u003C/ul\u003E\n            \u003Cli\u003E\u003Ci\u003E\u003Ca href='http://www.caveonix.com/' target=\\”_blank\\” rel=\\”noopener noreferrer\\”\u003ECaveonix, Inc\u003C/a\u003E:\n                    \u003Cstrong\u003EWeb Developer &amp; Consultant\u003C/strong\u003E, October 2020 - April 2021\u003C/i\u003E\u003C/li\u003E\n            \u003Cul\u003E\n                \u003Cli\u003EImplementing &amp; maintaining APIs with ExpressJS on a project following various Agile\n                    methodologies\u003C/li\u003E\n                \u003Cli\u003EAssisting with technical documentation\u003C/li\u003E\n            \u003C/ul\u003E\n            \u003Cli\u003E\u003Ci\u003E\u003Ca href='http://www.idealnursing.org/' target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003EIdeal Nursing\n                        Services, Inc\u003C/a\u003E: \u003Cstrong\u003EComputing &amp; IT Consultant\u003C/strong\u003E, June 2015 - August 2017\u003C/i\u003E\n            \u003C/li\u003E\n            \u003Cul\u003E\n                \u003Cli\u003EPerformed various hardware task including removing and installing of operating systems, basic cyber\n                    security, networking, and troubleshooting of various issues\u003C/li\u003E\n                \u003Cli\u003E\n                    \u003Cp\u003EPerformed Network Upgrade: For this project, I hired two other professionals to assist with\n                        taking Ideal Nursing from a wired network to a wireless network. Measurements of the building\n                        were taken to create proper network diagrams for approval by Ideal Nursing. Wires were removed\n                        and Wireless Access Points (WAPs) were then installed and configured. All machines were upgraded\n                        and/or configured to connect to the WAPs. In addition, a new rack with POE ports was installed\n                        in their server room for their server, multi-port hub and router. This created a more efficient\n                        working space and alleviated unnecessary clutter.\u003C/p\u003E\n                \u003C/li\u003E\n            \u003C/ul\u003E\n        \u003C/ul\u003E\n    \u003C/div\u003E\n    \u003Cdiv\u003E\u003Cstrong\u003EWebsites\u003C/strong\u003E\n        \u003Cul\u003E\n            \u003Cli\u003E\u003Ca href='https://jacobdavidproperties.com/' target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003EJacob David\n                    Properties, LLC\u003C/a\u003E - Selma , TX\u003C/li\u003E\n            \u003Cli\u003E\u003Ca href='https://www.diamondgrovebaptist.com' target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003EDiamond\n                    Grove Baptist Church, Inc\u003C/a\u003E - Franklin, VA\u003C/li\u003E\n            \u003Cli\u003E\u003Ca href='https://www.oberryamezionchurch.org/' target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003EO'Berry A.\n                    M. E. Zion Church\u003C/a\u003E - Franklin, VA\u003C/li\u003E\n        \u003C/ul\u003E\n    \u003C/div\u003E\n\u003C/div\u003E",
-      "highlights": [],
+      "summary": "<div><p>We assist smaller business, mostly concentrating on HIPPA, with Cyber Security, Software &amp; Hardware Installation and Updates, and Network Configuration. We also build websites using Content Management Systems like WordPress and technologies such JavaScript, CSS3 &amp; HTML5. </p></div>",
+      "highlights": [
+        "Implementing & maintaining APIs with ExpressJS on a development following various Agile methodologies",
+        "Assisting with technical documentation",
+        "Acting as an Information Technology and Computing Consultant",
+        "Performs regular maintenance on business website",
+        "Performed various hardware task including removing and installing of operating systems, basic cyber security, networking, and troubleshooting of various issues",
+        "Performed Network Upgrade: For this project, I hired two other professionals to assist with taking Ideal Nursing from a wired network to a wireless network. Measurements of the building were taken to create proper network diagrams for approval by Ideal Nursing. Wires were removed and Wireless Access Points (WAPs) were then installed and configured. All machines were upgraded and/or configured to connect to the WAPs. In addition, a new rack with POE ports was installed in their server room for their server, multi-port hub and router. This created a more efficient working environment for the employees and a more secure network for the business."
+      ],
       "location": "Selma, Texas",
       "isCurrentRole": true,
       "start": {
@@ -73,7 +115,18 @@
       "url": "https://civitech.io",
       "startDate": "2021-04-01",
       "endDate": "2022-08-01",
-      "summary": "\u003Cul\u003E\n\u003Cli style=\"font-weight: 400;\"\u003E\u003Cspan style=\"font-weight: 400;\"\u003EParticipated as a Full Stack Engineer for on the Voter Outreach team building and maintain a web application&nbsp;\u003C/span\u003E\u003C/li\u003E\n\u003Cul\u003E\n\u003Cli style=\"font-weight: 400;\"\u003E\u003Cspan style=\"font-weight: 400;\"\u003EThe tech stack mainly consists of Java (Maven project), PostgreSQL, CSS, JavaScript, &amp; HTML\u003C/span\u003E\u003C/li\u003E\n\u003Cli style=\"font-weight: 400;\"\u003E\u003Cspan style=\"font-weight: 400;\"\u003EBuilding and Maintaining new and existing APIs for voter registration and address lookup\u003C/span\u003E\u003C/li\u003E\n\u003Cli style=\"font-weight: 400;\"\u003E\u003Cspan style=\"font-weight: 400;\"\u003EBuilding and Maintaining new and existing UIs for voter registration and address lookup\u003C/span\u003E\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cli style=\"font-weight: 400;\"\u003E\u003Cspan style=\"font-weight: 400;\"\u003EParticipated as a Full Stack Engineer of the Web Applications Team building APIs that make CiviTech's platform, and other tools within the political and commercial ecosystem, work better together. I help to develop and maintain the Recruiter application, making it more useful and accessible to candidates, campaign staff, and volunteers.\u003C/span\u003E\u003C/li\u003E\n\u003Cul\u003E\n\u003Cli style=\"font-weight: 400;\"\u003E\u003Cspan style=\"font-weight: 400;\"\u003EThe tech stack mainly consist of Angular, TypeORM, and PostgreSQL\u003C/span\u003E\u003C/li\u003E\n\u003C/ul\u003E\n\u003C/ul\u003E",
+      "summary": "<ul>
+<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Participated as a Full Stack Engineer for on the Voter Outreach team building and maintain a web application&nbsp;</span></li>
+<ul>
+<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">The tech stack mainly consists of Java (Maven project), PostgreSQL, CSS, JavaScript, &amp; HTML</span></li>
+<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Building and Maintaining new and existing APIs for voter registration and address lookup</span></li>
+<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Building and Maintaining new and existing UIs for voter registration and address lookup</span></li>
+</ul>
+<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Participated as a Full Stack Engineer of the Web Applications Team building APIs that make CiviTech's platform, and other tools within the political and commercial ecosystem, work better together. I help to develop and maintain the Recruiter application, making it more useful and accessible to candidates, campaign staff, and volunteers.</span></li>
+<ul>
+<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">The tech stack mainly consist of Angular, TypeORM, and PostgreSQL</span></li>
+</ul>
+</ul>",
       "highlights": [],
       "location": "Austin, TX",
       "isCurrentRole": false,
@@ -94,7 +147,7 @@
       "url": "https://www.iheartmedia.com",
       "startDate": "2019-01-01",
       "endDate": "2020-07-01",
-      "summary": "\u003Cp\u003E I participated as a member of iHeartMedia's Music Lab team. I assist in the maintaining and improving of a web application that assist in helping program directors of iHeartRadio stations determine how air time (spins) for songs will be distributed across radio stations. I am working as both a Software Engineer and Data Analytics team liaison on the Music Lab team. Some of my tasks include architecting solutions with \u003Cstrong\u003ENodeJS\u003C/strong\u003E, automating \u003Cstrong\u003EAmazon Web Services\u003C/strong\u003E CodeBuilds using CloudWatch events for our MySQL databases, improving technical documentation, and learning both our data analytics and \u003Cstrong\u003Esoftware development stack (ReactJS)\u003C/strong\u003E for Music Lab. \u003C/p\u003E \u003Cp\u003E I conducted a \u003Cstrong\u003EProof of Concept analysis to present to VP of Data Engineering & Analytics for using an aiWare platform that uses GraphQL\u003C/strong\u003E. This was an idea to help iHeartMedia automate the analysis of some of its market data like spots and digital impression \u003C/p\u003E \u003Cp\u003E Previously apart of the Salesforce team, working with the Campaign Recap application which kept track of iHeartMedia's clients radio ad campaigns. I briefly worked with our Kibana instance in attempt to improve logging. I updated our software architecture. I also performed a technical analysis with Vertione One in using there development platform with GraphiQ that could possible help iHeartMedia automate some of its processes. \u003C/p\u003E",
+      "summary": "<p> I participated as a member of iHeartMedia's Music Lab team. I assist in the maintaining and improving of a web application that assist in helping program directors of iHeartRadio stations determine how air time (spins) for songs will be distributed across radio stations. I am working as both a Software Engineer and Data Analytics team liaison on the Music Lab team. Some of my tasks include architecting solutions with <strong>NodeJS</strong>, automating <strong>Amazon Web Services</strong> CodeBuilds using CloudWatch events for our MySQL databases, improving technical documentation, and learning both our data analytics and <strong>software development stack (ReactJS)</strong> for Music Lab. </p> <p> I conducted a <strong>Proof of Concept analysis to present to VP of Data Engineering & Analytics for using an aiWare platform that uses GraphQL</strong>. This was an idea to help iHeartMedia automate the analysis of some of its market data like spots and digital impression </p> <p> Previously apart of the Salesforce team, working with the Campaign Recap application which kept track of iHeartMedia's clients radio ad campaigns. I briefly worked with our Kibana instance in attempt to improve logging. I updated our software architecture. I also performed a technical analysis with Vertione One in using there development platform with GraphiQ that could possible help iHeartMedia automate some of its processes. </p>",
       "highlights": [],
       "location": "San Antonio, TX",
       "isCurrentRole": false,
@@ -115,7 +168,7 @@
       "url": "https://www.bah.com",
       "startDate": "2015-10-01",
       "endDate": "2019-01-01",
-      "summary": "\u003Cdiv\u003EI have written training documentation for the Air Force serving as an \u003Cstrong\u003EElastic Stack Subject Matter Expert (SME)\u003C/strong\u003E creating Elastic Stack training courses. This included modules for:\u003Cul\u003E\u003Cli\u003EThe Overview of Elastic Stack\u003C/li\u003E\u003Cli\u003EThe understanding and use of Elasticsearch\u003C/li\u003E\u003Cli\u003EThe understanding and use of Logstash\u003C/li\u003E\u003Cli\u003EThe understanding and use of Kibana The understanding of Beats\u003C/li\u003E\u003C/ul\u003EI have created learning documentation for server configuration (Puppet) and YAML\u003Cbr\u003E\u003Cbr\u003EI participated as a \u003Cstrong\u003Emember of an Agile Coaching team for the Air Force\u003C/strong\u003E, practicing Scrum using Sprints. I wrote guidance for development teams such as how-to-guides and best practices for use of Agile methodologies.\u003Cbr\u003E\u003Cbr\u003EI served as a member of the DoD community working as an Application Lead/Senior Developer working with and managing \u003Cstrong\u003EAmazing Web Services (AWS)\u003C/strong\u003E EC2 instances building a Java application that would create and maintain IT disaster recovery plans.\u003Cbr\u003E\u003Cbr\u003EI lead and participated on projects working with technologies such as \u003Cstrong\u003EPostgreSQL, MongoDB, ExpressDB, AngularJS and NodeJS (MEAN) web development\u003C/strong\u003E, Java and other Microsoft technologies.\u003Cbr\u003E\u003Cbr\u003EInternally, for Booz Allen Hamilton, I have configured and implemented a prototype website using Drupal with Acquia cloud.\u003C/div\u003E",
+      "summary": "<div>I have written training documentation for the Air Force serving as an <strong>Elastic Stack Subject Matter Expert (SME)</strong> creating Elastic Stack training courses. This included modules for:<ul><li>The Overview of Elastic Stack</li><li>The understanding and use of Elasticsearch</li><li>The understanding and use of Logstash</li><li>The understanding and use of Kibana The understanding of Beats</li></ul>I have created learning documentation for server configuration (Puppet) and YAML<br><br>I participated as a <strong>member of an Agile Coaching team for the Air Force</strong>, practicing Scrum using Sprints. I wrote guidance for development teams such as how-to-guides and best practices for use of Agile methodologies.<br><br>I served as a member of the DoD community working as an Application Lead/Senior Developer working with and managing <strong>Amazing Web Services (AWS)</strong> EC2 instances building a Java application that would create and maintain IT disaster recovery plans.<br><br>I lead and participated on projects working with technologies such as <strong>PostgreSQL, MongoDB, ExpressDB, AngularJS and NodeJS (MEAN) web development</strong>, Java and other Microsoft technologies.<br><br>Internally, for Booz Allen Hamilton, I have configured and implemented a prototype website using Drupal with Acquia cloud.</div>",
       "highlights": [],
       "location": "",
       "isCurrentRole": false,
@@ -136,7 +189,7 @@
       "url": "https://www.sevatec.com",
       "startDate": "2014-11-01",
       "endDate": "2015-06-01",
-      "summary": "\u003Cp\u003EI fulfilled the role of Web Developer as a member of the Implementation Team for Content Management System (CMS), redesigning of the \u003Cb\u003EUS Embassy websites\u003C/b\u003E at the IIP bureau of the \u003Cb\u003EDepartment of State\u003C/b\u003E. We were part of the UI/UX team with this task. We conducted wireframe testing, user interviews, and analysis on the both tasks.\u003Cbr\u003E\u003Cbr\u003EAs a web developer, I was responsible for the development of websites and mobile applications on Amazon Web Services (AWS) via WordPress, assisting with technical documentation and end-user training &amp; development transition plans. I participated in weekly calls with WordPress VIP and Automattic (creators and founders of WordPress) to receive guidance towards implementing possible solutions for the client. I also created and implemented the US Embassy Travel Alert Wordpress plugin which incorporates travel warnings and alerts using a JSON file from travel.state.gov.\u003C/p\u003E",
+      "summary": "<p>I fulfilled the role of Web Developer as a member of the Implementation Team for Content Management System (CMS), redesigning of the <b>US Embassy websites</b> at the IIP bureau of the <b>Department of State</b>. We were part of the UI/UX team with this task. We conducted wireframe testing, user interviews, and analysis on the both tasks.<br><br>As a web developer, I was responsible for the development of websites and mobile applications on Amazon Web Services (AWS) via WordPress, assisting with technical documentation and end-user training &amp; development transition plans. I participated in weekly calls with WordPress VIP and Automattic (creators and founders of WordPress) to receive guidance towards implementing possible solutions for the client. I also created and implemented the US Embassy Travel Alert Wordpress plugin which incorporates travel warnings and alerts using a JSON file from travel.state.gov.</p>",
       "highlights": [],
       "location": "",
       "isCurrentRole": false,
@@ -157,7 +210,7 @@
       "url": "https://buchanan-edwards.com/",
       "startDate": "2013-11-01",
       "endDate": "2014-10-01",
-      "summary": "\u003Cp\u003EI fulfilled the role of \u003Cstrong\u003EApplication Lead\u003C/strong\u003E, SharePoint Administrator & Software Developer on the Application Programming Development team for Department of State's IRM/OPS/SIO/EPI Division. I developed and maintained features for Java and ASP.NET/C# based applications for Web.TATEL, Department of State’s JAVA web-based Human Resource Time & Attendance payroll application, and Post Application Software Suite (PASS)\u003C/p\u003E",
+      "summary": "<p>I fulfilled the role of <strong>Application Lead</strong>, SharePoint Administrator & Software Developer on the Application Programming Development team for Department of State's IRM/OPS/SIO/EPI Division. I developed and maintained features for Java and ASP.NET/C# based applications for Web.TATEL, Department of State’s JAVA web-based Human Resource Time & Attendance payroll application, and Post Application Software Suite (PASS)</p>",
       "highlights": [],
       "location": "",
       "isCurrentRole": false,
@@ -178,7 +231,7 @@
       "url": "https://citi-us.com/",
       "startDate": "2010-05-01",
       "endDate": "2013-10-01",
-      "summary": "\u003Cp\u003EI fulfilled the role of \u003Cstrong\u003EApplication Lead\u003C/strong\u003E, SharePoint Administrator & Software Developer on the Application Programming Development team for Department of State's IRM/OPS/SIO/EPI Division. I developed and maintained features for Java and ASP.NET/C# based applications for Web.TATEL, Department of State’s JAVA web-based Human Resource Time & Attendance payroll application, and Post Application Software Suite (PASS)\u003C/p\u003E",
+      "summary": "<p>I fulfilled the role of <strong>Application Lead</strong>, SharePoint Administrator & Software Developer on the Application Programming Development team for Department of State's IRM/OPS/SIO/EPI Division. I developed and maintained features for Java and ASP.NET/C# based applications for Web.TATEL, Department of State’s JAVA web-based Human Resource Time & Attendance payroll application, and Post Application Software Suite (PASS)</p>",
       "highlights": [],
       "location": "",
       "isCurrentRole": false,
@@ -199,7 +252,7 @@
       "url": "https://www.inteprosfed.com/",
       "startDate": "2009-09-01",
       "endDate": "2010-04-01",
-      "summary": "\u003Cp\u003EI was a technical consultant supporting the Joint Chiefs of Staff (JCS), Office of the Chief Information Officer  (OCIO)at the Pentagon. Apart of the applications engineering team under the Systems Requirements and System Integration (SRSI) area for the JCS OCIO. I consulted directly with the client in gathering requirements and participating/leading application demos with assistance of using Gartner references for analysis & research into workflow tools. I wrote documentation for a small data inventory system and implemented an application with another developer using ASP.NET/C#. I was also tasked with SharePoint 2003 administration tasks and requests. I worked with a SharePoint developer to create a weekly status automation tool using MS Access and VB.\u003C/p\u003E",
+      "summary": "<p>I was a technical consultant supporting the Joint Chiefs of Staff (JCS), Office of the Chief Information Officer  (OCIO)at the Pentagon. Apart of the applications engineering team under the Systems Requirements and System Integration (SRSI) area for the JCS OCIO. I consulted directly with the client in gathering requirements and participating/leading application demos with assistance of using Gartner references for analysis & research into workflow tools. I wrote documentation for a small data inventory system and implemented an application with another developer using ASP.NET/C#. I was also tasked with SharePoint 2003 administration tasks and requests. I worked with a SharePoint developer to create a weekly status automation tool using MS Access and VB.</p>",
       "highlights": [],
       "location": "",
       "isCurrentRole": false,
@@ -220,7 +273,46 @@
       "url": "https://www.ibm.com",
       "startDate": "2007-08-01",
       "endDate": "2009-09-01",
-      "summary": "\u003Cdiv\u003E\n  \u003Cdiv\u003E\n    \u003Cstrong\u003EProjects\u003C/strong\u003E\n    \u003Cul\u003E\n      \u003Cli\u003E\n        \u003Ci\n          \u003E\u003Cstrong\u003EWeb Developer/Database Analyst at National Defense University\n          (NDU)\u003C/strong\u003E, February 2009 - September 2009\u003C/i\n        \u003E\n      \u003C/li\u003E\n      \u003Cp\u003E\n        I worked out of the Chief Information Office (CIO) with the\n        Department of Defense at the National Defense University (NDU).\n        There, I was a part of the Application team and specifically, the\n        technical laison on Data Enterprise System(DES) team for the North\n        Campus of NDU at Fort McNair. I met with professors and officers of\n        the campus to gather requirements for the DES system. I also acted\n        as HelpDesk support by creating new accounts in DES for all those\n        authorized. I coordinated meetings, presentation and briefings with\n        NDU clients on solutions, progress and future endeavors for DES as\n        well as performed assigned technical tasks including system\n        analysis, programming, product installation, testing and system\n        integration.\n      \u003C/p\u003E\n      \u003Cli\u003E\n        \u003Ci\n          \u003E\u003Cstrong\u003EJava Developer/Web Developer at Federal Emergency Management\n          Agency (FEMA)\u003C/strong\u003E, August 2007 - January 2009\u003C/i\n        \u003E\n      \u003C/li\u003E\n      \u003Cp\u003E\n        I was a part of the Agile Systems Development (ASD) team on the\n        FEMA RIMS team. We provided a web-based, Recovery Information\n        Management System (RIMS), designed to help FEMA employees and\n        disaster victims seek disaster-related information by increasing\n        data accuracy, expanding data access, and streamlining reporting\n        processes.. Our team implemented solutions in an agile environment\n        using up-to-date technologies in J2EE, including Spring and\n        Hibernate frameworks, JSTL, and Oracle. Some of my other\n        responsibilities included gathering analysis of functional and\n        technical requirements, assisting with IT architect design of\n        applications, technical documentation, understanding relational\n        database (Oracle DB) and schema created for applications, as well\n        as mentoring other developers.\n      \u003C/p\u003E\n    \u003C/ul\u003E\n  \u003C/div\u003E\n\u003C/div\u003E",
+      "summary": "<div>
+  <div>
+    <strong>Projects</strong>
+    <ul>
+      <li>
+        <i><strong>Web Developer/Database Analyst at National Defense University
+          (NDU)</strong>, February 2009 - September 2009</i>
+      </li>
+      <p>
+        I worked out of the Chief Information Office (CIO) with the
+        Department of Defense at the National Defense University (NDU).
+        There, I was a part of the Application team and specifically, the
+        technical laison on Data Enterprise System(DES) team for the North
+        Campus of NDU at Fort McNair. I met with professors and officers of
+        the campus to gather requirements for the DES system. I also acted
+        as HelpDesk support by creating new accounts in DES for all those
+        authorized. I coordinated meetings, presentation and briefings with
+        NDU clients on solutions, progress and future endeavors for DES as
+        well as performed assigned technical tasks including system
+        analysis, programming, product installation, testing and system
+        integration.
+      </p>
+      <li>
+        <i><strong>Java Developer/Web Developer at Federal Emergency Management
+          Agency (FEMA)</strong>, August 2007 - January 2009</i>
+      </li>
+      <p>
+        I was a part of the Agile Systems Development (ASD) team on the
+        FEMA RIMS team. We provided a web-based, Recovery Information
+        Management System (RIMS), designed to help FEMA employees and
+        disaster victims seek disaster-related information by increasing
+        data accuracy, expanding data access, and streamlining reporting
+        processes.. Our team implemented solutions in an agile environment
+        using up-to-date technologies and practice Scrum on a daily basis. I
+        also acted as a technical liaison between the ASD team and the
+        Independent Verification and Validation (IV&amp;V) team.
+      </p>
+    </ul>
+  </div>
+</div>",
       "highlights": [],
       "location": "",
       "isCurrentRole": false,
@@ -243,7 +335,10 @@
       "url": "https://codepath.org",
       "startDate": "2020-06-01",
       "endDate": "",
-      "summary": "Sharing my career and college experience along with mentoring Computer Science students of underserved communities\n\n- Panelist in a Virtual Panel for \"Work From Home Best Practices\"\n- Volunteered as a resume reviewer for Computer Science students",
+      "summary": "Sharing my career and college experience along with mentoring Computer Science students of underserved communities
+
+- Panelist in a Virtual Panel for \"Work From Home Best Practices\"
+- Volunteered as a resume reviewer for Computer Science students",
       "highlights": [],
       "location": "",
       "start": {
@@ -309,7 +404,13 @@
       "score": "",
       "courses": [],
       "description": "",
-      "activities": "Black Student Alliance\nCS^2\nStudent Government Association\nOrder of the Gavel\nStudent African American Brotherhood\nIota Phi Theta Fraternity, Inc.\n",
+      "activities": "Black Student Alliance
+CS^2
+Student Government Association
+Order of the Gavel
+Student African American Brotherhood
+Iota Phi Theta Fraternity, Inc.
+",
       "start": {
         "year": 2002,
         "month": 9

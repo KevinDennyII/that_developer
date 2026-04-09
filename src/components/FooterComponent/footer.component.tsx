@@ -3,6 +3,7 @@ import { bccLogo, copyright } from './footer.module.scss';
 import bcc from '../../images/bcclog.png';
 
 function FooterComponent() {
+  const currentYear = new Date().getFullYear();
 
   return (
     <div>
@@ -19,7 +20,7 @@ function FooterComponent() {
       </div>
       <div className={copyright}>
         {' '}
-        Kevin Denny II &#169; 2025 All Rights Reserved.
+        Kevin Denny II &#169; {currentYear} All Rights Reserved.
         {' '}
         <br />
       </div>
