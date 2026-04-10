@@ -5,7 +5,7 @@ import styles from './about.module.scss';
 
 const AboutComponent: React.FC = () => {
   return (
-    <div>
+    <div className={styles.aboutPage}>
       <section className="colorlib-about" data-section="about">
         <div className="colorlib-narrow-content">
           <div className="row">

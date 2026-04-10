@@ -1,3 +1,18 @@
+/* Vertical rhythm; horizontal inset comes from #container-wrap in App.css */
+.aboutPage {
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+  margin: 0 auto;
+  max-width: 72rem;
+  box-sizing: border-box;
+}
+
+/* Bootstrap rows use negative horizontal margin; reset here so copy isn’t pulled to the edge */
+.aboutPage :global(.row) {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .gallery {
   width: 100%;
 }
