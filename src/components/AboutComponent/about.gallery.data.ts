@@ -5,35 +5,41 @@ import blackManGraduate from '../../images/black-man-graduate.png';
 import blackManReading from '../../images/black-man-reading.png';
 import blackPeopleDancing from '../../images/black-people-dancing.png';
 
-export const aboutData = [
+export interface AboutGalleryEntry {
+  image: string;
+  alt: string;
+  description: string;
+}
+
+export const aboutGalleryData: AboutGalleryEntry[] = [
   {
     image: blackFamily,
-    alt: 'black family sitting on couch',
+    alt: 'Black family sitting on couch',
     description: 'I am loving husband. A VERY proud father of 2.',
   },
   {
     image: blackManGraduate,
-    alt: 'black man graduate',
+    alt: 'Black man in graduation attire',
     description: 'I am a computer science graduate of Virginia Tech, class of 2007',
   },
   {
     image: blackManUsingLaptop,
-    alt: 'black man programming',
+    alt: 'Black man programming on a laptop',
     description: 'I am software and web developer with over 15 years of experience.',
   },
   {
     image: blackManLearning,
-    alt: 'black man write on white board',
+    alt: 'Black man writing on a whiteboard',
     description: 'I have a passion to continuously learn.',
   },
   {
     image: blackManReading,
-    alt: 'black man reading on couch',
+    alt: 'Black man reading on couch',
     description: 'I love reading all types of books.',
   },
   {
     image: blackPeopleDancing,
-    alt: 'black people dancing',
+    alt: 'Black people dancing',
     description: 'I am a curator of music; a DJ and hip hop enthusiast.',
   },
 ];

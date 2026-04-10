@@ -1,52 +1,187 @@
-.services {
-  margin-bottom: 30px;
-  padding: 1.5em;
-  -webkit-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
-  -moz-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
-  -ms-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
-  -o-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
-  box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
-  border-bottom: 2px solid #2c98f0;
+/* Matches Colorlib theme: $brand-primary #2c98f0, $brand-color-3 #f9bf3f, $brand-color-5 #2fa499 */
+$brand-primary: #2c98f0;
+$brand-gold: #f9bf3f;
+$brand-teal: #2fa499;
+
+.whatIDoSection {
+  padding: 4em 0;
+  background: #fff;
 }
 
-.services .icon {
-  display: block;
-  margin-bottom: 30px;
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-.services .icon i {
-  font-size: 60px;
-  color: #2c98f0;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
 }
 
-.services .desc h3 {
-  font-size: 16px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: 600 !important;
-  font-family: "Quicksand", Arial, sans-serif;
+.heading {
+  text-align: center;
+  margin-bottom: 2.5em;
+  width: 100%;
+
+  .headingMeta {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #999999;
+  }
+
+  .colorlibHeading {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #000;
+  }
 }
 
-.web-development {
-  border-bottom: 2px solid #2c98f0;
+.itemsRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem 2.25rem;
+  margin-top: 1rem;
 }
 
-.web-development .icon i {
-  color: #2c98f0;
+.serviceCard {
+  position: relative;
+  flex: 1 1 260px;
+  max-width: 100%;
+  margin-bottom: 2.5em;
+  padding: 1.5em 1.25em 1.75em;
+  background: #fff;
+  box-shadow: 0 0 56px -8px rgba(0, 0, 0, 0.17);
+  border-bottom: 2px solid $brand-primary;
+  z-index: 0;
+  text-align: center;
+
+  @media screen and (min-width: 900px) {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: calc(33.333% - 1.5rem);
+    margin-bottom: 5rem;
+  }
 }
 
-.data-structures {
-  border-bottom: 2px solid #ec5453;
+.iconHex {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  width: 100px;
+  height: 50px;
+  margin: 0 auto;
+  background: $brand-primary;
+  display: table;
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    content: "";
+  }
+
+  &::before {
+    top: -30px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 50px 30px 50px;
+    border-color: transparent transparent $brand-primary transparent;
+  }
+
+  &::after {
+    bottom: -30px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 50px 0 50px;
+    border-color: $brand-primary transparent transparent transparent;
+  }
+
+  i {
+    font-size: 30px;
+    color: #fff;
+    z-index: 1;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 1;
+  }
 }
 
-.data-structures .icon i {
-  color: #ec5453;
+.desc {
+  margin-top: 60px;
+
+  h3 {
+    font-family: Quicksand, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0 0 1rem;
+    color: #000;
+  }
+
+  .body {
+    font-family: Quicksand, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #888;
+    margin: 0;
+
+    a {
+      color: $brand-primary;
+      text-decoration: none;
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
-.dev-ops {
-  border-bottom: 2px solid #f9bf3f;
+.serviceCardGold {
+  border-bottom-color: $brand-gold;
+
+  .iconHex {
+    background: $brand-gold;
+
+    &::before {
+      border-color: transparent transparent $brand-gold transparent;
+    }
+
+    &::after {
+      border-color: $brand-gold transparent transparent transparent;
+    }
+  }
 }
 
-.dev-ops .icon i {
-  color: #f9bf3f;
+.serviceCardTeal {
+  border-bottom-color: $brand-teal;
+
+  .iconHex {
+    background: $brand-teal;
+
+    &::before {
+      border-color: transparent transparent $brand-teal transparent;
+    }
+
+    &::after {
+      border-color: $brand-teal transparent transparent transparent;
+    }
+  }
 }

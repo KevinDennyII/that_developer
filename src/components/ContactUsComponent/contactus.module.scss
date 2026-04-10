@@ -23,6 +23,14 @@
   padding: 0 15rem;
 }
 
+/* Unstyled fieldset: semantics + disabled state without default chrome */
+.formFieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
 @media screen and (max-width: 680px) {
 
   .sendMsgTitle {

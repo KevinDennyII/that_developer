@@ -1,0 +1,76 @@
+.headerBkg {
+  background-color: #f8f9fa;
+  padding: 2rem 0;
+}
+
+.introduction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.aviHeader {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: url("../../images/kevin_final.png");
+  background-size: cover;
+  background-position: center;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.introInfo h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+.introInfo h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0.25rem 0;
+}
+.introInfo h3 a {
+  text-decoration: none;
+  color: #000;
+}
+.introInfo h3 a:hover {
+  text-decoration: underline;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.links a {
+  color: #333;
+  font-size: 1.5rem;
+}
+.links a:hover {
+  color: #007bff;
+}
+
+.headerLinks {
+  font-size: 20px;
+}
+
+.resumeLink {
+  margin-top: 1rem;
+}
+.resumeLink button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.resumeLink button:hover {
+  background-color: #0056b3;
+}/*# sourceMappingURL=introduction.module.css.map */

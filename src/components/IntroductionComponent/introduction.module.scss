@@ -1,107 +1,195 @@
 .headerBkg {
-  background: rgb(235,235,241);
-  background: linear-gradient(0deg, rgba(235,235,241,1) 0%, rgba(64,126,195,1) 100%);
+  --header-inline-pad: 1rem;
+  background: linear-gradient(165deg, #6ba8d9 0%, #9ec9eb 45%, #b8daf4 100%);
+  padding: 2.5rem var(--header-inline-pad) 0;
 }
 
 .introduction {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto 0 auto;
+  gap: clamp(1.5rem, 4vw, 2.75rem);
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 1.75rem;
 }
 
 .aviHeader {
-  background-size: 30rem 30rem;
-  margin: 0;
-  background-image: url(../../images/kevin_avatar_transparent.png);
-  background-position: center center;
-  background-repeat: no-repeat;
-  position: relative;
-  height: 28rem;
-  width: 30rem;
+  width: clamp(152px, 26vw, 200px);
+  height: clamp(152px, 26vw, 200px);
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-image: url('../../images/kevin_final.png');
+  background-size: cover;
+  background-position: center;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .introInfo {
-  text-align: center;
-  margin: auto 0 auto 0;
-  font-family: Titillium Web, sans-serif;
-  width: 30rem;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
 }
 
-.introInfo h3 {
-  line-height: 0.1rem;
+/* Name is the largest text in the header; roles and links stay smaller */
+.introName {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2rem, 5.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.65rem;
+  line-height: 1.12;
+  color: #111;
 }
 
-.introInfo h4 {
-  line-height: 0.1rem;
-  letter-spacing: 0.35em;
+.roleList {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  li {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(1.05rem, 2.35vw, 1.38rem);
+    font-weight: 500;
+    line-height: 1.3;
+    color: #1a1a1a;
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+
+    &:hover {
+      color: #0d2d45;
+      border-bottom-color: rgba(13, 45, 69, 0.35);
+    }
+  }
 }
 
 .links {
   display: flex;
-  flex-direction: row;
-  align-content: space-between;
-  justify-content: center;
-}
+  flex-wrap: wrap;
+  gap: 1rem 1.35rem;
+  margin: 0 0 1.1rem;
 
-.menuItems {
-  text-align: center;
-  font-size: 1.75rem
-}
+  a {
+    color: #1a4a6e;
+    font-size: clamp(1.5rem, 3.2vw, 1.8rem);
+    line-height: 1;
+    opacity: 0.92;
+    transition: color 0.2s, opacity 0.2s;
 
-.emailIcon {
-  font-size: large;
+    &:hover {
+      color: #0d2d45;
+      opacity: 1;
+    }
+  }
 }
 
 .headerLinks {
-  font-weight: 800;
-  font-size: 1.75rem;
-  color: #407bbc;
-  text-shadow: 0 2px #d2cfcf;
+  font-size: clamp(22px, 3.2vw, 27px);
+  display: block;
 }
 
-.resumeLink{
+.resumeCta {
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: clamp(1rem, 2.1vw, 1.15rem);
+  font-weight: 600;
+  color: #1a4a6e;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  border-bottom: 2px solid rgba(26, 74, 110, 0.35);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+
+  &:hover {
+    color: #0d2d45;
+    border-bottom-color: #0d2d45;
+  }
+}
+
+.headerNav {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1rem 1.5rem;
+}
+
+.headerNavList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-  font-size: 14px;
-  font-weight: bold;
-  text-shadow:
-    1px 0 1px #c4c4c4, 0 1px 1px #e7e7e7;
+  justify-content: center;
+  gap: 0.65rem clamp(2rem, 5vw, 3.25rem);
 }
 
-.resumeLink button{
-  color: white;
-  background-color: #074e76;
-  font-size: 15px;
-  border-radius: 10px;
-  margin-left: .25rem;
-  margin-right: .25rem;
-  box-shadow: 0 5px #999;
-  cursor: pointer;
+.navLink {
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: clamp(1.18rem, 2.6vw, 1.42rem);
+  font-weight: 600;
+  color: #1d3d5d;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  padding: 0.35rem 0.15rem;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+
+  &:hover {
+    color: #0d2d45;
+  }
 }
 
-
-.resumeLink button:hover {
-  background-color: #0f81ef;
+.navLinkActive {
+  color: #0d2d45;
+  font-weight: 700;
+  border-bottom-color: #0d2d45;
 }
 
-.resumeLink button:active {
-  background-color: #0f81ef;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+/* Bleed edge-to-edge: parent horizontal padding left naked blue strips under the bar */
+.headerDivider {
+  height: 14px;
+  margin-left: calc(-1 * var(--header-inline-pad));
+  margin-right: calc(-1 * var(--header-inline-pad));
+  width: calc(100% + 2 * var(--header-inline-pad));
+  background: linear-gradient(180deg, #2a2a2a 0%, #6a6a6a 35%, #e8e8e8 70%, #ffffff 100%);
 }
 
-
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 520px) {
   .introduction {
     flex-direction: column;
+    text-align: center;
+    gap: 1.35rem;
   }
-  .aviHeader {
-    width: 100%;
-    margin: 0;
+
+  .introInfo {
+    align-items: center;
   }
-  .menuItems {
-    margin-top: .7rem;
+
+  .roleList {
+    align-items: center;
+    text-align: center;
+  }
+
+  .links {
+    justify-content: center;
+  }
+
+  .headerNavList {
+    gap: 0.6rem 1.35rem;
+  }
+
+  .navLink {
+    font-size: clamp(1.05rem, 4vw, 1.25rem);
   }
 }

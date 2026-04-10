@@ -1,5 +1,5 @@
 import React from 'react';
-import { bccLogo, copyright } from './footer.module.scss';
+import styles from './footer.module.scss';
 import bcc from '../../images/bcclog.png';
 
 function FooterComponent() {
@@ -14,11 +14,11 @@ function FooterComponent() {
         {' '}
         <img
           src={bcc}
-          className={bccLogo}
+          className={styles.bccLogo}
           alt="Black Code Collective log with a black fist in between curly braces"
         />
       </div>
-      <div className={copyright}>
+      <div className={styles.copyright}>
         {' '}
         Kevin Denny II &#169; {currentYear} All Rights Reserved.
         {' '}

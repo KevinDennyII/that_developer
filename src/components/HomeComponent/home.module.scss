@@ -1,33 +1,73 @@
 .home {
+  width: 100%;
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   text-align: center;
-  font-family: Comic Sans MS, serif;
-  font-size: 2rem;
+  background: #fff;
 }
 
 .quote {
-  margin-bottom: 3rem;
+  font-family: "Chewy", cursive, system-ui;
+  font-size: clamp(1.2rem, 2.8vw, 1.75rem);
+  line-height: 1.55;
+  color: #2d2d2d;
+  margin: 0 0 1.5rem;
+  max-width: min(100%, 34rem);
+}
+
+/* Keep “When you change your perspective,” on one line; break only after the comma */
+.quoteFirstPhrase {
+  white-space: nowrap;
+}
+
+@media (max-width: 400px) {
+  .quoteFirstPhrase {
+    white-space: normal;
+  }
+}
+
+.embedLabel {
+  align-self: stretch;
+  max-width: 42rem;
+  margin: 0 auto 0.65rem;
+  text-align: left;
+  font-family: "Open Sans", "Quicksand", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6b6b6b;
+}
+
+.embedCard {
+  width: 100%;
+  max-width: 42rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  background: #111;
 }
 
 .music {
-  border-radius: 10px;
-  //width: 300px;
-  overflow: hidden;
-  margin-bottom: 2rem;
-  font-weight: 550;
-  width: 50%;
-  height: 50%;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 100%;
+  margin: 0;
+  line-height: 0;
+
+  iframe {
+    display: block;
+    width: 100%;
+    min-height: 380px;
+    border: 0;
+  }
 }
 
 @media screen and (max-width: 680px) {
-  .home{
-    font-size: 1.5rem
-  }
-  .music {
-    width: 100%
+  .home {
+    padding: 1.5rem 1rem 2.5rem;
   }
 }

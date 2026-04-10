@@ -1,54 +1,204 @@
-.about {
-  display: block;
+.gallery {
+  width: 100%;
 }
 
-.container {
+.galleryRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem 2rem;
+  max-width: 900px;
+  margin: 0 auto 2.25rem;
+  padding: 0 15px;
+}
+
+/* Soft blue halo + light card — cleaner than a heavy flat tint */
+.galleryCopy {
+  flex: 1 1 220px;
+  max-width: 26rem;
+  position: relative;
+  padding: 1.15rem 1.4rem 1.2rem;
+  border-radius: 12px;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 128%;
+    height: 168%;
+    z-index: -2;
+    background: radial-gradient(
+      ellipse 72% 68% at 50% 48%,
+      rgba(100, 175, 230, 0.52) 0%,
+      rgba(160, 205, 240, 0.24) 46%,
+      rgba(200, 228, 248, 0.08) 68%,
+      transparent 78%
+    );
+    filter: blur(18px);
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.92) 0%,
+      rgba(242, 248, 255, 0.9) 100%
+    );
+    box-shadow:
+      0 0 0 1px rgba(44, 152, 240, 0.14),
+      0 12px 36px -12px rgba(44, 152, 240, 0.4),
+      0 22px 52px -20px rgba(90, 160, 220, 0.28);
+    pointer-events: none;
+  }
+
+  p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #2c2c2c;
+    font-family: Quicksand, Arial, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .galleryCopy::before {
+    filter: blur(14px);
+  }
+}
+
+/* Fixed frame (~200px) with full image visible — contain avoids cover cropping */
+.galleryImage {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 150px 0 150px;
-}
+  background: #f2f3f7;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 
-.container p {
-  align-self: center;
-  font-family: Titillium Web, sans-serif;
-  font-size: 1.75rem;
-  font-weight: 600;
-  text-shadow: 0 0 30px rgba(37, 108, 255, 1);
-}
-
-.aboutImg {
-  flex: 0 0 50px;
-  margin-right: 20px;
-  height: 200px;
-}
-
-@media screen and (max-width: 992px) {
-  .container {
-    flex-direction: column;
-    margin: 10px;
-  }
-
-  .container:nth-child(even) {
-    flex-direction: column-reverse;
-  }
-
-  .aboutImg {
-    margin: 0;
-    height: 125px;
-  }
-  .container p {
-    text-align: center;
-    font-size: 1.25rem;
-    margin: 5px 75px;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .container {
-    margin: 10px;
+  .galleryImage {
+    width: 180px;
+    height: 180px;
   }
-  .container p {
-    margin: 5px 5px;
+}
+
+.aboutSection {
+  padding: 4em 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 3em;
+  width: 100%;
+}
+
+.headingMeta {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #999999;
+}
+
+.colorlibHeading {
+  font-size: 30px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #000;
+}
+
+.profileImage {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-image: url('../../images/kevin_final.png');
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto 2em;
+}
+
+.bio {
+  padding: 0 15px;
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 1em;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+  }
+}
+
+.itemsRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3em;
+}
+
+.item {
+  width: 30%;
+  text-align: center;
+  padding: 0 15px;
+
+  .icon {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+
+  .text {
+    h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #888;
+    }
   }
 }

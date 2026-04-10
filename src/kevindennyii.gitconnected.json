@@ -1,3 +1,4 @@
+
 {
   "basics": {
     "name": "Kevin Denny II",
@@ -6,56 +7,19 @@
     "email": "kevin.dennyii@gmail.com",
     "url": "https://thatdeveloper.dev",
     "roles": [
-      {
-        "title": "Published Author",
-        "url": "https://bitesizedhuman.com/"
-      },
-      {
-        "title": "Web Developer"
-      },
-      {
-        "title": "Music Curator"
-      },
-      {
-        "title": "Life Long Learner"
-      }
+      {"title": "Published Author", "url": "https://bitesizedhuman.com/"},
+      {"title": "Web Developer"},
+      {"title": "Music Curator"},
+      {"title": "Life Long Learner"}
     ],
     "profiles": [
-      {
-        "network": "gitconnected",
-        "username": "kevindennyii",
-        "url": "https://gitconnected.com/kevindennyii"
-      },
-      {
-        "network": "GitHub",
-        "username": "KevinDennyII",
-        "url": "https://github.com/KevinDennyII"
-      },
-      {
-        "network": "LinkedIn",
-        "username": "kodii",
-        "url": "https://linkedin.com/in/kodii"
-      },
-      {
-        "network": "Instagram",
-        "username": "djlookup",
-        "url": "https://instagram.com/djlookup"
-      },
-      {
-        "network": "X",
-        "username": "thatdeveloper",
-        "url": "https://x.com/thatdeveloper"
-      },
-      {
-        "network": "Bluesky",
-        "username": "thatdeveloper.bsky.social",
-        "url": "https://bsky.app/profile/thatdeveloper.bsky.social"
-      },
-      {
-        "network": "Book",
-        "username": "Bite-Sized Human",
-        "url": "https://bitesizedhuman.com/"
-      }
+      {"network": "gitconnected", "username": "kevindennyii", "url": "https://gitconnected.com/kevindennyii"},
+      {"network": "GitHub", "username": "KevinDennyII", "url": "https://github.com/KevinDennyII"},
+      {"network": "LinkedIn", "username": "kodii", "url": "https://linkedin.com/in/kodii"},
+      {"network": "Instagram", "username": "djlookup", "url": "https://instagram.com/djlookup"},
+      {"network": "X", "username": "thatdeveloper", "url": "https://x.com/thatdeveloper"},
+      {"network": "Bluesky", "username": "thatdeveloper.bsky.social", "url": "https://bsky.app/profile/thatdeveloper.bsky.social"},
+      {"network": "Book", "username": "Bite-Sized Human", "url": "https://bitesizedhuman.com/"}
     ]
   },
   "work": [
@@ -73,13 +37,8 @@
       ],
       "location": "",
       "isCurrentRole": true,
-      "start": {
-        "year": 2022,
-        "month": 9
-      },
-      "end": {
-
-      },
+      "start": {"year": 2022, "month": 9},
+      "end": {},
       "company": "Booz Allen Hamilton, Inc",
       "website": "https://www.bah.com"
     },
@@ -88,7 +47,7 @@
       "position": "Director of Operations",
       "url": "https://www.ohhdennyservices.com",
       "startDate": "2015-06-01",
-      "summary": "<div><p>We assist smaller business, mostly concentrating on HIPPA, with Cyber Security, Software &amp; Hardware Installation and Updates, and Network Configuration. We also build websites using Content Management Systems like WordPress and technologies such JavaScript, CSS3 &amp; HTML5. </p></div>",
+      "summary": "We assist smaller business, mostly concentrating on HIPPA, with Cyber Security, Software & Hardware Installation and Updates, and Network Configuration. We also build websites using Content Management Systems like WordPress and technologies such JavaScript, CSS3 & HTML5.",
       "highlights": [
         "Implementing & maintaining APIs with ExpressJS on a development following various Agile methodologies",
         "Assisting with technical documentation",
@@ -99,13 +58,8 @@
       ],
       "location": "Selma, Texas",
       "isCurrentRole": true,
-      "start": {
-        "year": 2015,
-        "month": 6
-      },
-      "end": {
-
-      },
+      "start": {"year": 2015, "month": 6},
+      "end": {},
       "company": "OhhDenny Services, LLC",
       "website": "https://www.ohhdennyservices.com"
     },
@@ -115,29 +69,12 @@
       "url": "https://civitech.io",
       "startDate": "2021-04-01",
       "endDate": "2022-08-01",
-      "summary": "<ul>
-<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Participated as a Full Stack Engineer for on the Voter Outreach team building and maintain a web application&nbsp;</span></li>
-<ul>
-<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">The tech stack mainly consists of Java (Maven project), PostgreSQL, CSS, JavaScript, &amp; HTML</span></li>
-<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Building and Maintaining new and existing APIs for voter registration and address lookup</span></li>
-<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Building and Maintaining new and existing UIs for voter registration and address lookup</span></li>
-</ul>
-<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Participated as a Full Stack Engineer of the Web Applications Team building APIs that make CiviTech's platform, and other tools within the political and commercial ecosystem, work better together. I help to develop and maintain the Recruiter application, making it more useful and accessible to candidates, campaign staff, and volunteers.</span></li>
-<ul>
-<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">The tech stack mainly consist of Angular, TypeORM, and PostgreSQL</span></li>
-</ul>
-</ul>",
+      "summary": "As a Full Stack Engineer, I built and maintained web applications for voter outreach using Java, PostgreSQL, and JavaScript. I also developed APIs and UIs for CiviTech's platform with Angular and TypeORM, improving tools for candidates and campaign staff.",
       "highlights": [],
       "location": "Austin, TX",
       "isCurrentRole": false,
-      "start": {
-        "year": 2021,
-        "month": 4
-      },
-      "end": {
-        "year": 2022,
-        "month": 8
-      },
+      "start": {"year": 2021, "month": 4},
+      "end": {"year": 2022, "month": 8},
       "company": "Civitech",
       "website": "https://civitech.io"
     },
@@ -147,18 +84,12 @@
       "url": "https://www.iheartmedia.com",
       "startDate": "2019-01-01",
       "endDate": "2020-07-01",
-      "summary": "<p> I participated as a member of iHeartMedia's Music Lab team. I assist in the maintaining and improving of a web application that assist in helping program directors of iHeartRadio stations determine how air time (spins) for songs will be distributed across radio stations. I am working as both a Software Engineer and Data Analytics team liaison on the Music Lab team. Some of my tasks include architecting solutions with <strong>NodeJS</strong>, automating <strong>Amazon Web Services</strong> CodeBuilds using CloudWatch events for our MySQL databases, improving technical documentation, and learning both our data analytics and <strong>software development stack (ReactJS)</strong> for Music Lab. </p> <p> I conducted a <strong>Proof of Concept analysis to present to VP of Data Engineering & Analytics for using an aiWare platform that uses GraphQL</strong>. This was an idea to help iHeartMedia automate the analysis of some of its market data like spots and digital impression </p> <p> Previously apart of the Salesforce team, working with the Campaign Recap application which kept track of iHeartMedia's clients radio ad campaigns. I briefly worked with our Kibana instance in attempt to improve logging. I updated our software architecture. I also performed a technical analysis with Vertione One in using there development platform with GraphiQ that could possible help iHeartMedia automate some of its processes. </p>",
+      "summary": "On the Music Lab team, I maintained and improved a web app for iHeartRadio program directors to manage song airtime. I worked with NodeJS, AWS, and ReactJS. I also conducted a Proof of Concept for a GraphQL-based AI platform to automate market data analysis.",
       "highlights": [],
       "location": "San Antonio, TX",
       "isCurrentRole": false,
-      "start": {
-        "year": 2019,
-        "month": 1
-      },
-      "end": {
-        "year": 2020,
-        "month": 7
-      },
+      "start": {"year": 2019, "month": 1},
+      "end": {"year": 2020, "month": 7},
       "company": "iHeartMedia, Inc",
       "website": "https://www.iheartmedia.com"
     },
@@ -168,18 +99,12 @@
       "url": "https://www.bah.com",
       "startDate": "2015-10-01",
       "endDate": "2019-01-01",
-      "summary": "<div>I have written training documentation for the Air Force serving as an <strong>Elastic Stack Subject Matter Expert (SME)</strong> creating Elastic Stack training courses. This included modules for:<ul><li>The Overview of Elastic Stack</li><li>The understanding and use of Elasticsearch</li><li>The understanding and use of Logstash</li><li>The understanding and use of Kibana The understanding of Beats</li></ul>I have created learning documentation for server configuration (Puppet) and YAML<br><br>I participated as a <strong>member of an Agile Coaching team for the Air Force</strong>, practicing Scrum using Sprints. I wrote guidance for development teams such as how-to-guides and best practices for use of Agile methodologies.<br><br>I served as a member of the DoD community working as an Application Lead/Senior Developer working with and managing <strong>Amazing Web Services (AWS)</strong> EC2 instances building a Java application that would create and maintain IT disaster recovery plans.<br><br>I lead and participated on projects working with technologies such as <strong>PostgreSQL, MongoDB, ExpressDB, AngularJS and NodeJS (MEAN) web development</strong>, Java and other Microsoft technologies.<br><br>Internally, for Booz Allen Hamilton, I have configured and implemented a prototype website using Drupal with Acquia cloud.</div>",
+      "summary": "As an Elastic Stack SME for the Air Force, I created training courses and learning documentation. I was also a member of an Agile Coaching team and served as an Application Lead/Senior Developer for the DoD, managing AWS EC2 instances and building a Java application for IT disaster recovery plans.",
       "highlights": [],
       "location": "",
       "isCurrentRole": false,
-      "start": {
-        "year": 2015,
-        "month": 10
-      },
-      "end": {
-        "year": 2019,
-        "month": 1
-      },
+      "start": {"year": 2015, "month": 10},
+      "end": {"year": 2019, "month": 1},
       "company": "Booz Allen Hamilton, Inc",
       "website": "https://www.bah.com"
     },
@@ -189,18 +114,12 @@
       "url": "https://www.sevatec.com",
       "startDate": "2014-11-01",
       "endDate": "2015-06-01",
-      "summary": "<p>I fulfilled the role of Web Developer as a member of the Implementation Team for Content Management System (CMS), redesigning of the <b>US Embassy websites</b> at the IIP bureau of the <b>Department of State</b>. We were part of the UI/UX team with this task. We conducted wireframe testing, user interviews, and analysis on the both tasks.<br><br>As a web developer, I was responsible for the development of websites and mobile applications on Amazon Web Services (AWS) via WordPress, assisting with technical documentation and end-user training &amp; development transition plans. I participated in weekly calls with WordPress VIP and Automattic (creators and founders of WordPress) to receive guidance towards implementing possible solutions for the client. I also created and implemented the US Embassy Travel Alert Wordpress plugin which incorporates travel warnings and alerts using a JSON file from travel.state.gov.</p>",
+      "summary": "I was a Web Developer on the Implementation Team for the redesign of US Embassy websites at the Department of State. I developed websites and mobile apps on AWS using WordPress and created a plugin to incorporate travel alerts from a JSON feed.",
       "highlights": [],
       "location": "",
       "isCurrentRole": false,
-      "start": {
-        "year": 2014,
-        "month": 11
-      },
-      "end": {
-        "year": 2015,
-        "month": 6
-      },
+      "start": {"year": 2014, "month": 11},
+      "end": {"year": 2015, "month": 6},
       "company": "Sevatec, Inc",
       "website": "https://www.sevatec.com"
     },
@@ -210,18 +129,12 @@
       "url": "https://buchanan-edwards.com/",
       "startDate": "2013-11-01",
       "endDate": "2014-10-01",
-      "summary": "<p>I fulfilled the role of <strong>Application Lead</strong>, SharePoint Administrator & Software Developer on the Application Programming Development team for Department of State's IRM/OPS/SIO/EPI Division. I developed and maintained features for Java and ASP.NET/C# based applications for Web.TATEL, Department of State’s JAVA web-based Human Resource Time & Attendance payroll application, and Post Application Software Suite (PASS)</p>",
+      "summary": "As Application Lead, I developed and maintained features for Java and ASP.NET/C# applications for the Department of State's Human Resource Time & Attendance payroll application.",
       "highlights": [],
       "location": "",
       "isCurrentRole": false,
-      "start": {
-        "year": 2013,
-        "month": 11
-      },
-      "end": {
-        "year": 2014,
-        "month": 10
-      },
+      "start": {"year": 2013, "month": 11},
+      "end": {"year": 2014, "month": 10},
       "company": "Buchanan & Edwards, Inc",
       "website": "https://buchanan-edwards.com/"
     },
@@ -231,18 +144,12 @@
       "url": "https://citi-us.com/",
       "startDate": "2010-05-01",
       "endDate": "2013-10-01",
-      "summary": "<p>I fulfilled the role of <strong>Application Lead</strong>, SharePoint Administrator & Software Developer on the Application Programming Development team for Department of State's IRM/OPS/SIO/EPI Division. I developed and maintained features for Java and ASP.NET/C# based applications for Web.TATEL, Department of State’s JAVA web-based Human Resource Time & Attendance payroll application, and Post Application Software Suite (PASS)</p>",
+      "summary": "As Application Lead, I developed and maintained features for Java and ASP.NET/C# applications for the Department of State's Human Resource Time & Attendance payroll application.",
       "highlights": [],
       "location": "",
       "isCurrentRole": false,
-      "start": {
-        "year": 2010,
-        "month": 5
-      },
-      "end": {
-        "year": 2013,
-        "month": 10
-      },
+      "start": {"year": 2010, "month": 5},
+      "end": {"year": 2013, "month": 10},
       "company": "Creative Information Technology, Inc",
       "website": "https://citi-us.com/"
     },
@@ -252,18 +159,12 @@
       "url": "https://www.inteprosfed.com/",
       "startDate": "2009-09-01",
       "endDate": "2010-04-01",
-      "summary": "<p>I was a technical consultant supporting the Joint Chiefs of Staff (JCS), Office of the Chief Information Officer  (OCIO)at the Pentagon. Apart of the applications engineering team under the Systems Requirements and System Integration (SRSI) area for the JCS OCIO. I consulted directly with the client in gathering requirements and participating/leading application demos with assistance of using Gartner references for analysis & research into workflow tools. I wrote documentation for a small data inventory system and implemented an application with another developer using ASP.NET/C#. I was also tasked with SharePoint 2003 administration tasks and requests. I worked with a SharePoint developer to create a weekly status automation tool using MS Access and VB.</p>",
+      "summary": "As a technical consultant for the Joint Chiefs of Staff at the Pentagon, I gathered requirements, led application demos, and developed an application using ASP.NET/C#. I also handled SharePoint 2003 administration tasks.",
       "highlights": [],
       "location": "",
       "isCurrentRole": false,
-      "start": {
-        "year": 2009,
-        "month": 9
-      },
-      "end": {
-        "year": 2010,
-        "month": 4
-      },
+      "start": {"year": 2009, "month": 9},
+      "end": {"year": 2010, "month": 4},
       "company": "Intepros Federal Consulting, Inc",
       "website": "https://www.inteprosfed.com/"
     },
@@ -273,57 +174,12 @@
       "url": "https://www.ibm.com",
       "startDate": "2007-08-01",
       "endDate": "2009-09-01",
-      "summary": "<div>
-  <div>
-    <strong>Projects</strong>
-    <ul>
-      <li>
-        <i><strong>Web Developer/Database Analyst at National Defense University
-          (NDU)</strong>, February 2009 - September 2009</i>
-      </li>
-      <p>
-        I worked out of the Chief Information Office (CIO) with the
-        Department of Defense at the National Defense University (NDU).
-        There, I was a part of the Application team and specifically, the
-        technical laison on Data Enterprise System(DES) team for the North
-        Campus of NDU at Fort McNair. I met with professors and officers of
-        the campus to gather requirements for the DES system. I also acted
-        as HelpDesk support by creating new accounts in DES for all those
-        authorized. I coordinated meetings, presentation and briefings with
-        NDU clients on solutions, progress and future endeavors for DES as
-        well as performed assigned technical tasks including system
-        analysis, programming, product installation, testing and system
-        integration.
-      </p>
-      <li>
-        <i><strong>Java Developer/Web Developer at Federal Emergency Management
-          Agency (FEMA)</strong>, August 2007 - January 2009</i>
-      </li>
-      <p>
-        I was a part of the Agile Systems Development (ASD) team on the
-        FEMA RIMS team. We provided a web-based, Recovery Information
-        Management System (RIMS), designed to help FEMA employees and
-        disaster victims seek disaster-related information by increasing
-        data accuracy, expanding data access, and streamlining reporting
-        processes.. Our team implemented solutions in an agile environment
-        using up-to-date technologies and practice Scrum on a daily basis. I
-        also acted as a technical liaison between the ASD team and the
-        Independent Verification and Validation (IV&amp;V) team.
-      </p>
-    </ul>
-  </div>
-</div>",
+      "summary": "I served as a Web Developer/Database Analyst at National Defense University and a Java Developer at FEMA, working on web-based systems for disaster recovery and information management in an Agile environment.",
       "highlights": [],
       "location": "",
       "isCurrentRole": false,
-      "start": {
-        "year": 2007,
-        "month": 8
-      },
-      "end": {
-        "year": 2009,
-        "month": 9
-      },
+      "start": {"year": 2007, "month": 8},
+      "end": {"year": 2009, "month": 9},
       "company": "IBM, Inc",
       "website": "https://www.ibm.com"
     }
@@ -335,20 +191,11 @@
       "url": "https://codepath.org",
       "startDate": "2020-06-01",
       "endDate": "",
-      "summary": "Sharing my career and college experience along with mentoring Computer Science students of underserved communities
-
-- Panelist in a Virtual Panel for \"Work From Home Best Practices\"
-- Volunteered as a resume reviewer for Computer Science students",
+      "summary": "Sharing my career and college experience, mentoring Computer Science students from underserved communities, serving as a panelist for 'Work From Home Best Practices', and reviewing resumes.",
       "highlights": [],
       "location": "",
-      "start": {
-        "year": 2020,
-        "month": 6
-      },
-      "end": {
-        "year": null,
-        "month": null
-      },
+      "start": {"year": 2020, "month": 6},
+      "end": {"year": null, "month": null},
       "isCurrentRole": false,
       "website": "https://codepath.org"
     },
@@ -361,14 +208,8 @@
       "summary": "Our mission is to transform individual lives and whole communities through Hip-Hop. We do this through public art creation, teaching courses in the core elements of Hip-Hop, publishing a global academic journal on Hip-Hop, sending artists abroad and hosting Teach-Ins and retreats to build the capacity of scholars, artists and arts educators and arts managers from throughout the country and around the world.",
       "highlights": [],
       "location": "Washington, D. C. ",
-      "start": {
-        "year": 2013,
-        "month": 2
-      },
-      "end": {
-        "year": 2017,
-        "month": 11
-      },
+      "start": {"year": 2013, "month": 2},
+      "end": {"year": 2017, "month": 11},
       "isCurrentRole": false,
       "website": "https://www.wblinc.org"
     },
@@ -381,14 +222,8 @@
       "summary": "I volunteered as a College Material Coach and assistant DJ instructor with DJ RBI and DJ 2-Tone Jones",
       "highlights": [],
       "location": "Washington, D. C.",
-      "start": {
-        "year": 2010,
-        "month": 11
-      },
-      "end": {
-        "year": 2013,
-        "month": 1
-      },
+      "start": {"year": 2010, "month": 11},
+      "end": {"year": 2013, "month": 1},
       "isCurrentRole": false,
       "website": "https://www.wblinc.org"
     }
@@ -404,21 +239,9 @@
       "score": "",
       "courses": [],
       "description": "",
-      "activities": "Black Student Alliance
-CS^2
-Student Government Association
-Order of the Gavel
-Student African American Brotherhood
-Iota Phi Theta Fraternity, Inc.
-",
-      "start": {
-        "year": 2002,
-        "month": 9
-      },
-      "end": {
-        "year": 2007,
-        "month": 5
-      },
+      "activities": "Black Student Alliance, CS^2, Student Government Association, Order of the Gavel, Student African American Brotherhood, Iota Phi Theta Fraternity, Inc.",
+      "start": {"year": 2002, "month": 9},
+      "end": {"year": 2007, "month": 5},
       "website": "https://www.vt.edu",
       "gpa": ""
     }
@@ -427,48 +250,12 @@ Iota Phi Theta Fraternity, Inc.
   "certificates": [],
   "publications": [],
   "skills": [
-    {
-      "name": "JavaScript",
-      "level": "Intermediate",
-      "keywords": [],
-      "rating": 3,
-      "yearsOfExperience": null
-    },
-    {
-      "name": "HTML",
-      "level": "Advanced",
-      "keywords": [],
-      "rating": 4,
-      "yearsOfExperience": null
-    },
-    {
-      "name": "CSS",
-      "level": "Intermediate",
-      "keywords": [],
-      "rating": 3,
-      "yearsOfExperience": null
-    },
-    {
-      "name": "Node",
-      "level": "Beginner",
-      "keywords": [],
-      "rating": 2,
-      "yearsOfExperience": null
-    },
-    {
-      "name": "Elastic Stack",
-      "level": "Beginner",
-      "keywords": [],
-      "rating": 2,
-      "yearsOfExperience": null
-    },
-    {
-      "name": "React",
-      "level": "Intermediate",
-      "keywords": [],
-      "rating": 3,
-      "yearsOfExperience": null
-    }
+    {"name": "JavaScript", "level": "Intermediate", "keywords": [], "rating": 3, "yearsOfExperience": null},
+    {"name": "HTML", "level": "Advanced", "keywords": [], "rating": 4, "yearsOfExperience": null},
+    {"name": "CSS", "level": "Intermediate", "keywords": [], "rating": 3, "yearsOfExperience": null},
+    {"name": "Node", "level": "Beginner", "keywords": [], "rating": 2, "yearsOfExperience": null},
+    {"name": "Elastic Stack", "level": "Beginner", "keywords": [], "rating": 2, "yearsOfExperience": null},
+    {"name": "React", "level": "Intermediate", "keywords": [], "rating": 3, "yearsOfExperience": null}
   ],
   "languages": [],
   "interests": [],

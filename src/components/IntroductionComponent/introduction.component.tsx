@@ -1,19 +1,11 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import { get } from 'lodash';
-
-import {
-  aviHeader,
-  headerBkg,
-  introduction,
-  introInfo,
-  links,
-  headerLinks,
-  resumeLink,
-} from './introduction.module.scss';
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBluesky, faGithub, faGit, faLinkedin, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { faGithub, faLinkedin, faInstagram, faBluesky } from '@fortawesome/free-brands-svg-icons';
+import { faBook } from '@fortawesome/free-solid-svg-icons';
+import styles from './introduction.module.scss';
+import HeaderNav from './headerNav.component';
 
 interface Role {
   title: string;
@@ -35,68 +27,73 @@ interface IntroductionProps {
   basics: Basics;
 }
 
+const EXCLUDED_HEADER_NETWORKS = new Set(['gitconnected', 'x', 'twitter']);
+
+const RESUME_DOC_URL =
+  'https://docs.google.com/document/d/1oLTOrlvB4jscqGfbCjJ6vhLh3NgH29oMwb4OLCRjFYA/edit?usp=sharing';
+
 const IntroductionComponent: React.FC<IntroductionProps> = ({ basics }) => {
-  const socialIcons: { [key: string]: IconDefinition } = {
-    gitconnected: faGit,
+  const socialIcons: Record<string, IconDefinition> = {
     github: faGithub,
     linkedin: faLinkedin,
     instagram: faInstagram,
-    x: faXTwitter,
+    book: faBook,
     bluesky: faBluesky,
   };
 
   return (
-    <div className={headerBkg}>
-      <section
-        className="colorlib-experience"
-        style={{
-          marginTop: '0px',
-          marginBottom: '0px',
-          paddingBottom: '0px',
-          paddingTop: '0px',
-        }}
-        data-section="home"
-      >
-        <div className={introduction}>
-          <div
-            className={aviHeader}
-            title="Kevin Denny II with a yellow hoodie that says Without Music The World Would B Flat"
-          />
-          <div className={introInfo}>
-            <h4>{get(basics, "name")}</h4>
-            {get(basics, "roles", []).map((role: Role) => (
-              <h3 key={role.title}>
+    <div className={styles.headerBkg}>
+      <section className={styles.introduction} data-section="home">
+        <div className={styles.aviHeader} title="Kevin Denny II with a yellow hoodie that says Without Music The World Would B Flat" />
+        <div className={styles.introInfo}>
+          <h1 className={styles.introName}>{get(basics, 'name')}</h1>
+          <ul className={styles.roleList}>
+            {get(basics, 'roles', []).map((role: Role) => (
+              <li key={role.title}>
                 {role.url ? (
-                  <a href={role.url} target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: '#000'}}>
+                  <a href={role.url} target="_blank" rel="noopener noreferrer">
                     {role.title}
                   </a>
                 ) : (
                   role.title
                 )}
-              </h3>
+              </li>
             ))}
-            <div className={links}>
-              {get(basics, "profiles", []).map((profile: Profile) => (
-                <div key={profile.network.toLowerCase()}>
-                  <a href={profile.url} target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={socialIcons[profile.network.toLowerCase()]} size="1x" style={{ fontSize: '15px' }} className={headerLinks} />
-                    <span className="sr-only">{profile.network}</span>
-                  </a>
-                </div>
-              ))}
-            </div>
-            <div style={{ paddingTop: '5px' }}>
-              <div className={resumeLink}>
-                <a href="https://gitconnected.com/kevindennyii/resume" target="_blank" rel="noopener noreferrer">
-                  <button type="submit">View Resume</button>
-                </a>
-              </div>
-            </div>
+          </ul>
+          <div className={styles.links}>
+            {get(basics, 'profiles', [])
+              .filter(
+                (profile: Profile) =>
+                  !EXCLUDED_HEADER_NETWORKS.has(profile.network.toLowerCase()),
+              )
+              .map((profile: Profile) => {
+                const icon = socialIcons[profile.network.toLowerCase()];
+                return (
+                  <div key={profile.network.toLowerCase()}>
+                    <a href={profile.url} target="_blank" rel="noopener noreferrer">
+                      {icon && (
+                        <FontAwesomeIcon icon={icon} size="1x" className={styles.headerLinks} />
+                      )}
+                      <span className="sr-only">{profile.network}</span>
+                    </a>
+                  </div>
+                );
+              })}
           </div>
+          <a
+            className={styles.resumeCta}
+            href={RESUME_DOC_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download My Resume
+          </a>
         </div>
       </section>
+      <HeaderNav />
+      <div className={styles.headerDivider} aria-hidden />
     </div>
   );
-}
+};
 
 export default IntroductionComponent;

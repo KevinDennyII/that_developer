@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ExperienceItem from '../ExperienceComponent/ExperienceItem';
+import type gitConnectedData from '../../kevindennyii.gitconnected.json';
 
-type Experience = {
-  experience: [];
+type WorkEntry = (typeof gitConnectedData)['work'][number];
+
+interface WorkExperienceProps {
+  experience: WorkEntry[];
 }
 
-function WorkExperienceComponent({experience}: Experience) {
+const WorkExperienceComponent: React.FC<WorkExperienceProps> = ({ experience }) => {
+  const [openAccordionId, setOpenAccordionId] = useState<string | null>(null);
+
   return (
     <div>
       <div className="row">
@@ -21,16 +26,27 @@ function WorkExperienceComponent({experience}: Experience) {
         <div className="row justify-content-center">
           <div className="col-md-12">
             <div className="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-              {experience.map((item, index) => (
-                <ExperienceItem item={item} key={index} />
-              ))}
+              {experience.map((item, index) => {
+                const accordionId = `work-exp-${index}`;
+                return (
+                  <ExperienceItem
+                    key={accordionId}
+                    item={item}
+                    display="accordion"
+                    accordionId={accordionId}
+                    accordionExpanded={openAccordionId === accordionId}
+                    onAccordionToggle={() =>
+                      setOpenAccordionId((prev) => (prev === accordionId ? null : accordionId))
+                    }
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default WorkExperienceComponent;
-

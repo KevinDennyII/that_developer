@@ -120,6 +120,15 @@
   };
 
   var stickyFunction = function () {
+    // Refactored React app no longer renders #sticky_item; Sticky-Kit is not loaded in index.html.
+    // Skip entirely when the legacy markup or plugin is absent to avoid runtime errors.
+    if (
+      $("#sticky_item").length === 0 ||
+      typeof $.fn.stick_in_parent !== "function"
+    ) {
+      return;
+    }
+
     var h = $(".image-content").outerHeight();
 
     if ($(window).width() <= 992) {
@@ -131,8 +140,8 @@
     }
 
     $(window).resize(function () {
-      var h = $(".image-content").outerHeight();
-      $(".sticky-parent").css("height", h);
+      var parentH = $(".image-content").outerHeight();
+      $(".sticky-parent").css("height", parentH);
 
       if ($(window).width() <= 992) {
         $("#sticky_item").trigger("sticky_kit:detach");
@@ -146,8 +155,6 @@
     });
 
     $(".sticky-parent").css("height", h);
-
-    //$("#sticky_item").stick_in_parent();
   };
 
   var owlCrouselFeatureSlide = function () {

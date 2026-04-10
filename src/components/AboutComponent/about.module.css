@@ -1,0 +1,94 @@
+.about {
+  width: 100%;
+}
+
+.aboutSection {
+  padding: 4em 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 3em;
+  width: 100%;
+}
+
+.headingMeta {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #999999;
+}
+
+.colorlibHeading {
+  font-size: 30px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #000;
+}
+
+.profileImage {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-image: url("../../images/kevin_final.png");
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto 2em;
+}
+
+.bio {
+  padding: 0 15px;
+}
+.bio h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+.bio p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.itemsRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3em;
+}
+
+.item {
+  width: 30%;
+  text-align: center;
+  padding: 0 15px;
+}
+.item .icon {
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+.item .text h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.item .text p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #888;
+}/*# sourceMappingURL=about.module.css.map */

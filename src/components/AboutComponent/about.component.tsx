@@ -1,9 +1,9 @@
 import React from 'react';
-import { aboutData } from './about.data';
-import AboutItem from './AboutItem';
-import { about } from './about.module.scss';
+import { aboutGalleryData } from './about.gallery.data';
+import AboutGalleryItem from './AboutGalleryItem';
+import styles from './about.module.scss';
 
-function AboutComponent(props) {
+const AboutComponent: React.FC = () => {
   return (
     <div>
       <section className="colorlib-about" data-section="about">
@@ -18,9 +18,9 @@ function AboutComponent(props) {
                   <div className="about-desc">
                     <span className="heading-meta">About Me</span>
                     <h2 className="colorlib-heading">Who Am I?</h2>
-                    <div className={about}>
-                      {aboutData.map((item, index) => (
-                        <AboutItem item={item} key={index} index={index} />
+                    <div className={styles.gallery}>
+                      {aboutGalleryData.map((item, index) => (
+                        <AboutGalleryItem item={item} key={item.alt} index={index} />
                       ))}
                     </div>
                   </div>
@@ -32,7 +32,6 @@ function AboutComponent(props) {
       </section>
     </div>
   );
-}
+};
 
 export default AboutComponent;
-
