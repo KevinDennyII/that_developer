@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import ReCAPTCHA from 'react-google-recaptcha';
 import BlackManTyping from '../../images/Black-Man-Using-Laptop-A.png';
@@ -18,6 +18,8 @@ const isContactFormConfigured = Boolean(
   EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_USER_ID && RECAPTCHA_SITE_KEY,
 );
 
+type RecaptchaInstance = { reset: () => void };
+
 const ContactusComponent: React.FC = () => {
   const [formData, setFormData] = useState({
     from_name: '',
@@ -28,6 +30,8 @@ const ContactusComponent: React.FC = () => {
   const [emailSent, setEmailSent] = useState<boolean | null>(null);
   const [errors, setErrors] = useState<ContactErrors>({});
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const [lastSubmitError, setLastSubmitError] = useState<string | null>(null);
+  const recaptchaRef = useRef<RecaptchaInstance | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -57,18 +61,39 @@ const ContactusComponent: React.FC = () => {
 
     setIsSubmitting(true);
     setEmailSent(null);
+    setLastSubmitError(null);
 
-    const formElement = e.currentTarget;
-
+    // Use send() with explicit params so g-recaptcha-response is always included.
+    // sendForm() only serializes fields inside the <form>; the reCAPTCHA textarea can be missed.
     emailjs
-      .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formElement, EMAILJS_USER_ID)
+      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        contact_number: '',
+        from_name: formData.from_name.trim(),
+        reply_to: formData.reply_to.trim(),
+        message: formData.message.trim(),
+        'g-recaptcha-response': recaptchaToken ?? '',
+      }, EMAILJS_USER_ID)
       .then(
         () => {
           setEmailSent(true);
           setFormData({ from_name: '', reply_to: '', message: '' });
           setRecaptchaToken(null);
+          recaptchaRef.current?.reset();
         },
-        () => {
+        (err: { text?: string; status?: number }) => {
+          let detail = err?.text?.trim() || `HTTP ${err?.status ?? '?'}`;
+          try {
+            const parsed = JSON.parse(detail) as { message?: string };
+            if (parsed?.message) detail = parsed.message;
+          } catch {
+            /* keep raw text */
+          }
+          if (process.env.NODE_ENV === 'development') {
+            console.error('EmailJS send failed', err?.status, err?.text);
+            setLastSubmitError(detail);
+          }
+          setRecaptchaToken(null);
+          recaptchaRef.current?.reset();
           setEmailSent(false);
         },
       )
@@ -152,8 +177,10 @@ const ContactusComponent: React.FC = () => {
           </div>
           {RECAPTCHA_SITE_KEY ? (
             <ReCAPTCHA
+              ref={recaptchaRef}
               sitekey={RECAPTCHA_SITE_KEY}
               onChange={(token: string | null) => setRecaptchaToken(token)}
+              onExpired={() => setRecaptchaToken(null)}
             />
           ) : (
             <p className="text-muted small" role="status">
@@ -171,9 +198,16 @@ const ContactusComponent: React.FC = () => {
           </p>
         )}
         {emailSent === false && (
-          <p className="text-danger" style={{ fontWeight: '700' }}>
-            Something went wrong. Please try again later.
-          </p>
+          <div className="text-danger" style={{ fontWeight: '700' }}>
+            <p style={{ marginBottom: lastSubmitError ? '0.35rem' : 0 }}>
+              Something went wrong. Please try again later.
+            </p>
+            {process.env.NODE_ENV === 'development' && lastSubmitError && (
+              <p className="small" style={{ fontWeight: 400, marginBottom: 0 }} role="status">
+                {lastSubmitError}
+              </p>
+            )}
+          </div>
         )}
       </form>
     </div>
