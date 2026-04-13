@@ -7,7 +7,7 @@ function FooterComponent() {
 
   return (
     <div>
-      <div className="bccMember">
+      <div className={styles.bccMember}>
         Proud member of
         {' '}
         <a href="https://blackcodecollective.com/">Black Code Collective</a>
