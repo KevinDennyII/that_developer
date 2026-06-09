@@ -165,6 +165,129 @@ figure {
   text-decoration:none;
 }
 
+.experience-summary p {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.experience-built-sites {
+  margin-top: 1.25em;
+  padding: 1em 1.25em;
+  background: #f7f7fb;
+  border-left: 3px solid #2c98f0;
+  border-radius: 0 4px 4px 0;
+}
+
+.experience-built-sites__heading {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #666;
+  margin: 0 0 0.5em;
+}
+
+.experience-built-sites__heading:not(:first-child) {
+  margin-top: 1.25em;
+}
+
+.experience-built-sites__list {
+  margin: 0;
+  padding-left: 1.25em;
+  list-style: disc;
+}
+
+.experience-built-sites__list li {
+  margin-bottom: 0.35em;
+  line-height: 1.5;
+}
+
+.experience-built-sites__list a {
+  color: #2c98f0;
+  text-decoration: none;
+}
+
+.experience-built-sites__list a:hover,
+.experience-built-sites__list a:focus {
+  text-decoration: underline;
+}
+
+.experience-role-sections {
+  margin-top: 1.5em;
+}
+
+.experience-role-section + .experience-role-section {
+  margin-top: 1.5em;
+}
+
+.experience-role-section__heading {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #666;
+  margin: 0 0 0.75em;
+}
+
+.experience-role-section__lead {
+  margin: 0;
+  line-height: 1.6;
+  color: #444;
+}
+
+.experience-role-section__list {
+  margin: 0;
+  padding-left: 1.25em;
+  list-style: disc;
+}
+
+.experience-role-section__list li {
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+}
+
+.experience-role-section__list li:last-child {
+  margin-bottom: 0;
+}
+
+.experience-role-section--project {
+  padding: 1em 1.25em;
+  background: #fafafa;
+  border-left: 3px solid #888;
+  border-radius: 0 4px 4px 0;
+}
+
+.experience-project__title {
+  margin: 0 0 0.5em;
+  line-height: 1.5;
+}
+
+.experience-project__detail {
+  margin: 0;
+  line-height: 1.65;
+  color: #555;
+}
+
+.experience-highlights__heading {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #666;
+  margin: 1.5em 0 0.75em;
+}
+
+.experience-highlights__list {
+  margin: 0;
+  padding-left: 1.25em;
+  list-style: disc;
+}
+
+.experience-highlights__list li {
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+}
+
 .timeline-centered {
   position: relative;
   margin-bottom: 30px; }

@@ -101,6 +101,24 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
     );
   }
 
+  function experienceBodyContent() {
+    return (
+      <>
+        <div className="experience-summary" dangerouslySetInnerHTML={trustedResumeHtml(item.summary)} />
+        {item.highlights.length > 0 && (
+          <>
+            <h4 className="experience-highlights__heading">Key responsibilities</h4>
+            <ul className="experience-highlights__list">
+              {item.highlights.map((highlight, index) => (
+                <li key={index}>{highlight}</li>
+              ))}
+            </ul>
+          </>
+        )}
+      </>
+    );
+  }
+
   if (display === 'timeline') {
     return (
       <article
@@ -113,13 +131,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
           </div>
           <div className="timeline-label">
             <h2>{experienceDescription()}</h2>
-            <div dangerouslySetInnerHTML={trustedResumeHtml(item.summary)} />
-            <br />
-            <ul>
-              {item.highlights.map((highlight, index) => (
-                <li key={index}>{highlight}</li>
-              ))}
-            </ul>
+            {experienceBodyContent()}
           </div>
         </div>
       </article>
@@ -157,18 +169,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
         <div className="panel-body">
           <div className="row">
             <div className="col-md-12">
-              <div dangerouslySetInnerHTML={trustedResumeHtml(item.summary)} />
-            </div>
-            <div className="col-md-12">
-              <div style={{ fontWeight: 'bold' }}>
-                <ul>
-                  {item.highlights.map((highlight, index) => (
-                    <li key={index} style={{ fontWeight: 'normal', fontStyle: 'italic' }}>
-                      {highlight}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {experienceBodyContent()}
             </div>
           </div>
         </div>
