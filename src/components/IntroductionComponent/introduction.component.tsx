@@ -30,7 +30,7 @@ interface IntroductionProps {
 const EXCLUDED_HEADER_NETWORKS = new Set(['gitconnected', 'x', 'twitter']);
 
 const RESUME_DOC_URL =
-  'https://docs.google.com/document/d/1oLTOrlvB4jscqGfbCjJ6vhLh3NgH29oMwb4OLCRjFYA/edit?usp=sharing';
+  'https://docs.google.com/document/d/1KtsJ2YA8qJjpnKkO58_Rh54v6JOlWekK8Pg4SQbkaho/edit?usp=sharing';
 
 const IntroductionComponent: React.FC<IntroductionProps> = ({ basics }) => {
   const socialIcons: Record<string, IconDefinition> = {
